@@ -1,0 +1,35 @@
+_description: >-
+  Wix Stores category tree for agent discovery. Shows category hierarchy, IDs, slugs, product counts, and parent-child
+  relationships.
+totalCategories: 6
+categoryTree:
+  - _id: 2709d4bf-1ac6-cd71-e3fd-e695c06a5b6a
+    name: best sellers
+    slug: best-sellers
+    productCount: 4
+    children: []
+  - _id: 2f892ae8-fd6d-4ed4-64bd-d46c28ec1f82
+    name: body care
+    slug: body-products
+    productCount: 3
+    children: []
+  - _id: 715d1a01-3aa4-772b-e1ec-9332f17c5edd
+    name: new arrivals
+    slug: new-arrivals
+    productCount: 2
+    children: []
+  - _id: be39c2da-f75e-456c-9ead-92e2effb6433
+    name: All Products
+    slug: all-products
+    productCount: 9
+    children: []
+  - _id: d527ebf9-eb7b-9c72-fcd3-98e9beed57a6
+    name: hair care
+    slug: hair-products
+    productCount: 3
+    children: []
+  - _id: e6884ca4-623a-603e-e161-05a146e825e1
+    name: face care
+    slug: face-products
+    productCount: 3
+    children: []
