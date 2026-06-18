@@ -121,3 +121,9 @@ Create `src/pages/page.jay-html`:
 jay-stack validate
 jay-stack dev
 ```
+
+## Plugin-Contributed Guides
+
+| File | Plugin | Description |
+| --- | --- | --- |
+| [wix-media.md](wix-media.md) | wix-media | How to use images, video, documents, and audio from Wix Media Manager in jay-html templates. |
