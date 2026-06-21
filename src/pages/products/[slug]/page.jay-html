@@ -1,0 +1,389 @@
+<html>
+  <head>
+    <script type="application/jay-headless"
+            plugin="@jay-framework/wix-stores"
+            contract="product-page"
+            key="productPage"
+    ></script>
+    <script type="application/jay-headless"
+            plugin="@jay-framework/wix-stores"
+            contract="related-products"
+    ></script>
+    <title>{productPage.productName} | Onsko</title>
+    <meta name="description" content="Shop {productPage.productName} at Onsko. Clean beauty products for everyone.">
+    <script type="application/jay-headfull" src="../../../components/site-header/site-header" names="SiteHeader" contract="../../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../../components/site-footer/site-footer" names="SiteFooter" contract="../../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
+    <style>
+      /* =====================================================
+         ONSKO PRODUCT DETAIL PAGE - TWO COLUMN LAYOUT
+         Gallery left (~55%), details right (~45%)
+         ===================================================== */
+
+      .product-detail-page {
+        min-height: 100vh;
+      }
+
+      .product-container {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 48px var(--page-padding) 80px;
+      }
+
+      /* Two Column Layout */
+      .product-layout {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 64px;
+        align-items: start;
+      }
+
+      /* Gallery */
+      .product-gallery {
+        position: sticky;
+        top: 80px;
+      }
+
+      .product-main-image {
+        aspect-ratio: 1;
+        overflow: hidden;
+        background: var(--bg-product-image);
+        border-radius: var(--radius-xl);
+        margin-bottom: 16px;
+      }
+
+      .product-main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .product-thumbnails {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+      }
+
+      .product-thumbnail {
+        width: 72px;
+        height: 72px;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid var(--border-light);
+        border-radius: var(--radius-md);
+        background: var(--bg-product-image);
+        transition: border-color var(--transition-fast);
+        flex-shrink: 0;
+      }
+
+      .product-thumbnail:hover {
+        border-color: var(--accent);
+      }
+
+      .product-thumbnail.selected {
+        border-color: var(--text-primary);
+      }
+
+      .product-thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Details */
+      .product-details {
+        padding-top: 0;
+      }
+
+      .product-details h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 600;
+        line-height: 1.15;
+        margin-bottom: 12px;
+        letter-spacing: -0.01em;
+      }
+
+      .product-pricing {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .product-pricing .current-price {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--text-primary);
+      }
+
+      .product-pricing .strikethrough-price {
+        font-size: 18px;
+        color: var(--text-muted);
+        text-decoration: line-through;
+      }
+
+      .product-description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+        margin-bottom: 28px;
+      }
+
+      /* Options */
+      .product-options {
+        margin-bottom: 24px;
+      }
+
+      .option-group {
+        margin-bottom: 20px;
+      }
+
+      .option-choices {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      /* Modifiers */
+      .product-modifiers {
+        margin-bottom: 24px;
+      }
+
+      .modifier-group {
+        margin-bottom: 20px;
+      }
+
+      /* Quantity */
+      .quantity-section {
+        margin-bottom: 24px;
+      }
+
+      /* Action Buttons */
+      .product-actions {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .product-actions .btn {
+        flex: 1;
+      }
+
+      /* Info Sections Accordion */
+      .info-sections {
+        border-top: 1px solid var(--border);
+      }
+
+      .info-section {
+        border-bottom: 1px solid var(--border);
+      }
+
+      .info-section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        cursor: pointer;
+      }
+
+      .info-section-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .info-section-toggle {
+        font-size: 20px;
+        color: var(--text-muted);
+        line-height: 1;
+      }
+
+      .info-section-content {
+        padding: 0 0 18px;
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--text-secondary);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .product-layout {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .product-gallery {
+          position: static;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .product-container {
+          padding: 32px var(--page-padding) 60px;
+        }
+
+        .product-actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="product-detail-page">
+      <!-- Site Header -->
+      <jay:SiteHeader />
+
+      <!-- Product Detail -->
+      <div class="product-container">
+        <div class="product-layout">
+          <!-- Gallery (left ~55%) -->
+          <div class="product-gallery">
+            <div class="product-main-image">
+              <img src="{productPage.mediaGallery.selectedMedia.url}/v1/fill/w_800,h_800/file.webp" alt="{productPage.productName}" loading="eager" fetchpriority="high" width="800" height="800" />
+            </div>
+            <div class="product-thumbnails">
+              <div class="product-thumbnail {selected == selected ? selected}"
+                   forEach="productPage.mediaGallery.availableMedia"
+                   trackBy="mediaId"
+                   ref="productPage.mediaGallery.availableMedia.selected">
+                <img src="{media.url}/v1/fill/w_144,h_144/file.webp" alt="Thumbnail" loading="lazy" width="144" height="144" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Details (right ~45%) -->
+          <div class="product-details">
+            <h1>{productPage.productName}</h1>
+
+            <div class="product-pricing">
+              <span class="current-price">{productPage.price}</span>
+              <span class="strikethrough-price" if="productPage.strikethroughPrice">{productPage.strikethroughPrice}</span>
+            </div>
+
+            <div class="product-description">{productPage.description}</div>
+
+            <!-- Options -->
+            <div class="product-options" if="productPage.options">
+              <div class="option-group" forEach="productPage.options" trackBy="_id">
+                <label class="option-label">{name}</label>
+
+                <!-- Text Choices -->
+                <select class="select"
+                        if="optionRenderType == TEXT_CHOICES"
+                        ref="productPage.options.textChoice"
+                        aria-label="{name}">
+                  <option forEach="choices" trackBy="choiceId" value="{choiceId}">{name}</option>
+                </select>
+
+                <!-- Color Swatch Choices -->
+                <div class="option-choices" if="optionRenderType == COLOR_SWATCH_CHOICES">
+                  <button class="choice-btn color-swatch {isSelected ? selected} {!inStock ? out-of-stock}"
+                          style="background-color: {colorCode}"
+                          forEach="choices"
+                          trackBy="choiceId"
+                          ref="productPage.options.choices.choiceButton"
+                          title="{name}"
+                          aria-label="{name}">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modifiers -->
+            <div class="product-modifiers" if="productPage.modifiers">
+              <div class="modifier-group" forEach="productPage.modifiers" trackBy="_id">
+                <label class="option-label">{name}</label>
+
+                <select class="select"
+                        if="modifierType == TEXT_CHOICES"
+                        ref="productPage.modifiers.textModifier"
+                        aria-label="{name}">
+                  <option forEach="choices" trackBy="choiceId" value="{choiceId}">{name}</option>
+                </select>
+
+                <div class="option-choices" if="modifierType == COLOR_SWATCH_CHOICES">
+                  <button class="choice-btn color-swatch {isSelected ? selected}"
+                          style="background-color: {colorCode}"
+                          forEach="choices"
+                          trackBy="choiceId"
+                          ref="choiceButton"
+                          title="{name}"
+                          aria-label="{name}">
+                  </button>
+                </div>
+
+                <input class="input"
+                       type="text"
+                       if="modifierType == FREE_TEXT"
+                       ref="productPage.modifiers.textInput"
+                       placeholder="Enter your text"
+                       maxlength="{textInputLength}"
+                       aria-label="{name}" />
+              </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="quantity-section">
+              <label class="option-label">Quantity</label>
+              <div class="quantity-controls">
+                <button class="quantity-btn" ref="productPage.quantity.decrementButton" aria-label="Decrease quantity">−</button>
+                <input class="quantity-input"
+                       type="number"
+                       value="{productPage.quantity.quantity}"
+                       ref="productPage.quantity.quantity"
+                       min="1"
+                       aria-label="Quantity" />
+                <button class="quantity-btn" ref="productPage.quantity.incrementButton" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="product-actions">
+              <button class="btn btn-primary" ref="productPage.addToCartButton" aria-label="Add to cart">add to cart</button>
+              <button class="btn btn-secondary" ref="productPage.buyNowButton" aria-label="Buy now">buy now</button>
+            </div>
+
+            <!-- Info Sections Accordion -->
+            <div class="info-sections" if="productPage.infoSections">
+              <div class="info-section" forEach="productPage.infoSections" trackBy="_id">
+                <div class="info-section-header">
+                  <h2 class="info-section-title">{title}</h2>
+                  <span class="info-section-toggle">+</span>
+                </div>
+                <div class="info-section-content">{plainDescription}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Related Products -->
+      <jay:related-products productId="{productPage._id}" categorySlug="{productPage.categorySlug}" limit="4">
+        <section class="related-section" if="hasProducts">
+          <h2 class="section-title">best sellers</h2>
+          <div class="related-grid">
+            <article class="product-card {isAddingToCart ? is-adding}" forEach="products" trackBy="_id">
+              <a href="{productUrl}" class="product-card-image">
+                <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
+                <span class="badge badge-accent ribbon" if="hasRibbon">{ribbon.name}</span>
+              </a>
+              <div class="product-card-content">
+                <h2 class="product-card-name"><a href="{productUrl}" ref="products.productLink">{name}</a></h2>
+                <div class="product-card-price">
+                  <span class="current-price">{price}</span>
+                  <span class="original-price" if="hasDiscount">{strikethroughPrice}</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </jay:related-products>
+
+      <!-- Site Footer -->
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>

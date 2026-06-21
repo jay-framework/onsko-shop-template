@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>Accessibility Statement | Onsko</title>
+    <meta name="description" content="Accessibility Statement for Onsko beauty store.">
+    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+  </head>
+  <body>
+    <main class="policy-page-wrapper">
+      <jay:SiteHeader />
+
+      <div class="policy-container">
+        <h1 class="policy-title">Accessibility Statement</h1>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Our Commitment</h2>
+          <div class="policy-body">
+            <p>We are committed to making our website accessible to all users, including those with disabilities. We strive to conform with the Web Content Accessibility Guidelines (WCAG) 2.1 at the AA level.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Accessibility Adjustments</h2>
+          <div class="policy-body">
+            <p>Our website has been adjusted for accessibility in the following ways: clear heading structure and content order; descriptive alt text for images; sufficient color contrast for readability; keyboard-navigable interface; readable font sizes and scalable layouts; accessible form labels and error messages.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Third-Party Content</h2>
+          <div class="policy-body">
+            <p>While we strive for full accessibility, some third-party content integrated into our website may not fully meet all accessibility standards. We are working with our partners to improve this.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Contact Us</h2>
+          <div class="policy-body">
+            <p>If you encounter any accessibility issues or have suggestions for improvement, please contact us at info@mysite.com or call 123-456-7890. We take all feedback seriously and will make every effort to accommodate your needs.</p>
+          </div>
+        </div>
+      </div>
+
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>

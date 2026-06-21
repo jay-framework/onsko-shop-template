@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Terms & Conditions | Onsko</title>
+    <meta name="description" content="Terms and Conditions for Onsko beauty store.">
+    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+  </head>
+  <body>
+    <main class="policy-page-wrapper">
+      <jay:SiteHeader />
+
+      <div class="policy-container">
+        <h1 class="policy-title">Terms & Conditions</h1>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">A Legal Disclaimer</h2>
+          <div class="policy-body">
+            <p>The explanations and information provided on this page are only general and high-level explanations and information on how to write your own document of Terms and Conditions. It should not be relied upon as legal advice or as recommendations on what you should actually do. We recommend that you seek legal advice to help you understand and to assist you in the creation of your Terms and Conditions.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Terms & Conditions – The Basics</h2>
+          <div class="policy-body">
+            <p>Terms and Conditions are the agreement between you and the user that sets the legal boundaries of the service you provide. T&C can be used as a legal document to establish the rights and obligations of both you and the user in regards to using the site.</p>
+            <p>T&C can cover many areas, including intellectual property rights, scope of service, and how you want users to behave.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">What to Include in T&C</h2>
+          <div class="policy-body">
+            <p>Generally speaking, T&C for an e-commerce site often addresses: payment methods accepted and payment terms; product warranties or lack thereof; intellectual property and copyright protections; the right to suspend or cancel user accounts; limitations of liability; and how disputes will be resolved.</p>
+          </div>
+        </div>
+      </div>
+
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>

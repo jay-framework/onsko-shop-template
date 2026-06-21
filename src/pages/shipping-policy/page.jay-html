@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Shipping Policy | Onsko</title>
+    <meta name="description" content="Shipping Policy for Onsko beauty store.">
+    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+  </head>
+  <body>
+    <main class="policy-page-wrapper">
+      <jay:SiteHeader />
+
+      <div class="policy-container">
+        <h1 class="policy-title">Shipping Policy</h1>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">A Legal Disclaimer</h2>
+          <div class="policy-body">
+            <p>The explanations and information provided on this page are only general and high-level explanations and information on how to write your own Shipping Policy. It should not be relied upon as legal advice. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Shipping Policy.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Shipping Policy – The Basics</h2>
+          <div class="policy-body">
+            <p>A Shipping Policy outlines the terms and procedures related to shipping products purchased from your website. It helps set customer expectations about delivery times, costs, and procedures.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">What to Include in the Shipping Policy</h2>
+          <div class="policy-body">
+            <p>Generally speaking, a Shipping Policy typically includes: order processing times; shipping costs and free shipping thresholds; domestic and international shipping options; estimated delivery times; how to track an order; what happens if a package is lost or damaged; and any shipping restrictions or interruptions.</p>
+          </div>
+        </div>
+      </div>
+
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script type="application/jay-data">
+      data:
+    </script>
+  </head>
+  <body>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h3>shop</h3>
+            <a href="/">home</a>
+            <a href="/products">shop</a>
+          </div>
+          <div class="footer-col">
+            <h3>policy</h3>
+            <a href="/terms-and-conditions">terms & conditions</a>
+            <a href="/privacy-policy">privacy policy</a>
+            <a href="/refund-policy">refund policy</a>
+            <a href="/shipping-policy">shipping policy</a>
+            <a href="/accessibility">accessibility statement</a>
+          </div>
+          <div class="footer-col">
+            <h3>contact</h3>
+            <p>500 terry francine street</p>
+            <p>san francisco, ca 94158</p>
+            <p>info@mysite.com</p>
+            <p>123-456-7890</p>
+          </div>
+          <div class="footer-col footer-newsletter">
+            <h3>subscribe to our newsletter</h3>
+            <p>be the first to know about our hottest discounts</p>
+            <label for="footer-email">Email *</label>
+            <input type="email" id="footer-email" class="input" placeholder="your email" aria-label="Email for newsletter" />
+            <label class="newsletter-checkbox">
+              <input type="checkbox" /> Yes, subscribe me to your newsletter. *
+            </label>
+            <button class="btn btn-cta">subscribe</button>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-logo"><span class="logo-icon-large">✻</span> onsko</div>
+          <div class="footer-meta">
+            <p>&copy; 2035 by onsko</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="TikTok">TT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

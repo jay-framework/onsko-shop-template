@@ -1,0 +1,418 @@
+<html>
+  <head>
+    <script type="application/jay-headless"
+            plugin="@jay-framework/wix-stores"
+            contract="product-search"
+            key="productSearch"
+    ></script>
+    <title>All Products | Onsko</title>
+    <meta name="description" content="Shop clean beauty products for face, body, and hair at Onsko.">
+    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+    <style>
+      /* =====================================================
+         ONSKO PRODUCTS PAGE - SIDEBAR + 3-COLUMN GRID
+         ===================================================== */
+
+      .shop-page {
+        min-height: 100vh;
+      }
+
+      /* Page Hero */
+      .shop-hero {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 48px var(--page-padding) 32px;
+      }
+
+      .shop-hero .page-title {
+        margin-bottom: 8px;
+      }
+
+      .shop-hero .page-subtitle {
+        color: var(--text-secondary);
+        font-size: 15px;
+        max-width: 480px;
+      }
+
+      /* Shop Layout — sidebar left + grid right */
+      .shop-layout {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 0 var(--page-padding) 80px;
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 48px;
+      }
+
+      /* Sidebar */
+      .shop-sidebar {
+        position: sticky;
+        top: 80px;
+        align-self: start;
+      }
+
+      .sidebar-section {
+        margin-bottom: 32px;
+      }
+
+      .sidebar-section-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--text-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .category-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .category-list label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 0;
+        font-size: 14px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: color var(--transition-fast);
+      }
+
+      .category-list label:hover {
+        color: var(--text-primary);
+      }
+
+      .category-list input[type="checkbox"] {
+        display: none;
+      }
+
+      .sidebar-price-range {
+        display: flex;
+        gap: 12px;
+      }
+
+      .sidebar-price-range .input {
+        width: 100%;
+        padding: 10px 12px;
+      }
+
+      .in-stock-label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: color var(--transition-fast);
+      }
+
+      .in-stock-label:hover {
+        color: var(--text-primary);
+      }
+
+      .clear-filters-btn {
+        margin-top: 8px;
+      }
+
+      /* Results Area */
+      .shop-results {
+        min-width: 0;
+      }
+
+      .results-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .results-count {
+        font-size: 14px;
+        color: var(--text-secondary);
+      }
+
+      .results-count strong {
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      /* 3-column product grid */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+
+      /* Product card layout consistency */
+      .products-grid .product-card {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .products-grid .product-card-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .products-grid .product-card-price {
+        margin-top: auto;
+      }
+
+      .products-grid .btn-block {
+        margin-top: 12px;
+      }
+
+      /* Pagination */
+      .load-more-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-top: 48px;
+        padding-top: 32px;
+        border-top: 1px solid var(--border-light);
+      }
+
+      .load-more-info {
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      /* Loading overlay */
+      .loading-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(249, 245, 240, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        backdrop-filter: blur(4px);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .shop-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .shop-sidebar {
+          position: static;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 24px;
+        }
+
+        .sidebar-section {
+          margin-bottom: 0;
+        }
+
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .shop-sidebar {
+          grid-template-columns: 1fr;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .shop-hero {
+          padding: 32px var(--page-padding) 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shop-page">
+      <!-- Site Header -->
+      <jay:SiteHeader />
+
+      <!-- Loading Overlay -->
+      <div class="loading-overlay" if="productSearch.isSearching">
+        <div class="loading-spinner"></div>
+      </div>
+
+      <!-- Page Hero -->
+      <section class="shop-hero">
+        <h1 class="page-title">all products</h1>
+        <p class="page-subtitle">Clean beauty essentials for face, body, and hair — crafted with care.</p>
+      </section>
+
+      <!-- Main Shop Layout -->
+      <div class="shop-layout">
+        <!-- Sidebar -->
+        <aside class="shop-sidebar" aria-label="Product filters">
+          <!-- Browse by Category -->
+          <div class="sidebar-section">
+            <h2 class="sidebar-section-title">browse by</h2>
+            <div class="category-list" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
+              <label>
+                <input type="checkbox" ref="productSearch.filters.categoryFilter.categories.isSelected" />
+                {categoryName}
+              </label>
+            </div>
+          </div>
+
+          <!-- Filter by Price -->
+          <div class="sidebar-section">
+            <h2 class="sidebar-section-title">filter by</h2>
+            <p class="label" style="margin-bottom: 10px;">price range</p>
+            <div class="sidebar-price-range">
+              <input
+                class="input"
+                type="number"
+                placeholder="Min"
+                value="{productSearch.filters.priceRange.minPrice}"
+                ref="productSearch.filters.priceRange.minPrice"
+                aria-label="Minimum price"
+              />
+              <input
+                class="input"
+                type="number"
+                placeholder="Max"
+                value="{productSearch.filters.priceRange.maxPrice}"
+                ref="productSearch.filters.priceRange.maxPrice"
+                aria-label="Maximum price"
+              />
+            </div>
+          </div>
+
+          <!-- In Stock Only -->
+          <div class="sidebar-section">
+            <label class="in-stock-label">
+              <input type="checkbox" ref="productSearch.filters.inStockOnly" />
+              in stock only
+            </label>
+          </div>
+
+          <!-- Clear Filters -->
+          <div class="sidebar-section">
+            <button class="btn btn-ghost btn-sm btn-block clear-filters-btn" ref="productSearch.filters.clearFilters">
+              clear filters
+            </button>
+          </div>
+        </aside>
+
+        <!-- Results -->
+        <section class="shop-results">
+          <!-- Results Header -->
+          <div class="results-header">
+            <p class="results-count">
+              showing <strong>{productSearch.loadedCount}</strong> of <strong>{productSearch.totalCount}</strong> products
+            </p>
+            <select class="select" ref="productSearch.sortBy.sortDropdown" aria-label="Sort products">
+              <option value="relevance">relevance</option>
+              <option value="newest">newest</option>
+              <option value="priceAsc">price: low to high</option>
+              <option value="priceDesc">price: high to low</option>
+              <option value="nameAsc">name: A–Z</option>
+              <option value="nameDesc">name: Z–A</option>
+            </select>
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" if="!productSearch.hasResults">
+            <div class="empty-state-icon">✻</div>
+            <h2 class="empty-state-title">no products found</h2>
+            <p class="empty-state-message">{productSearch.emptyStateMessage}</p>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="products-grid" if="productSearch.hasResults">
+            <article class="product-card {isAddingToCart ? is-adding}" forEach="productSearch.searchResults" trackBy="_id">
+              <a href="{productUrl}" class="product-card-image">
+                <img
+                  src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp"
+                  alt="{thumbnail.altText}"
+                  loading="lazy"
+                  width="600"
+                  height="600"
+                  fetchpriority="high"
+                />
+                <!-- Ribbon Badge -->
+                <span class="badge badge-accent ribbon" if="hasRibbon">{ribbon.name}</span>
+              </a>
+              <div class="product-card-content">
+                <h2 class="product-card-name">
+                  <a href="{productUrl}" ref="productSearch.searchResults.productLink">{name}</a>
+                </h2>
+                <div class="product-card-price">
+                  <span class="current-price">{price}</span>
+                  <span class="original-price" if="hasDiscount">{strikethroughPrice}</span>
+                  <span class="badge badge-error" if="hasDiscount">sale</span>
+                </div>
+
+                <!-- Quick Add — simple product in stock -->
+                <button
+                  class="btn btn-primary btn-block"
+                  ref="productSearch.searchResults.addToCartButton"
+                  if="quickAddType === SIMPLE && inventory.availabilityStatus === IN_STOCK"
+                >
+                  add to cart
+                </button>
+
+                <!-- View Options — needs configuration, not out of stock -->
+                <a
+                  href="{productUrl}"
+                  class="btn btn-secondary btn-block"
+                  ref="productSearch.searchResults.viewOptionsButton"
+                  if="quickAddType === NEEDS_CONFIGURATION && inventory.availabilityStatus !== OUT_OF_STOCK"
+                >
+                  view options
+                </a>
+
+                <!-- Sold Out -->
+                <button
+                  class="btn btn-ghost btn-block"
+                  disabled
+                  if="inventory.availabilityStatus === OUT_OF_STOCK"
+                >
+                  sold out
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Load More -->
+          <div class="load-more-section" if="productSearch.hasResults">
+            <span class="load-more-info">
+              {productSearch.loadedCount} of {productSearch.totalCount} products
+            </span>
+            <button
+              class="btn btn-secondary"
+              ref="productSearch.loadMoreButton"
+              if="productSearch.hasMore && !productSearch.isSearching"
+            >
+              load more
+            </button>
+            <span class="load-more-info" if="!productSearch.hasMore && productSearch.totalCount > 0">
+              all products shown
+            </span>
+          </div>
+        </section>
+      </div>
+
+      <!-- Site Footer -->
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>

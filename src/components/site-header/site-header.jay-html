@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="application/jay-headless"
+            plugin="@jay-framework/wix-cart"
+            contract="cart-indicator"
+    ></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="site-logo"><span class="logo-icon">✻</span> onsko</a>
+        <nav class="site-nav">
+          <a href="/">home</a>
+          <a href="/products">shop</a>
+        </nav>
+        <div class="header-actions">
+          <jay:cart-indicator>
+            <a href="/cart"
+               class="cart-indicator {hasItems ? has-items} {isLoading ? is-loading} {justAdded ? just-added}"
+               ref="cartLink">
+              <span class="cart-indicator-icon">🛒</span>
+              <span class="cart-indicator-count" if="hasItems">{itemCount}</span>
+            </a>
+          </jay:cart-indicator>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

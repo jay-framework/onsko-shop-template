@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Refund Policy | Onsko</title>
+    <meta name="description" content="Refund Policy for Onsko beauty store.">
+    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+  </head>
+  <body>
+    <main class="policy-page-wrapper">
+      <jay:SiteHeader />
+
+      <div class="policy-container">
+        <h1 class="policy-title">Refund Policy</h1>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">A Legal Disclaimer</h2>
+          <div class="policy-body">
+            <p>The explanations and information provided on this page are only general and high-level explanations and information on how to write your own Refund Policy. It should not be relied upon as legal advice. We recommend that you seek legal advice to help you understand and to assist you in the creation of your own Refund Policy.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">Refund Policy – The Basics</h2>
+          <div class="policy-body">
+            <p>A Refund Policy is a legal document that outlines the conditions under which customers can return purchased products and receive refunds. It sets expectations for both the business and customers regarding refunds, exchanges, and returns.</p>
+          </div>
+        </div>
+
+        <div class="policy-section">
+          <h2 class="policy-heading">What to Include in the Refund Policy</h2>
+          <div class="policy-body">
+            <p>Generally speaking, a Refund Policy typically includes: the time frame within which returns are accepted; conditions for full or partial refunds; whether the product must be unused or in its original packaging; how to initiate a return or exchange; who pays for return shipping; and how long it takes to process the refund.</p>
+          </div>
+        </div>
+      </div>
+
+      <jay:SiteFooter />
+    </main>
+  </body>
+</html>
