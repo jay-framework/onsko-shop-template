@@ -1,0 +1,7 @@
+name: home-page
+tags:
+  - tag: headerHidden
+    type: variant
+    dataType: boolean
+    phase: fast+interactive
+    description: Whether the header is hidden due to scroll position

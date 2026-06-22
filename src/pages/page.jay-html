@@ -4,9 +4,7 @@
     <meta name="description" content="Discover clean beauty products for face, body, and hair. Beauty that reflects your spirit.">
     <script type="application/jay-headless" plugin="@jay-framework/wix-cart" contract="cart-indicator"></script>
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
-    <script type="application/jay-data">
-      data:
-    </script>
+    <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
     <style>
       /* ── White body for hero gap ── */
@@ -17,28 +15,22 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        padding: 20px 16px 8px;
-        margin-bottom: -80px;
-        animation: header-slide-out linear both;
-        animation-timeline: scroll();
-        animation-range: 45% 55%;
+        padding: 50px 50px 0;
+        margin-bottom: -97px;
+        transition: transform 0.5s ease, opacity 0.5s ease;
       }
 
-      @keyframes header-slide-out {
-        from {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        to {
-          transform: translateY(-110%);
-          opacity: 0;
-        }
+      .home-header.header-hidden {
+        transform: translateY(-110%);
+        opacity: 0;
+        transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
       }
 
       .home-header-bar {
         background: #ffffff;
-        border-radius: 16px;
+        border-radius: var(--radius-full);
         box-shadow: var(--shadow-md);
+        height: 47px;
       }
 
       .home-header-inner {
@@ -46,7 +38,8 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-        padding: 14px var(--page-padding);
+        height: 100%;
+        padding: 0 24px;
         gap: 32px;
       }
 
@@ -153,8 +146,8 @@
       }
 
       @media (max-width: 768px) {
-        .home-header { padding: 16px 8px 6px; margin-bottom: -70px; }
-        .home-header-inner { padding: 12px 16px; gap: 16px; }
+        .home-header { padding: 24px 16px 0; margin-bottom: -71px; }
+        .home-header-inner { padding: 0 16px; gap: 16px; }
         .home-nav { gap: 14px; }
         .home-header-actions { gap: 12px; }
         .home-search-label { display: none; }
@@ -171,15 +164,15 @@
         position: relative;
         min-height: 80vh;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        align-items: flex-end;
+        justify-content: flex-start;
+        text-align: left;
         background: linear-gradient(135deg, #e87a4a 0%, #d4643a 30%, #3d7a5e 70%, #2d5d45 100%);
         color: #fff;
         overflow: hidden;
-        padding: 80px var(--page-padding);
-        margin: 8px 12px 0;
-        border-radius: 20px 20px 0 0;
+        padding: 60px 40px 40px;
+        margin: 25px;
+        border-radius: 20px;
       }
 
       .hero-bg-image {
@@ -191,26 +184,42 @@
         z-index: 0;
       }
 
-      .hero-content { position: relative; z-index: 2; }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 520px;
+      }
 
       .hero h1 {
         font-size: clamp(48px, 10vw, 96px);
         font-weight: 700;
         line-height: 1;
-        margin-bottom: 16px;
+        margin-bottom: 0;
         letter-spacing: -0.02em;
       }
 
       .hero p {
-        font-size: 18px;
-        opacity: 0.9;
-        margin-bottom: 32px;
+        font-family: var(--font-primary);
+        font-size: clamp(18px, 2.5vw, 24px);
+        font-style: normal;
+        opacity: 0.95;
+        margin-bottom: 15px;
         font-weight: 400;
+        line-height: 1.3;
       }
 
       .hero .btn-cta {
-        padding: 14px 40px;
-        font-size: 15px;
+        padding: 10px 64px;
+        font-size: 18px;
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        border-radius: var(--radius-lg);
+      }
+
+      .hero .btn-cta:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #fff;
       }
 
       .best-sellers {
@@ -239,6 +248,41 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 24px;
+      }
+
+      .best-sellers .product-card {
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+
+      .best-sellers .product-card:hover {
+        box-shadow: none;
+        transform: none;
+      }
+
+      .best-sellers .product-card-image {
+        aspect-ratio: 4 / 5;
+        border-radius: 20px;
+      }
+
+      .best-sellers .product-card-content {
+        padding: 12px 4px;
+        background: transparent;
+      }
+
+      .best-seller-badge {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        z-index: 2;
+        background: var(--bg-header);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 5px 14px;
+        border-radius: var(--radius-full);
+        letter-spacing: 0.02em;
       }
 
       .shipping-banner {
@@ -459,7 +503,7 @@
   </head>
   <body>
     <main class="home-page">
-      <header class="home-header">
+      <header class="home-header {headerHidden ? header-hidden}">
         <div class="home-header-bar">
           <div class="home-header-inner">
             <a href="/" class="home-logo"><span class="home-logo-icon">✻</span> onsko</a>
@@ -505,6 +549,7 @@
         <div class="best-sellers-grid">
           <a href="/products" class="product-card">
             <div class="product-card-image">
+              <span class="best-seller-badge">best seller</span>
               <img src="https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Repairing hair mask" loading="lazy" width="600" height="600" />
             </div>
             <div class="product-card-content">
@@ -514,6 +559,7 @@
           </a>
           <a href="/products" class="product-card">
             <div class="product-card-image">
+              <span class="best-seller-badge">best seller</span>
               <img src="https://static.wixstatic.com/media/c569b3_86ed1e83b7a54ec081b49bcd4b4b524d~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Deep hydration cream" loading="lazy" width="600" height="600" />
             </div>
             <div class="product-card-content">
@@ -523,6 +569,7 @@
           </a>
           <a href="/products" class="product-card">
             <div class="product-card-image">
+              <span class="best-seller-badge">best seller</span>
               <img src="https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Luminous eye cream" loading="lazy" width="600" height="600" />
             </div>
             <div class="product-card-content">
@@ -532,6 +579,7 @@
           </a>
           <a href="/products" class="product-card">
             <div class="product-card-image">
+              <span class="best-seller-badge">best seller</span>
               <img src="https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Hydrating moisturizer" loading="lazy" width="600" height="600" />
             </div>
             <div class="product-card-content">
