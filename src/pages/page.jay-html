@@ -176,6 +176,17 @@
         border-radius: 20px;
       }
 
+      @keyframes hero-float-in {
+        0% {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .hero-bg-image {
         position: absolute;
         inset: 0;
@@ -183,12 +194,38 @@
         height: 100%;
         object-fit: cover;
         z-index: 0;
+        animation: hero-float-in 0.7s ease-out both;
+      }
+
+      @keyframes hero-slide-up {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
       }
 
       .hero-content {
         position: relative;
         z-index: 2;
         max-width: 520px;
+      }
+
+      .hero-line-clip {
+        overflow: hidden;
+      }
+
+      .hero-line-clip > * {
+        animation: hero-slide-up 0.8s ease-out both;
+      }
+
+      .hero-line-clip:nth-child(2) > * {
+        animation-delay: 0.15s;
+      }
+
+      .hero-line-clip:nth-child(3) > * {
+        animation-delay: 0.3s;
       }
 
       .hero h1 {
@@ -536,9 +573,9 @@
       <section class="hero">
         <img class="hero-bg-image" src="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920,h_1080/file.webp" alt="Onsko beauty products" loading="eager" width="1920" height="1080" fetchpriority="high" />
         <div class="hero-content">
-          <h1>shine on</h1>
-          <p>beauty that reflects your spirit</p>
-          <a href="/products" class="btn btn-cta btn-lg">shop now</a>
+          <div class="hero-line-clip"><h1>shine on</h1></div>
+          <div class="hero-line-clip"><p>beauty that reflects your spirit</p></div>
+          <div class="hero-line-clip"><a href="/products" class="btn btn-cta btn-lg">shop now</a></div>
         </div>
       </section>
 
