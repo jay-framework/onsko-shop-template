@@ -3,6 +3,7 @@
     <title>Onsko | Clean Beauty Products</title>
     <meta name="description" content="Discover clean beauty products for face, body, and hair. Beauty that reflects your spirit.">
     <script type="application/jay-headless" plugin="@jay-framework/wix-cart" contract="cart-indicator"></script>
+    <script type="application/jay-headless" plugin="@jay-framework/wix-stores" contract="product-search"></script>
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
@@ -23,7 +24,7 @@
       .home-header.header-hidden {
         transform: translateY(-110%);
         opacity: 0;
-        transition: transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s;
+        transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.5s;
       }
 
       .home-header-bar {
@@ -541,54 +542,26 @@
         </div>
       </section>
 
-      <section class="best-sellers">
-        <div class="best-sellers-header">
-          <h2 class="section-title">best sellers</h2>
-          <a href="/products" class="view-more-link">view more →</a>
-        </div>
-        <div class="best-sellers-grid">
-          <a href="/products" class="product-card">
-            <div class="product-card-image">
-              <span class="best-seller-badge">best seller</span>
-              <img src="https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Repairing hair mask" loading="lazy" width="600" height="600" />
-            </div>
-            <div class="product-card-content">
-              <h3 class="product-card-name">repairing hair mask</h3>
-              <div class="product-card-price"><span class="current-price">$95.00</span></div>
-            </div>
-          </a>
-          <a href="/products" class="product-card">
-            <div class="product-card-image">
-              <span class="best-seller-badge">best seller</span>
-              <img src="https://static.wixstatic.com/media/c569b3_86ed1e83b7a54ec081b49bcd4b4b524d~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Deep hydration cream" loading="lazy" width="600" height="600" />
-            </div>
-            <div class="product-card-content">
-              <h3 class="product-card-name">deep hydration cream</h3>
-              <div class="product-card-price"><span class="current-price">$36.00</span></div>
-            </div>
-          </a>
-          <a href="/products" class="product-card">
-            <div class="product-card-image">
-              <span class="best-seller-badge">best seller</span>
-              <img src="https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Luminous eye cream" loading="lazy" width="600" height="600" />
-            </div>
-            <div class="product-card-content">
-              <h3 class="product-card-name">luminous eye cream</h3>
-              <div class="product-card-price"><span class="current-price">$26.00</span></div>
-            </div>
-          </a>
-          <a href="/products" class="product-card">
-            <div class="product-card-image">
-              <span class="best-seller-badge">best seller</span>
-              <img src="https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_600,h_600/file.webp" alt="Hydrating moisturizer" loading="lazy" width="600" height="600" />
-            </div>
-            <div class="product-card-content">
-              <h3 class="product-card-name">hydrating moisturizer</h3>
-              <div class="product-card-price"><span class="current-price">$26.00</span></div>
-            </div>
-          </a>
-        </div>
-      </section>
+      <jay:product-search category="best-sellers">
+        <section class="best-sellers">
+          <div class="best-sellers-header">
+            <h2 class="section-title">best sellers</h2>
+            <a href="/products" class="view-more-link">view more →</a>
+          </div>
+          <div class="best-sellers-grid">
+            <a href="{productUrl}" class="product-card" forEach="searchResults" trackBy="_id">
+              <div class="product-card-image">
+                <span class="best-seller-badge">best seller</span>
+                <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
+              </div>
+              <div class="product-card-content">
+                <h3 class="product-card-name">{name}</h3>
+                <div class="product-card-price"><span class="current-price">{price}</span></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </jay:product-search>
 
       <div class="shipping-banner">
         <div class="marquee">
