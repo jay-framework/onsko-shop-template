@@ -11,6 +11,17 @@
       /* ── White body for hero gap ── */
       body { background: #ffffff; }
 
+      @keyframes header-float-in {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       /* ── Homepage Unique Header ── */
       .home-header {
         position: sticky;
@@ -19,6 +30,7 @@
         padding: 50px 50px 0;
         margin-bottom: -97px;
         transition: transform 0.5s ease, opacity 0.5s ease;
+        animation: header-float-in 0.7s ease-out both;
       }
 
       .home-header.header-hidden {
