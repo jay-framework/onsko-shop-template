@@ -273,10 +273,12 @@
       }
 
       .best-sellers {
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 64px var(--page-padding);
         background: var(--bg-primary);
+        padding: 64px var(--page-padding);
+      }
+
+      .best-sellers-inner {
+        width: 100%;
       }
 
       /* ── Scroll-triggered animation ── */
@@ -298,13 +300,25 @@
         margin-bottom: 32px;
       }
 
-      .view-more-link {
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--accent);
+      .best-sellers-header .section-title {
+        font-size: clamp(32px, 4vw, 42px);
+        font-weight: 700;
       }
 
-      .view-more-link:hover { text-decoration: underline; }
+      .view-more-link {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-primary);
+        padding: 10px 28px;
+        border: 2px solid var(--border, #d4d4d4);
+        border-radius: var(--radius-full);
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .view-more-link:hover {
+        background-color: var(--bg-secondary, #f5f5f5);
+        border-color: var(--text-primary);
+      }
 
       .best-sellers-grid {
         display: grid;
@@ -557,13 +571,24 @@
       }
 
       @media (max-width: 768px) {
+        .best-sellers { padding: 48px var(--page-padding); }
+        .best-sellers-header { margin-bottom: 24px; }
+        .best-sellers-header .section-title { font-size: clamp(26px, 5vw, 32px); }
+        .view-more-link { padding: 8px 20px; font-size: 14px; }
+        .best-sellers-grid { gap: 16px; }
         .category-cards { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         .new-arrivals-images { grid-template-columns: 1fr; }
         .instagram-grid { grid-template-columns: repeat(3, 1fr); }
       }
 
       @media (max-width: 600px) {
-        .best-sellers-grid { grid-template-columns: 1fr; }
+        .best-sellers-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .view-more-link { align-self: flex-start; }
+        .best-sellers-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         .instagram-grid { grid-template-columns: repeat(2, 1fr); }
       }
     </style>
@@ -610,21 +635,23 @@
 
       <jay:product-search category="best-sellers">
         <section class="best-sellers">
-          <div class="best-sellers-header scroll-animate">
-            <h2 class="section-title">best sellers</h2>
-            <a href="/products" class="view-more-link">view more →</a>
-          </div>
-          <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
-            <a href="{productUrl}" class="product-card" forEach="searchResults" trackBy="_id">
-              <div class="product-card-image">
-                <span class="best-seller-badge">best seller</span>
-                <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
-              </div>
-              <div class="product-card-content">
-                <h3 class="product-card-name">{name}</h3>
-                <div class="product-card-price"><span class="current-price">{price}</span></div>
-              </div>
-            </a>
+          <div class="best-sellers-inner">
+            <div class="best-sellers-header scroll-animate">
+              <h2 class="section-title">best sellers</h2>
+              <a href="/products" class="view-more-link">view more</a>
+            </div>
+            <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
+              <a href="{productUrl}" class="product-card" forEach="searchResults" trackBy="_id">
+                <div class="product-card-image">
+                  <span class="best-seller-badge">best seller</span>
+                  <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
+                </div>
+                <div class="product-card-content">
+                  <h3 class="product-card-name">{name}</h3>
+                  <div class="product-card-price"><span class="current-price">{price}</span></div>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
       </jay:product-search>
