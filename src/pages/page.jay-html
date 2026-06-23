@@ -279,6 +279,18 @@
         background: var(--bg-primary);
       }
 
+      /* ── Scroll-triggered animation ── */
+      .scroll-animate {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: none;
+      }
+
+      .scroll-animate.in-view {
+        animation: hero-float-in 0.7s ease-out both;
+        animation-delay: var(--scroll-delay, 0s);
+      }
+
       .best-sellers-header {
         display: flex;
         justify-content: space-between;
@@ -598,11 +610,11 @@
 
       <jay:product-search category="best-sellers">
         <section class="best-sellers">
-          <div class="best-sellers-header">
+          <div class="best-sellers-header scroll-animate">
             <h2 class="section-title">best sellers</h2>
             <a href="/products" class="view-more-link">view more →</a>
           </div>
-          <div class="best-sellers-grid">
+          <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
             <a href="{productUrl}" class="product-card" forEach="searchResults" trackBy="_id">
               <div class="product-card-image">
                 <span class="best-seller-badge">best seller</span>
