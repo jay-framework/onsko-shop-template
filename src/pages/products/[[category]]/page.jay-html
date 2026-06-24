@@ -5,14 +5,14 @@
             contract="product-search"
             key="productSearch"
     ></script>
-    <title>All Products | Onsko</title>
-    <meta name="description" content="Shop clean beauty products for face, body, and hair at Onsko.">
-    <script type="application/jay-headfull" src="../../components/site-header/site-header" names="SiteHeader" contract="../../components/site-header/site-header.jay-contract"></script>
-    <script type="application/jay-headfull" src="../../components/site-footer/site-footer" names="SiteFooter" contract="../../components/site-footer/site-footer.jay-contract"></script>
+    <title>{productSearch.categoryHeader.name} | Onsko</title>
+    <meta name="description" content="{productSearch.categoryHeader.description}">
+    <script type="application/jay-headfull" src="../../../components/site-header/site-header" names="SiteHeader" contract="../../../components/site-header/site-header.jay-contract"></script>
+    <script type="application/jay-headfull" src="../../../components/site-footer/site-footer" names="SiteFooter" contract="../../../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data">
       data:
     </script>
-    <link rel="stylesheet" href="../../styles/onsko-theme.css" />
+    <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
     <style>
       /* =====================================================
          ONSKO PRODUCTS PAGE - SIDEBAR + 3-COLUMN GRID
@@ -20,6 +20,37 @@
 
       .shop-page {
         min-height: 100vh;
+      }
+
+      /* Breadcrumbs */
+      .shop-breadcrumbs {
+        max-width: var(--container-max);
+        margin: 0 auto;
+        padding: 16px var(--page-padding) 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--text-muted);
+      }
+
+      .shop-breadcrumbs a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color var(--transition-fast);
+      }
+
+      .shop-breadcrumbs a:hover {
+        color: var(--text-primary);
+      }
+
+      .shop-breadcrumbs .breadcrumb-separator {
+        color: var(--text-muted);
+      }
+
+      .shop-breadcrumbs .breadcrumb-current {
+        color: var(--text-primary);
+        font-weight: 600;
       }
 
       /* Page Hero */
@@ -37,6 +68,12 @@
         color: var(--text-secondary);
         font-size: 15px;
         max-width: 480px;
+      }
+
+      .shop-hero .category-count {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-top: 4px;
       }
 
       /* Shop Layout — sidebar left + grid right */
@@ -77,23 +114,22 @@
         gap: 6px;
       }
 
-      .category-list label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
+      .category-list a {
+        display: block;
         padding: 6px 0;
         font-size: 14px;
         color: var(--text-secondary);
-        cursor: pointer;
+        text-decoration: none;
         transition: color var(--transition-fast);
       }
 
-      .category-list label:hover {
+      .category-list a:hover {
         color: var(--text-primary);
       }
 
-      .category-list input[type="checkbox"] {
-        display: none;
+      .category-list a.active {
+        color: var(--text-primary);
+        font-weight: 600;
       }
 
       .sidebar-price-range {
@@ -238,6 +274,10 @@
         .shop-hero {
           padding: 32px var(--page-padding) 24px;
         }
+
+        .shop-breadcrumbs {
+          padding-top: 12px;
+        }
       }
     </style>
   </head>
@@ -251,10 +291,19 @@
         <div class="loading-spinner"></div>
       </div>
 
+      <!-- Breadcrumbs -->
+      <nav class="shop-breadcrumbs" aria-label="Breadcrumb" if="productSearch.categoryHeader.breadcrumbs">
+        <span forEach="productSearch.categoryHeader.breadcrumbs" trackBy="categoryId">
+          <span class="breadcrumb-separator">/</span>
+          <a href="{url}">{name}</a>
+        </span>
+      </nav>
+
       <!-- Page Hero -->
       <section class="shop-hero">
-        <h1 class="page-title">all products</h1>
-        <p class="page-subtitle">Clean beauty essentials for face, body, and hair — crafted with care.</p>
+        <h1 class="page-title">{productSearch.categoryHeader.name}</h1>
+        <p class="page-subtitle" if="productSearch.categoryHeader.description">{productSearch.categoryHeader.description}</p>
+        <p class="category-count">{productSearch.categoryHeader.productCount} products</p>
       </section>
 
       <!-- Main Shop Layout -->
@@ -264,11 +313,11 @@
           <!-- Browse by Category -->
           <div class="sidebar-section">
             <h2 class="sidebar-section-title">browse by</h2>
-            <div class="category-list" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
-              <label>
-                <input type="checkbox" ref="productSearch.filters.categoryFilter.categories.isSelected" />
+            <div class="category-list">
+              <a href="/products">all products</a>
+              <a href="{categoryUrl}" class="{isSelected ? active}" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
                 {categoryName}
-              </label>
+              </a>
             </div>
           </div>
 
@@ -342,6 +391,8 @@
               <a href="{productUrl}" class="product-card-image">
                 <img
                   src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp"
+                  srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w"
+                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   alt="{thumbnail.altText}"
                   loading="lazy"
                   width="600"

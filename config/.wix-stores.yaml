@@ -15,4 +15,5 @@
 # To see available categories: jay-stack setup wix-stores (generates category tree reference)
 
 urls:
-  product: "/products/{slug}"
+  product: "/product/{slug}"
+  category: "/products/{category}"

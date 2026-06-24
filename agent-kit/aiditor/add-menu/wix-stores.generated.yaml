@@ -15,18 +15,19 @@ items:
         Category slug: best-sellers
         Product count: 4
         Hierarchy: best sellers
+        Example category URL (config/.wix-stores.yaml): /products/best-sellers
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="best-sellers"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="best-sellers"
-        related-products — pass categorySlug="best-sellers" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="best-sellers" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:body-products
@@ -43,18 +44,19 @@ items:
         Category slug: body-products
         Product count: 3
         Hierarchy: body care
+        Example category URL (config/.wix-stores.yaml): /products/body-products
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="body-products"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="body-products"
-        related-products — pass categorySlug="body-products" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="body-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:new-arrivals
@@ -71,18 +73,19 @@ items:
         Category slug: new-arrivals
         Product count: 2
         Hierarchy: new arrivals
+        Example category URL (config/.wix-stores.yaml): /products/new-arrivals
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="new-arrivals"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="new-arrivals"
-        related-products — pass categorySlug="new-arrivals" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="new-arrivals" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:all-products
@@ -99,18 +102,19 @@ items:
         Category slug: all-products
         Product count: 9
         Hierarchy: All Products
+        Example category URL (config/.wix-stores.yaml): /products/all-products
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="all-products"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="all-products"
-        related-products — pass categorySlug="all-products" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="all-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:hair-products
@@ -127,18 +131,19 @@ items:
         Category slug: hair-products
         Product count: 3
         Hierarchy: hair care
+        Example category URL (config/.wix-stores.yaml): /products/hair-products
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="hair-products"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="hair-products"
-        related-products — pass categorySlug="hair-products" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="hair-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:face-products
@@ -155,17 +160,18 @@ items:
         Category slug: face-products
         Product count: 3
         Hierarchy: face care
+        Example category URL (config/.wix-stores.yaml): /products/face-products
 
       Full indexed category tree: agent-kit/references/wix-stores/categories.yaml
 
       Common headless bindings for this category:
         product-search — filter by category slug via jay-params, e.g. category="face-products"
         category-list — show top-level categories (no parentCategory), or children with parentCategory="face-products"
-        related-products — pass categorySlug="face-products" alongside a productId when showing related items in this category
+        category-products — pass categorySlug="face-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
         agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
         agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/related-products.jay-contract
+        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.

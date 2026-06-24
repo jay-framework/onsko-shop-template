@@ -3,7 +3,7 @@
     <title>Onsko | Clean Beauty Products</title>
     <meta name="description" content="Discover clean beauty products for face, body, and hair. Beauty that reflects your spirit.">
     <script type="application/jay-headless" plugin="@jay-framework/wix-cart" contract="cart-indicator"></script>
-    <script type="application/jay-headless" plugin="@jay-framework/wix-stores" contract="product-search"></script>
+    <script type="application/jay-headless" plugin="@jay-framework/wix-stores" contract="category-products"></script>
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
@@ -625,7 +625,7 @@
       </header>
 
       <section class="hero">
-        <img class="hero-bg-image" src="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920,h_1080/file.webp" alt="Onsko beauty products" loading="eager" width="1920" height="1080" fetchpriority="high" />
+        <img class="hero-bg-image" src="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920,h_1080/file.webp" srcset="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_640%2Ch_360/file.webp 640w, https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1200%2Ch_675/file.webp 1200w, https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920%2Ch_1080/file.webp 1920w" sizes="100vw" alt="Onsko beauty products" loading="eager" width="1920" height="1080" fetchpriority="high" />
         <div class="hero-content">
           <div class="hero-line-clip"><h1>shine on</h1></div>
           <div class="hero-line-clip"><p>beauty that reflects your spirit</p></div>
@@ -633,18 +633,18 @@
         </div>
       </section>
 
-      <jay:product-search category="best-sellers">
+      <jay:category-products categorySlug="best-sellers" limit="4">
         <section class="best-sellers">
           <div class="best-sellers-inner">
             <div class="best-sellers-header scroll-animate">
               <h2 class="section-title">best sellers</h2>
-              <a href="/products" class="view-more-link">view more</a>
+              <a href="/products/best-sellers" class="view-more-link">view more</a>
             </div>
             <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
-              <a href="{productUrl}" class="product-card" forEach="searchResults" trackBy="_id">
+              <a href="{productUrl}" class="product-card" forEach="products" trackBy="_id">
                 <div class="product-card-image">
                   <span class="best-seller-badge">best seller</span>
-                  <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
+                  <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
                 </div>
                 <div class="product-card-content">
                   <h3 class="product-card-name">{name}</h3>
@@ -654,7 +654,7 @@
             </div>
           </div>
         </section>
-      </jay:product-search>
+      </jay:category-products>
 
       <div class="shipping-banner">
         <div class="marquee">
@@ -673,8 +673,8 @@
         <h2>effortless beauty, timeless charm.</h2>
         <p>new arrivals now in stock</p>
         <div class="new-arrivals-images">
-          <img src="https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_800,h_1000/file.webp" alt="New arrivals product" loading="lazy" width="800" height="1000" />
-          <img src="https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_800,h_1000/file.webp" alt="New arrivals product" loading="lazy" width="800" height="1000" />
+          <img src="https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_800,h_1000/file.webp" srcset="https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_400%2Ch_500/file.webp 400w, https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_600%2Ch_750/file.webp 600w, https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_800%2Ch_1000/file.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="New arrivals product" loading="lazy" width="800" height="1000" />
+          <img src="https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_800,h_1000/file.webp" srcset="https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_400%2Ch_500/file.webp 400w, https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_600%2Ch_750/file.webp 600w, https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_800%2Ch_1000/file.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="New arrivals product" loading="lazy" width="800" height="1000" />
         </div>
         <a href="/products" class="btn btn-cta">shop now</a>
       </section>
@@ -684,15 +684,15 @@
           <h2>shop by category</h2>
           <div class="category-cards">
             <a href="/products" class="category-card">
-              <img src="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_600,h_800/file.webp" alt="Face products" loading="lazy" width="600" height="800" />
+              <img src="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_600,h_800/file.webp" srcset="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_300%2Ch_400/file.webp 300w, https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_400%2Ch_533/file.webp 400w, https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_600%2Ch_800/file.webp 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Face products" loading="lazy" width="600" height="800" />
               <span class="category-card-label">face</span>
             </a>
             <a href="/products" class="category-card">
-              <img src="https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_600,h_800/file.webp" alt="Body products" loading="lazy" width="600" height="800" />
+              <img src="https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_600,h_800/file.webp" srcset="https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_300%2Ch_400/file.webp 300w, https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_400%2Ch_533/file.webp 400w, https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_600%2Ch_800/file.webp 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Body products" loading="lazy" width="600" height="800" />
               <span class="category-card-label">body</span>
             </a>
             <a href="/products" class="category-card">
-              <img src="https://static.wixstatic.com/media/c569b3_4dd2feb1e0f646bba2cd5f9cd5802189~mv2.jpg/v1/fill/w_600,h_800/file.webp" alt="Hair products" loading="lazy" width="600" height="800" />
+              <img src="https://static.wixstatic.com/media/c569b3_4dd2feb1e0f646bba2cd5f9cd5802189~mv2.jpg/v1/fill/w_600,h_800/file.webp" srcset="https://static.wixstatic.com/media/c569b3_4dd2feb1e0f646bba2cd5f9cd5802189~mv2.jpg/v1/fill/w_300%2Ch_400/file.webp 300w, https://static.wixstatic.com/media/c569b3_4dd2feb1e0f646bba2cd5f9cd5802189~mv2.jpg/v1/fill/w_400%2Ch_533/file.webp 400w, https://static.wixstatic.com/media/c569b3_4dd2feb1e0f646bba2cd5f9cd5802189~mv2.jpg/v1/fill/w_600%2Ch_800/file.webp 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Hair products" loading="lazy" width="600" height="800" />
               <span class="category-card-label">hair</span>
             </a>
           </div>
