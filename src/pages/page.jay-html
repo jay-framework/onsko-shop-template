@@ -366,15 +366,21 @@
       }
 
       /* ── Full-width Banner (between best sellers & roller) ── */
-      .fold3-banner {
+      .fold3-banner-wrapper {
         position: relative;
         z-index: 2;
+        margin: 0 25px;
+        padding-top: 25px;
+        background: var(--bg-primary);
+      }
+
+      .fold3-banner {
+        position: relative;
         height: 609px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
-        margin: 25px 25px 0;
         border-radius: 20px;
       }
 
@@ -753,14 +759,16 @@
         </section>
       </jay:category-products>
 
-      <section class="fold3-banner scroll-animate">
-        <img class="fold3-banner-bg" src="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0,y_514,w_2688,h_1278/fill/w_1437,h_683,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fold3_banner.jpg" srcset="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_640%2Ch_304%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 640w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1200%2Ch_570%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1200w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1437%2Ch_683%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1437w" sizes="100vw" alt="Onsko new arrivals banner" loading="lazy" width="1437" height="683" />
-        <div class="fold3-banner-content">
-          <h2>effortless beauty, timeless charm.</h2>
-          <p>new arrivals now in stock</p>
-          <a href="/products" class="btn-banner">shop now</a>
-        </div>
-      </section>
+      <div class="fold3-banner-wrapper">
+        <section class="fold3-banner scroll-animate">
+          <img class="fold3-banner-bg" src="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0,y_514,w_2688,h_1278/fill/w_1437,h_683,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fold3_banner.jpg" srcset="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_640%2Ch_304%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 640w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1200%2Ch_570%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1200w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1437%2Ch_683%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1437w" sizes="100vw" alt="Onsko new arrivals banner" loading="lazy" width="1437" height="683" />
+          <div class="fold3-banner-content">
+            <h2>effortless beauty, timeless charm.</h2>
+            <p>new arrivals now in stock</p>
+            <a href="/products" class="btn-banner">shop now</a>
+          </div>
+        </section>
+      </div>
 
       <div class="shipping-banner">
         <div class="marquee">
