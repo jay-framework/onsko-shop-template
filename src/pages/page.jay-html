@@ -540,7 +540,7 @@
         align-items: center;
         border-radius: var(--radius-xl);
         border: none;
-        background: #f7f5f2;
+        background: #e0ddd9;
         padding: 20px;
         gap: 12px;
         transition: transform var(--transition-base), background-color 0.3s ease;
@@ -561,14 +561,14 @@
 
       .category-card-label {
         display: inline-block;
-        padding: 8px 32px;
-        border: 2px solid var(--border, #d4d4d4);
-        border-radius: var(--radius-full);
+        padding: 10px 36px;
+        border: 2px solid #2d3436;
+        border-radius: var(--radius-lg);
         font-size: 18px;
         font-weight: 600;
         text-align: center;
-        color: var(--text-primary);
-        background: #fff;
+        color: #2d3436;
+        background: transparent;
         margin-bottom: 4px;
       }
 
