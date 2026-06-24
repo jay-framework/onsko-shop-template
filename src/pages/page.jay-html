@@ -7,6 +7,7 @@
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap" />
     <style>
       /* ── Body matches best-sellers fold ── */
       body { background: var(--bg-primary); }
@@ -485,7 +486,7 @@
         position: relative;
         z-index: 2;
         background: var(--bg-primary);
-        padding: 40px var(--page-padding) 80px;
+        padding: 40px 25px 80px;
       }
 
       .shop-by-category-inner {
@@ -541,7 +542,7 @@
         border-radius: var(--radius-xl);
         border: none;
         background: #e0ddd9;
-        padding: 20px;
+        padding: 29px;
         gap: 12px;
         transition: transform var(--transition-base), background-color 0.3s ease;
       }
@@ -572,40 +573,49 @@
         margin-bottom: 4px;
       }
 
-      .our-story {
+      .our-story-wrapper {
         position: relative;
         z-index: 2;
-        background: #3d7a5e;
-        color: #fff;
+        margin: 0 25px;
+        background: var(--bg-primary);
+      }
+
+      .our-story {
+        background: #a0c8ff;
+        color: #2d4d3f;
         text-align: center;
         padding: 100px var(--page-padding);
+        border-radius: 20px;
       }
 
       .our-story h2 {
-        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(28px, 4vw, 40px);
         font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-bottom: 24px;
-        opacity: 0.8;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
       }
 
       .our-story p {
-        font-family: var(--font-serif);
-        font-size: clamp(24px, 3.5vw, 36px);
-        font-weight: 400;
-        font-style: italic;
-        line-height: 1.4;
-        max-width: 700px;
+        font-family: 'kepler-w03-light-scd-cp', serif;
+        font-size: clamp(36px, 5vw, 58px);
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.3;
+        max-width: 900px;
         margin: 0 auto 16px;
+        color: #2d4d3f;
       }
 
       .our-story .tagline {
-        font-family: var(--font-primary);
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
+        font-weight: 200;
         font-style: normal;
-        opacity: 0.7;
+        opacity: 1;
         letter-spacing: 0.05em;
+        color: #2d4d3f;
       }
 
       .instagram-section {
@@ -785,11 +795,13 @@
         </div>
       </section>
 
-      <section class="our-story">
-        <h2>our story</h2>
-        <p>born from a passion for beauty rituals, we celebrate individuality and bring radiant confidence to everyone</p>
-        <p class="tagline">for every body, anywhere</p>
-      </section>
+      <div class="our-story-wrapper">
+        <section class="our-story">
+          <h2>our story</h2>
+          <p>born from a passion for beauty rituals, we celebrate individuality and bring radiant confidence to everyone</p>
+          <p class="tagline">for every body, anywhere</p>
+        </section>
+      </div>
 
       <section class="instagram-section">
         <h2>Follow Us on Instagram</h2>
