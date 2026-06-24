@@ -481,54 +481,11 @@
         100% { transform: translateX(-50%); }
       }
 
-      .new-arrivals {
-        position: relative;
-        z-index: 2;
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 80px var(--page-padding);
-        text-align: center;
-        background: var(--bg-primary);
-      }
-
-      .new-arrivals h2 {
-        font-family: var(--font-serif);
-        font-size: clamp(28px, 4vw, 40px);
-        font-weight: 400;
-        font-style: italic;
-        margin-bottom: 8px;
-        color: var(--text-primary);
-      }
-
-      .new-arrivals p {
-        font-size: 15px;
-        color: var(--text-secondary);
-        margin-bottom: 32px;
-      }
-
-      .new-arrivals-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        margin-bottom: 32px;
-      }
-
-      .new-arrivals-images .image-placeholder {
-        aspect-ratio: 4/5;
-        background: var(--bg-product-image);
-        border-radius: var(--radius-xl);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-muted);
-        font-size: 14px;
-      }
-
       .shop-by-category {
         position: relative;
         z-index: 2;
-        background: var(--bg-secondary);
-        padding: 80px var(--page-padding);
+        background: var(--bg-primary);
+        padding: 40px var(--page-padding) 80px;
       }
 
       .shop-by-category-inner {
@@ -536,11 +493,39 @@
         margin: 0 auto;
       }
 
-      .shop-by-category h2 {
-        text-align: center;
+      .shop-by-category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 40px;
+      }
+
+      .shop-by-category h2 {
+        text-align: left;
         font-size: 28px;
         font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .shop-by-category .btn-shop-now {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 36px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #2d3436;
+        background: transparent;
+        border: 2px solid #2d3436;
+        border-radius: var(--radius-lg);
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .shop-by-category .btn-shop-now:hover {
+        background: rgba(0, 0, 0, 0.08);
+        border-color: #2d3436;
       }
 
       .category-cards {
@@ -676,7 +661,6 @@
         .view-more-link { padding: 8px 20px; font-size: 14px; }
         .best-sellers-grid { gap: 16px; }
         .category-cards { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-        .new-arrivals-images { grid-template-columns: 1fr; }
         .instagram-grid { grid-template-columns: repeat(3, 1fr); }
       }
 
@@ -778,19 +762,12 @@
         </div>
       </div>
 
-      <section class="new-arrivals">
-        <h2>effortless beauty, timeless charm.</h2>
-        <p>new arrivals now in stock</p>
-        <div class="new-arrivals-images">
-          <img src="https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_800,h_1000/file.webp" srcset="https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_400%2Ch_500/file.webp 400w, https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_600%2Ch_750/file.webp 600w, https://static.wixstatic.com/media/c569b3_f712cb28454c4f75b5f658ec9cfecae0~mv2.jpg/v1/fill/w_800%2Ch_1000/file.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="New arrivals product" loading="lazy" width="800" height="1000" />
-          <img src="https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_800,h_1000/file.webp" srcset="https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_400%2Ch_500/file.webp 400w, https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_600%2Ch_750/file.webp 600w, https://static.wixstatic.com/media/c569b3_e82cca0081a24f539215c12ceea2f27f~mv2.jpg/v1/fill/w_800%2Ch_1000/file.webp 800w" sizes="(max-width: 768px) 100vw, 50vw" alt="New arrivals product" loading="lazy" width="800" height="1000" />
-        </div>
-        <a href="/products" class="btn btn-cta">shop now</a>
-      </section>
-
       <section class="shop-by-category">
         <div class="shop-by-category-inner">
-          <h2>shop by category</h2>
+          <div class="shop-by-category-header">
+            <h2>shop by category</h2>
+            <a href="/products" class="btn-shop-now">shop now</a>
+          </div>
           <div class="category-cards">
             <a href="/products" class="category-card">
               <img src="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_600,h_800/file.webp" srcset="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_300%2Ch_400/file.webp 300w, https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_400%2Ch_533/file.webp 400w, https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_600%2Ch_800/file.webp 600w" sizes="(max-width: 768px) 100vw, 33vw" alt="Face products" loading="lazy" width="600" height="800" />
