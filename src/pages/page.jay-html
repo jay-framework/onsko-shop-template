@@ -490,8 +490,7 @@
       }
 
       .shop-by-category-inner {
-        max-width: var(--container-max);
-        margin: 0 auto;
+        width: 100%;
       }
 
       .shop-by-category-header {
