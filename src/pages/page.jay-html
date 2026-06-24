@@ -370,7 +370,7 @@
         position: relative;
         z-index: 2;
         margin: 0 25px;
-        padding-top: 25px;
+        padding: 25px 0;
         background: var(--bg-primary);
       }
 
@@ -381,7 +381,7 @@
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
-        border-radius: 20px;
+        border-radius: 20px 20px 0 0;
       }
 
       .fold3-banner-bg {
@@ -455,11 +455,8 @@
       }
 
       .shipping-banner {
-        position: relative;
-        z-index: 2;
-        background: var(--bg-card);
-        border-top: 1px solid var(--border);
-        border-bottom: 1px solid var(--border);
+        background: #d5e955;
+        border-radius: 0 0 20px 20px;
         padding: 16px 0;
         overflow: hidden;
       }
@@ -474,7 +471,7 @@
       .marquee span {
         font-size: 14px;
         font-weight: 600;
-        color: var(--accent);
+        color: var(--text-primary);
         display: flex;
         align-items: center;
         gap: 12px;
@@ -768,18 +765,17 @@
             <a href="/products" class="btn-banner">shop now</a>
           </div>
         </section>
-      </div>
-
-      <div class="shipping-banner">
-        <div class="marquee">
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
-          <span>✻ free shipping on orders over $50</span>
+        <div class="shipping-banner">
+          <div class="marquee">
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+            <span>✻ free shipping on orders over $50</span>
+          </div>
         </div>
       </div>
 
