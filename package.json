@@ -21,6 +21,7 @@
   "dependencies": {
     "@jay-framework/fullstack-component": "^0.19.6",
     "@jay-framework/jay-stack-cli": "^0.19.6",
+    "@jay-framework/ui-kit": "^0.19.6",
     "@jay-framework/wix-cart": "^0.19.6",
     "@jay-framework/wix-deploy": "^0.19.6",
     "@jay-framework/wix-server-client": "^0.19.6",
