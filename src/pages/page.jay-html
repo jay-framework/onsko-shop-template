@@ -574,17 +574,85 @@
 
       .our-story-wrapper {
         position: relative;
-        z-index: 2;
-        margin: 0 25px;
+        z-index: 1;
+        margin: 0 25px 100px 25px;
         background: var(--bg-primary);
+        height: 2500px;
       }
 
       .our-story {
+        position: sticky;
+        top: 13vh;
         background: #a0c8ff;
         color: #2d4d3f;
         text-align: center;
         padding: 100px var(--page-padding);
         border-radius: 20px;
+        z-index: 1;
+      }
+
+      .our-story-float-right {
+        position: sticky;
+        top: 35vh;
+        height: 0;
+        z-index: 2;
+        pointer-events: none;
+        margin-top: 300px;
+        margin-bottom: 400px;
+      }
+
+      .our-story-float-left {
+        position: sticky;
+        top: 25vh;
+        height: 0;
+        z-index: 2;
+        pointer-events: none;
+        margin-top: 700px;
+        margin-bottom: 500px;
+      }
+
+      .our-story-img-left,
+      .our-story-img-right {
+        position: absolute;
+        pointer-events: auto;
+      }
+
+      .our-story-img-left {
+        left: 30px;
+        top: 30px;
+        width: clamp(100px, 15vw, 180px);
+        height: clamp(100px, 15vw, 180px);
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+      }
+
+      .our-story-img-right {
+        right: 40px;
+        top: 40px;
+        width: clamp(80px, 12vw, 150px);
+        object-fit: contain;
+        filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
+      }
+
+      @media (max-width: 768px) {
+        .our-story-wrapper {
+          padding-bottom: 600px;
+        }
+        .our-story-float-right {
+          margin-top: 200px;
+        }
+        .our-story-float-left {
+          margin-top: 400px;
+        }
+        .our-story-img-left {
+          left: 10px;
+          top: 20px;
+        }
+        .our-story-img-right {
+          right: 10px;
+          top: 30px;
+        }
       }
 
       .our-story h2 {
@@ -800,6 +868,12 @@
           <p>born from a passion for beauty rituals, we celebrate individuality and bring radiant confidence to everyone</p>
           <p class="tagline">for every body, anywhere</p>
         </section>
+        <div class="our-story-float-right">
+          <img class="our-story-img-right" src="https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_300,h_500/file.webp" srcset="https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_150%2Ch_250/file.webp 150w, https://static.wixstatic.com/media/c569b3_049fc20e8f8d48738107db12853c1f5d~mv2.jpg/v1/fill/w_300%2Ch_500/file.webp 300w" sizes="12vw" alt="Onsko product" loading="lazy" width="300" height="500" />
+        </div>
+        <div class="our-story-float-left">
+          <img class="our-story-img-left" src="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_400,h_400/file.webp" srcset="https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_cf29fc0440cd480a806555212a919777~mv2.jpg/v1/fill/w_400%2Ch_400/file.webp 400w" sizes="15vw" alt="Beauty model" loading="lazy" width="400" height="400" />
+        </div>
       </div>
 
       <section class="instagram-section">
