@@ -175,7 +175,7 @@
       /* ── Hero Section ── */
       .hero {
         position: relative;
-        min-height: 100vh;
+        aspect-ratio: 19 / 10;
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
@@ -376,9 +376,9 @@
 
       .fold3-banner {
         position: relative;
-        height: 609px;
+        aspect-ratio: 19 / 10;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: flex-start;
         overflow: hidden;
         border-radius: 20px 20px 0 0;
@@ -396,58 +396,57 @@
       .fold3-banner-content {
         position: relative;
         z-index: 2;
-        padding: 80px 60px;
-        max-width: 480px;
+        padding: 60px 40px 40px;
+        max-width: 520px;
       }
 
       .fold3-banner-content h2 {
-        font-family: var(--font-serif);
-        font-size: clamp(28px, 4vw, 40px);
+        font-family: var(--font-primary);
+        font-size: clamp(32px, 5vw, 48px);
         font-weight: 700;
-        font-style: normal;
-        line-height: 1.15;
-        color: var(--text-primary);
-        margin-bottom: 12px;
+        line-height: 1.1;
+        color: #2d3436;
+        margin-bottom: 8px;
+        letter-spacing: -0.02em;
       }
 
       .fold3-banner-content p {
-        font-size: 15px;
-        color: var(--text-secondary);
-        margin-bottom: 28px;
+        font-family: var(--font-primary);
+        font-size: clamp(16px, 2vw, 20px);
+        font-weight: 400;
+        line-height: 1.3;
+        color: #2d3436;
+        margin-bottom: 20px;
       }
 
       .fold3-banner-content .btn-banner {
-        display: inline-block;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         padding: 10px 36px;
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--text-primary);
+        font-size: 16px;
+        font-weight: 500;
+        color: #2d3436;
         background: transparent;
-        border: 2px solid var(--text-primary);
-        border-radius: 0;
+        border: 2px solid #2d3436;
+        border-radius: var(--radius-lg);
         text-transform: lowercase;
         letter-spacing: 0.02em;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
       }
 
       .fold3-banner-content .btn-banner:hover {
-        background: var(--text-primary);
-        color: #fff;
+        background: rgba(0, 0, 0, 0.08);
+        border-color: #2d3436;
       }
 
       @media (max-width: 768px) {
-        .fold3-banner {
-          height: 609px;
-        }
         .fold3-banner-content {
           padding: 48px 32px;
         }
       }
 
       @media (max-width: 480px) {
-        .fold3-banner {
-          height: 609px;
-        }
         .fold3-banner-content {
           padding: 32px 24px;
           max-width: 100%;
