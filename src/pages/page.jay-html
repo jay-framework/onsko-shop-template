@@ -275,6 +275,9 @@
       .best-sellers {
         background: var(--bg-primary);
         padding: 64px var(--page-padding);
+        position: sticky;
+        top: 0;
+        z-index: 1;
       }
 
       .best-sellers-inner {
@@ -361,7 +364,91 @@
         letter-spacing: 0.02em;
       }
 
+      /* ── Full-width Banner (between best sellers & roller) ── */
+      .fold3-banner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 609px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+      }
+
+      .fold3-banner-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .fold3-banner-content {
+        position: relative;
+        z-index: 2;
+        padding: 80px 60px;
+        max-width: 480px;
+      }
+
+      .fold3-banner-content h2 {
+        font-family: var(--font-serif);
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 700;
+        font-style: normal;
+        line-height: 1.15;
+        color: var(--text-primary);
+        margin-bottom: 12px;
+      }
+
+      .fold3-banner-content p {
+        font-size: 15px;
+        color: var(--text-secondary);
+        margin-bottom: 28px;
+      }
+
+      .fold3-banner-content .btn-banner {
+        display: inline-block;
+        padding: 10px 36px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-primary);
+        background: transparent;
+        border: 2px solid var(--text-primary);
+        border-radius: 0;
+        text-transform: lowercase;
+        letter-spacing: 0.02em;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .fold3-banner-content .btn-banner:hover {
+        background: var(--text-primary);
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .fold3-banner {
+          height: 609px;
+        }
+        .fold3-banner-content {
+          padding: 48px 32px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .fold3-banner {
+          height: 609px;
+        }
+        .fold3-banner-content {
+          padding: 32px 24px;
+          max-width: 100%;
+        }
+      }
+
       .shipping-banner {
+        position: relative;
+        z-index: 2;
         background: var(--bg-card);
         border-top: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
@@ -391,6 +478,8 @@
       }
 
       .new-arrivals {
+        position: relative;
+        z-index: 2;
         max-width: var(--container-max);
         margin: 0 auto;
         padding: 80px var(--page-padding);
@@ -432,6 +521,8 @@
       }
 
       .shop-by-category {
+        position: relative;
+        z-index: 2;
         background: var(--bg-secondary);
         padding: 80px var(--page-padding);
       }
@@ -493,6 +584,8 @@
       }
 
       .our-story {
+        position: relative;
+        z-index: 2;
         background: #3d7a5e;
         color: #fff;
         text-align: center;
@@ -527,6 +620,8 @@
       }
 
       .instagram-section {
+        position: relative;
+        z-index: 2;
         background: var(--bg-footer);
         color: #fff;
         text-align: center;
@@ -655,6 +750,15 @@
           </div>
         </section>
       </jay:category-products>
+
+      <section class="fold3-banner scroll-animate">
+        <img class="fold3-banner-bg" src="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0,y_514,w_2688,h_1278/fill/w_1437,h_683,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fold3_banner.jpg" srcset="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_640%2Ch_304%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 640w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1200%2Ch_570%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1200w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1437%2Ch_683%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1437w" sizes="100vw" alt="Onsko new arrivals banner" loading="lazy" width="1437" height="683" />
+        <div class="fold3-banner-content">
+          <h2>effortless beauty, timeless charm.</h2>
+          <p>new arrivals now in stock</p>
+          <a href="/products" class="btn-banner">shop now</a>
+        </div>
+      </section>
 
       <div class="shipping-banner">
         <div class="marquee">
