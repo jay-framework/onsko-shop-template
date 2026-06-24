@@ -8,8 +8,8 @@
     <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
     <style>
-      /* ── White body for hero gap ── */
-      body { background: #ffffff; }
+      /* ── Body matches best-sellers fold ── */
+      body { background: var(--bg-primary); }
 
       @keyframes header-float-in {
         0% {
@@ -274,7 +274,8 @@
 
       .best-sellers {
         background: var(--bg-primary);
-        padding: 64px var(--page-padding);
+        padding: 64px 0;
+        margin: 0 25px;
         position: sticky;
         top: 0;
         z-index: 1;
@@ -368,12 +369,13 @@
       .fold3-banner {
         position: relative;
         z-index: 2;
-        width: 100%;
         height: 609px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
+        margin: 25px 25px 0;
+        border-radius: 20px;
       }
 
       .fold3-banner-bg {
