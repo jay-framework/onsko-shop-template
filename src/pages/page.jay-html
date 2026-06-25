@@ -589,7 +589,7 @@
         padding: 100px var(--page-padding);
         border-radius: 20px;
         z-index: 1;
-        height: 52vh;
+        height: 40vw;
         color: transparent;
       }
 
@@ -608,8 +608,40 @@
       .our-story-text-content {
         text-align: center;
         color: #2d4d3f;
-        padding: 100px var(--page-padding);
+        padding: clamp(50px, 4vw, 100px) var(--page-padding);
         pointer-events: auto;
+        width: 78%;
+        margin: auto;
+      }
+
+      .our-story-text-content h2 {
+          font-family: 'Poppins', sans-serif;
+          font-size: max(12px, calc(42 * clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px)) / 1280));
+          font-weight: 600;
+          text-transform: lowercase;
+          letter-spacing: 0.02em;
+          margin-bottom: 16px;
+          color: #2d4d3f;
+      }
+
+      .our-story-text-content p {
+          font-family: 'kepler-w03-light-scd-cp', serif;
+          font-size: clamp(36px, 4vw, 58px);
+          font-weight: 300;
+          font-style: normal;
+          line-height: 1.3;
+          margin: 0 auto 16px;
+          color: #2d4d3f;
+      }
+
+      .our-story-text-content .tagline {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 200;
+          font-style: normal;
+          opacity: 1;
+          letter-spacing: 0.05em;
+          color: #2d4d3f;
       }
 
       /* Layer 2: images (middle) */
@@ -640,19 +672,19 @@
       }
 
       .our-story-img-left {
-        left: 30px;
+        left: 60px;
         top: 30px;
-        width: clamp(100px, 15vw, 180px);
-        height: clamp(100px, 15vw, 180px);
+        width: clamp(100px, 15vw, 350px);
+        height: clamp(100px, 15vw, 350px);
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
       }
 
       .our-story-img-right {
-        right: 40px;
+        right: 80px;
         top: 40px;
-        width: clamp(80px, 12vw, 150px);
+        width: clamp(80px, 15vw, 450px);
         object-fit: contain;
       }
 
@@ -674,37 +706,6 @@
           right: 10px;
           top: 30px;
         }
-      }
-
-      .our-story-text-content h2 {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(28px, 4vw, 40px);
-        font-weight: 600;
-        text-transform: lowercase;
-        letter-spacing: 0.02em;
-        margin-bottom: 16px;
-        color: #2d4d3f;
-      }
-
-      .our-story-text-content p {
-        font-family: 'kepler-w03-light-scd-cp', serif;
-        font-size: clamp(36px, 5vw, 58px);
-        font-weight: 300;
-        font-style: normal;
-        line-height: 1.3;
-        max-width: 900px;
-        margin: 0 auto 16px;
-        color: #2d4d3f;
-      }
-
-      .our-story-text-content .tagline {
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        font-weight: 200;
-        font-style: normal;
-        opacity: 1;
-        letter-spacing: 0.05em;
-        color: #2d4d3f;
       }
 
       .instagram-section {
