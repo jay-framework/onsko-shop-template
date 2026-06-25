@@ -273,6 +273,10 @@
         border-color: #fff;
       }
 
+      .best-sellers-clip {
+        overflow: clip;
+      }
+
       .best-sellers {
         background: var(--bg-primary);
         padding: 64px 0;
@@ -574,7 +578,7 @@
 
       .our-story-wrapper {
         position: relative;
-        z-index: 1;
+        z-index: 2;
         margin: 0 25px 100px 25px;
         background: var(--bg-primary);
         height: 2000px;
@@ -831,51 +835,54 @@
         </div>
       </section>
 
-      <jay:category-products categorySlug="best-sellers" limit="4">
-        <section class="best-sellers">
-          <div class="best-sellers-inner">
-            <div class="best-sellers-header scroll-animate">
-              <h2 class="section-title">best sellers</h2>
-              <a href="/products/best-sellers" class="view-more-link">view more</a>
+      <div class="best-sellers-clip">
+        <jay:category-products categorySlug="best-sellers" limit="4">
+          <section class="best-sellers">
+            <div class="best-sellers-inner">
+              <div class="best-sellers-header scroll-animate">
+                <h2 class="section-title">best sellers</h2>
+                <a href="/products/best-sellers" class="view-more-link">view more</a>
+              </div>
+              <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
+                <a href="{productUrl}" class="product-card" forEach="products" trackBy="_id">
+                  <div class="product-card-image">
+                    <span class="best-seller-badge">best seller</span>
+                    <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
+                  </div>
+                  <div class="product-card-content">
+                    <h3 class="product-card-name">{name}</h3>
+                    <div class="product-card-price"><span class="current-price">{price}</span></div>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="best-sellers-grid scroll-animate" style="--scroll-delay: 0.15s">
-              <a href="{productUrl}" class="product-card" forEach="products" trackBy="_id">
-                <div class="product-card-image">
-                  <span class="best-seller-badge">best seller</span>
-                  <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
-                </div>
-                <div class="product-card-content">
-                  <h3 class="product-card-name">{name}</h3>
-                  <div class="product-card-price"><span class="current-price">{price}</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-      </jay:category-products>
+          </section>
+        </jay:category-products>
 
-      <div class="fold3-banner-wrapper">
-        <section class="fold3-banner scroll-animate">
-          <img class="fold3-banner-bg" src="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0,y_514,w_2688,h_1278/fill/w_1437,h_683,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fold3_banner.jpg" srcset="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_640%2Ch_304%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 640w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1200%2Ch_570%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1200w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1437%2Ch_683%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1437w" sizes="100vw" alt="Onsko new arrivals banner" loading="lazy" width="1437" height="683" />
-          <div class="fold3-banner-content">
-            <h2>effortless beauty, timeless charm.</h2>
-            <p>new arrivals now in stock</p>
-            <a href="/products" class="btn-banner">shop now</a>
+          <div class="fold3-banner-wrapper">
+              <section class="fold3-banner scroll-animate">
+                  <img class="fold3-banner-bg" src="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0,y_514,w_2688,h_1278/fill/w_1437,h_683,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fold3_banner.jpg" srcset="https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_640%2Ch_304%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 640w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1200%2Ch_570%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1200w, https://static.wixstatic.com/media/c837a6_ce2611b99f714d55ac39dd982c0e2dc3~mv2.jpg/v1/crop/x_0%2Cy_514%2Cw_2688%2Ch_1278/fill/w_1437%2Ch_683%2Cfp_0.50_0.50%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_avif%2Cquality_auto/fold3_banner.jpg 1437w" sizes="100vw" alt="Onsko new arrivals banner" loading="lazy" width="1437" height="683" />
+                  <div class="fold3-banner-content">
+                      <h2>effortless beauty, timeless charm.</h2>
+                      <p>new arrivals now in stock</p>
+                      <a href="/products" class="btn-banner">shop now</a>
+                  </div>
+              </section>
+              <div class="shipping-banner">
+                  <div class="marquee">
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                      <span>✻ free shipping on orders over $50</span>
+                  </div>
+              </div>
           </div>
-        </section>
-        <div class="shipping-banner">
-          <div class="marquee">
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-            <span>✻ free shipping on orders over $50</span>
-          </div>
-        </div>
       </div>
+
 
       <section class="shop-by-category">
         <div class="shop-by-category-inner">
