@@ -170,120 +170,184 @@ font-weight: 200;
 
 ---
 
-## Text Styles by Element
+## Text Styles by Element (from homepage CSS)
 
-### Hero Section — "shine on"
+### Logo — "onsko"
 
-- **Font**: Poppins SemiBold
-- **Size**: 55spx (desktop), 50spx (tablet) — roughly 55px / 50px at default scale
-- **Line Height**: inherited
-- **Color**: `#F2F0EB` (cream, `--color_16`)
-- **Text Decoration**: none
-- **Text Shadow**: none
+- **Font**: Poppins, sans-serif
+- **Size**: 32px
+- **Weight**: 600
+- **Color**: `rgb(45, 81, 67)` / `#2D5143`
+- **Letter Spacing**: -0.96px
+
+### Navigation Menu — "home", "shop", "about", "blog"
+
+- **Font**: Poppins, sans-serif
+- **Size**: 16px (13px on mobile ≤600px)
+- **Weight**: 500
+- **Color**: `#2D5143` (active: `#AE3A00`)
+
+### Header Actions — "log in", "Search"
+
+- **Font**: Poppins, sans-serif
+- **Size**: 16px
+- **Weight**: 500
+- **Color**: `var(--text-secondary)`
+
+### Hero Headline — "shine on"
+
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 6.3vw, 120px)`
+- **Weight**: 600
+- **Line Height**: 1
+- **Letter Spacing**: -0.03em
+- **Color**: `#F2F0EB`
 
 ### Hero Subtitle — "beauty that reflects your spirit"
 
-- **Font**: Poppins SemiBold
-- **Size**: 28spx (desktop), 27spx (tablet)
-- **Line Height**: inherited
-- **Color**: `#F2F0EB` (cream, `--color_16`)
+- **Font**: Kepler W03 Light Scd Cp, serif
+- **Size**: `clamp(12px, 3.19vw, 64px)`
+- **Weight**: 400
+- **Line Height**: 1.3
+- **Color**: `#F2F0EB`
 
-### Page Heading — "effortless beauty,"
+### Hero CTA Button — "shop now"
 
-- **Element**: `<h2 class="font_2">`
-- **Font**: Poppins SemiBold
-- **Size**: 42px (scaled via `--theme-spx-ratio`)
-- **Line Height**: 1.1em
-- **Color**: `#2B312F` (near-black, `--color_15`) — switches to `#EEEEEE` on mobile
+- **Font**: Poppins SemiBold, sans-serif
+- **Size**: 20px
+- **Weight**: 600
+- **Color**: `#F2F0EB`
+- **Border**: 2px solid `rgba(255, 255, 255, 0.8)`
+- **Background**: transparent
 
-### Page Subheading — "new arrivals now in stock"
+### Section Titles — "best sellers", "shop by category"
 
-- **Element**: `<h3 class="font_3">`
-- **Font**: Kepler W03 Light Scd Cp (serif)
-- **Size**: 42px (scaled via `--theme-spx-ratio`)
-- **Line Height**: 1em
-- **Color**: `#2B312F` (near-black, `--color_15`) — switches to `#EEEEEE` on mobile
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 2.19vw, 45px)` (best sellers) / `clamp(12px, 2.19vw, 64px)` (shop by category)
+- **Weight**: 600
+- **Color**: `#2D5143`
+- **Mobile (≤768px)**: `clamp(26px, 5vw, 32px)` for best sellers
 
-### Section Headers — "best sellers", "shop by category", "our story"
+### View More Link
 
-- **Font**: Poppins SemiBold
-- **Size**: ~28spx (desktop), responsive-scaled on smaller viewports
-- **Line Height**: 1.3em
-- **Color**: `#2D5143` (deep teal, `--color_33`)
+- **Font**: Poppins, sans-serif
+- **Size**: 20px (14px on mobile ≤768px)
+- **Weight**: 600
+- **Color**: `var(--text-primary)`
+- **Border**: 2px solid `var(--border)`
+- **Border Radius**: 8px
 
-### Navigation Menu Items — "home", "shop", "about", "blog"
+### Best Seller Badge
 
-- **Font**: Poppins SemiBold
-- **Size**: varies per component — typically matches `font_5` (30px) or `font_7` (16px)
-- **Line Height**: 1.3em
-- **Color**: `#2D5143` (deep teal, `--color_33`)
-- **Letter Spacing**: 0em
-- **Text Transform**: none
-- **Separator between items**: 61.8% width line
+- **Font**: Poppins ExtraLight, sans-serif
+- **Size**: 12px
+- **Weight**: 400
+- **Letter Spacing**: 0.02em
+- **Color**: `var(--text-primary)`
+- **Background**: `#bdd8f1`
 
-### Category Navigation — "body", "face", "hair"
+### Banner Heading — "effortless beauty, timeless charm."
 
-- **Font**: Poppins SemiBold
-- **Size**: 18spx–20spx
-- **Color**: `#2D5143` (deep teal)
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 3.28vw, 64px)`
+- **Weight**: 600
+- **Line Height**: 1.1
+- **Letter Spacing**: -0.03em
+- **Color**: `#2B312F`
 
-### Product Names — "radiant renewal serum", etc.
+### Banner Subheading — "new arrivals now in stock"
 
-- **Element**: `<p>` with typography class `runningText`, priority `primary`
-- **Font**: Poppins ExtraLight (via `--font_8` / Body M)
-- **Size**: 14px
-- **Line Height**: 1.6em
-- **Weight**: bold
-- **Color**: `#2B312F` (near-black, `--color_15`)
+- **Font**: Kepler W03 Light Scd Cp, serif
+- **Size**: `clamp(12px, 3.28vw, 64px)`
+- **Weight**: 400
+- **Line Height**: 1
+- **Color**: `#2B312F`
 
-### Product Prices — "$27.00", "$25.00", etc.
+### Banner Button — "shop now"
 
-- **Font**: Poppins ExtraLight
-- **Size**: 14px
-- **Line Height**: 1.6em
-- **Weight**: bold
-- **Color**: `#2B312F` (near-black, `--color_15`)
+- **Font**: Poppins, sans-serif
+- **Size**: 20px
+- **Weight**: 600
+- **Color**: `#2B312F`
+- **Border**: 2px solid `#2B312F`
+- **Text Transform**: lowercase
+- **Letter Spacing**: 0.02em
+- **Background**: transparent
 
-### Buttons — "shop now", "view more", "subscribe"
+### Shipping Marquee — "free shipping on orders over $50"
 
-- **Font**: Poppins ExtraLight
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 3.28vw, 24px)`
+- **Weight**: 600
+- **Color**: `var(--text-primary)`
+- **Background**: `#d5e955`
+
+### Category Card Labels — "face", "body", "hair"
+
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 3.56vw, 64px)`
+- **Weight**: 600
+- **Color**: `#2D5143`
+- **Border**: 2px solid `#2D5143`
+- **Border Radius**: `var(--radius-lg)`
+
+### Shop Now Button (secondary) — category section
+
+- **Font**: Poppins, sans-serif
 - **Size**: 16px
-- **Line Height**: 16px
-- **Weight**: normal
-- **Color (text)**: `#EEEEEE` (light, `--color_50` / `--color_11`) on primary buttons
-- **Background (primary)**: `#627023` (olive green, `--color_48`)
-- **Background (primary hover)**: `#627023` (same, `--color_51`)
-- **Background (secondary)**: `#EEEEEE` (`--color_57`)
-- **Border (primary)**: `#627023` (`--color_49`)
-- **Text Decoration**: none
+- **Weight**: 200
+- **Color**: `#2B312F`
+- **Border**: 2px solid `#2B312F`
+- **Text Transform**: lowercase
+- **Letter Spacing**: 0.02em
+- **Background**: transparent
 
-### Promotional Banner — "free shipping on orders over $50"
+### Our Story Heading — "our story"
 
-- **Font**: Poppins ExtraLight
-- **Size**: ~14px
-- **Weight**: bold
-- **Line Height**: 1.6em
-- **Color**: dark on light background
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 4vw, 64px)`
+- **Weight**: 600
+- **Text Transform**: lowercase
+- **Letter Spacing**: 0.02em
+- **Color**: `#2D5143`
 
-### Body / Description Text — "born from a passion for beauty rituals…"
+### Our Story Description — "born from a passion for beauty rituals…"
 
-- **Font**: Poppins ExtraLight
+- **Font**: Kepler W03 Light Scd Cp, serif
+- **Size**: `clamp(12px, 5vw, 90px)`
+- **Weight**: 400
+- **Line Height**: 1
+- **Color**: `#2D5143`
+
+### Our Story Tagline — "for every body, anywhere"
+
+- **Font**: Poppins, sans-serif
 - **Size**: 14px
-- **Line Height**: 1.6em
-- **Weight**: bold
-- **Color**: `#2D5143` (deep teal) or `#2B312F` (near-black)
+- **Weight**: 200
+- **Letter Spacing**: 0.05em
+- **Color**: `#2D5143`
 
-### Footer Text — "© 2035 by onsko", address, links
+### Instagram Heading — "Follow Us on Instagram"
 
-- **Font**: Poppins ExtraLight or DIN Next W01 Light
-- **Size**: 12px–14px
-- **Line Height**: 1.4em–1.6em
-- **Color**: varies by section background
+- **Font**: Poppins, sans-serif
+- **Size**: `clamp(12px, 3vw, 64px)`
+- **Weight**: 600
+- **Color**: `#2D5143`
 
-### Newsletter Section — "subscribe to our newsletter"
+### Instagram Subtitle — "#onsko_beauty"
 
-- **Font**: Poppins SemiBold (heading) / Poppins ExtraLight (body)
-- **Color**: `#2D5143` (deep teal)
+- **Font**: Kepler W03 Light Scd Cp, serif
+- **Size**: `clamp(12px, 3vw, 50px)`
+- **Weight**: 200
+- **Color**: `var(--text-secondary)`
+
+### Cart Badge
+
+- **Font**: Poppins, sans-serif
+- **Size**: 12px
+- **Weight**: 700
+- **Color**: `#fff`
+- **Background**: `var(--success)`
 
 ---
 
@@ -291,11 +355,10 @@ font-weight: 200;
 
 | Value | Context |
 |-------|---------|
-| `0em` / `0px` | Default for most text |
-| `-0.03em` | Tight headings |
-| `-0.04em` | Extra-tight display |
-| `1px` | Gallery social elements |
-| `5px` | Spaced-out labels (rare) |
+| `-0.96px` | Logo |
+| `-0.03em` | Hero headline, banner heading |
+| `0.02em` | Buttons, badges, section headings |
+| `0.05em` | Our story tagline |
 
 ---
 
@@ -303,16 +366,23 @@ font-weight: 200;
 
 | Context | Font | Size | Weight | Color |
 |---------|------|------|--------|-------|
-| Hero headline | Poppins SemiBold | 50–55px | normal | `#F2F0EB` cream |
-| Hero subtitle | Poppins SemiBold | 27–28px | normal | `#F2F0EB` cream |
-| Page heading (h2) | Poppins SemiBold | 42px | normal | `#2B312F` / `#EEEEEE` mobile |
-| Page subheading (h3) | Kepler Light (serif) | 42px | normal | `#2B312F` / `#EEEEEE` mobile |
-| Section header | Poppins SemiBold | 28px | normal | `#2D5143` deep teal |
-| Heading small | Poppins SemiBold | 20px | normal | `#2D5143` deep teal |
-| Nav menu | Poppins SemiBold | 16–30px | normal | `#2D5143` deep teal |
-| Body text | Poppins ExtraLight | 14px | bold | `#2B312F` or `#2D5143` |
-| Product name | Poppins ExtraLight | 14px | bold | `#2B312F` |
-| Product price | Poppins ExtraLight | 14px | bold | `#2B312F` |
-| Button label | Poppins ExtraLight | 16px | normal | `#EEEEEE` on `#627023` bg |
-| Small text / captions | DIN Next Light | 12px | normal | varies |
-| Menu items | DIN Next Light | 16px | normal | `#2B312F` |
+| Logo | Poppins | 32px | 600 | `#2D5143` |
+| Hero headline | Poppins | clamp 6.3vw (max 120px) | 600 | `#F2F0EB` |
+| Hero subtitle | Kepler (serif) | clamp 3.19vw (max 64px) | 400 | `#F2F0EB` |
+| Hero CTA | Poppins SemiBold | 20px | 600 | `#F2F0EB` |
+| Section title | Poppins | clamp 2.19vw (max 45–64px) | 600 | `#2D5143` |
+| Banner heading | Poppins | clamp 3.28vw (max 64px) | 600 | `#2B312F` |
+| Banner subheading | Kepler (serif) | clamp 3.28vw (max 64px) | 400 | `#2B312F` |
+| Banner/hero button | Poppins | 20px | 600 | on-context, transparent bg |
+| Shipping marquee | Poppins | clamp 3.28vw (max 24px) | 600 | `var(--text-primary)` |
+| Category labels | Poppins | clamp 3.56vw (max 64px) | 600 | `#2D5143` |
+| Our Story heading | Poppins | clamp 4vw (max 64px) | 600 | `#2D5143` |
+| Our Story body | Kepler (serif) | clamp 5vw (max 90px) | 400 | `#2D5143` |
+| Our Story tagline | Poppins | 14px | 200 | `#2D5143` |
+| Instagram heading | Poppins | clamp 3vw (max 64px) | 600 | `#2D5143` |
+| Instagram subtitle | Kepler (serif) | clamp 3vw (max 50px) | 200 | `var(--text-secondary)` |
+| Nav links | Poppins | 16px | 500 | `#2D5143` |
+| Secondary button | Poppins | 16px | 200 | `#2B312F` |
+| View more | Poppins | 20px | 600 | `var(--text-primary)` |
+| Badge | Poppins ExtraLight | 12px | 400 | `var(--text-primary)` |
+| Header actions | Poppins | 16px | 500 | `var(--text-secondary)` |
