@@ -730,36 +730,77 @@
       .instagram-section {
         position: relative;
         z-index: 2;
-        background: var(--bg-footer);
-        color: #fff;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
         text-align: center;
         padding: 64px var(--page-padding);
       }
 
+      .instagram-icon {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .instagram-icon svg {
+        width: 40px;
+        height: 40px;
+      }
+
       .instagram-section h2 {
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 700;
         margin-bottom: 8px;
+        color: var(--text-primary);
       }
 
       .instagram-section p {
         font-size: 14px;
-        opacity: 0.6;
+        color: var(--text-secondary);
         margin-bottom: 32px;
       }
 
       .instagram-grid {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 8px;
-        max-width: 1000px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        overflow: hidden;
       }
 
-      .instagram-grid .ig-image {
-        aspect-ratio: 1;
-        background: rgba(255,255,255,0.1);
-        border-radius: var(--radius-md);
+      .ig-row {
+        display: flex;
+        gap: 16px;
+        will-change: transform;
+      }
+
+      .ig-row-1 {
+        animation: ig-scroll-left linear both;
+        animation-timeline: scroll(root);
+      }
+
+      .ig-row-2 {
+        animation: ig-scroll-right linear both;
+        animation-timeline: scroll(root);
+      }
+
+      @keyframes ig-scroll-left {
+        from { transform: translateX(200px); }
+        to { transform: translateX(-200px); }
+      }
+
+      @keyframes ig-scroll-right {
+        from { transform: translateX(-400px); }
+        to { transform: translateX(000px); }
+      }
+
+      .ig-row .ig-image {
+        width: 22vw;
+        height: 22vw;
+        max-width: 420px;
+        max-height: 420px;
+        flex-shrink: 0;
+        background: var(--bg-primary);
+        border-radius: var(--radius-xl);
         overflow: hidden;
       }
 
@@ -926,19 +967,32 @@
       </div>
 
       <section class="instagram-section">
+        <div class="instagram-icon">
+          <svg preserveAspectRatio="xMidYMid meet" data-bbox="7 7 42 42" xmlns="http://www.w3.org/2000/svg" viewBox="7 7 42 42" height="56" width="56" role="presentation" aria-hidden="true">
+            <g>
+              <path fill="#2B312F" d="M41.73 16.79a2.52 2.52 0 1 1-5.04 0 2.52 2.52 0 0 1 5.04 0"></path>
+              <path fill="#2B312F" d="M17.216 28c0-5.956 4.828-10.784 10.784-10.784S38.784 22.044 38.784 28 33.956 38.784 28 38.784 17.216 33.956 17.216 28M21 28a7 7 0 1 0 14 0 7 7 0 0 0-14 0" clip-rule="evenodd" fill-rule="evenodd"></path>
+              <path fill="#2B312F" d="M19.342 7.126C21.582 7.024 22.297 7 28 7s6.419.024 8.657.127a15.4 15.4 0 0 1 5.098.976 10.74 10.74 0 0 1 6.142 6.142 15.4 15.4 0 0 1 .977 5.097c.102 2.24.126 2.955.126 8.658s-.024 6.419-.126 8.657a15.4 15.4 0 0 1-.976 5.098 10.74 10.74 0 0 1-6.142 6.142 15.4 15.4 0 0 1-5.098.977c-2.24.102-2.955.126-8.658.126s-6.419-.024-8.657-.126a15.4 15.4 0 0 1-5.098-.976 10.74 10.74 0 0 1-6.142-6.142 15.4 15.4 0 0 1-.977-5.098C7.024 34.418 7 33.703 7 28s.024-6.419.126-8.657a15.4 15.4 0 0 1 .976-5.098 10.74 10.74 0 0 1 6.143-6.142 15.4 15.4 0 0 1 5.097-.977m17.144 3.78c-2.214-.1-2.879-.122-8.486-.122s-6.271.021-8.486.122a11.6 11.6 0 0 0-3.9.723 6.96 6.96 0 0 0-3.985 3.986 11.6 11.6 0 0 0-.723 3.9c-.101 2.214-.122 2.878-.122 8.485s.021 6.272.122 8.486c.016 1.332.26 2.65.723 3.9a6.96 6.96 0 0 0 3.986 3.985 11.6 11.6 0 0 0 3.9.723c2.213.101 2.877.123 8.485.123s6.272-.022 8.486-.123a11.6 11.6 0 0 0 3.9-.723 6.96 6.96 0 0 0 3.985-3.986 11.6 11.6 0 0 0 .723-3.9c.101-2.213.122-2.878.122-8.485s-.021-6.271-.122-8.486a11.6 11.6 0 0 0-.723-3.9 6.96 6.96 0 0 0-3.986-3.985 11.6 11.6 0 0 0-3.9-.723" clip-rule="evenodd" fill-rule="evenodd"></path>
+            </g>
+          </svg>
+        </div>
         <h2>Follow Us on Instagram</h2>
         <p>#onsko_beauty</p>
         <div class="instagram-grid">
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a9c56931a8584d80aa7b1fa26d3b6fab~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_1bd7d185cb8a43e380138168bb3fb7c4~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_5c2838e71e5b4d1697fc1ed7cfd8e534~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_888ea433600044d0bb78c88db94f532b~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a3d6d1e4a8fa48f899460c35095b7524~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_d932ea27531f42dbb91ab57d9ff68687~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_8bf48c1f406f46a4bd02629af619b3c7~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
-          <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_300,h_300/file.webp" alt="Gallery photo" loading="lazy" width="300" height="300" /></div>
+          <div class="ig-row ig-row-1">
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a9c56931a8584d80aa7b1fa26d3b6fab~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_a9c56931a8584d80aa7b1fa26d3b6fab~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_a9c56931a8584d80aa7b1fa26d3b6fab~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_a9c56931a8584d80aa7b1fa26d3b6fab~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_1bd7d185cb8a43e380138168bb3fb7c4~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_1bd7d185cb8a43e380138168bb3fb7c4~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_1bd7d185cb8a43e380138168bb3fb7c4~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_1bd7d185cb8a43e380138168bb3fb7c4~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_5c2838e71e5b4d1697fc1ed7cfd8e534~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_5c2838e71e5b4d1697fc1ed7cfd8e534~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_5c2838e71e5b4d1697fc1ed7cfd8e534~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_5c2838e71e5b4d1697fc1ed7cfd8e534~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_888ea433600044d0bb78c88db94f532b~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_888ea433600044d0bb78c88db94f532b~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_888ea433600044d0bb78c88db94f532b~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_888ea433600044d0bb78c88db94f532b~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a3d6d1e4a8fa48f899460c35095b7524~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_a3d6d1e4a8fa48f899460c35095b7524~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_a3d6d1e4a8fa48f899460c35095b7524~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_a3d6d1e4a8fa48f899460c35095b7524~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+          </div>
+          <div class="ig-row ig-row-2">
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_a819ead9b3b04405aa30d59dc840b5d0~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_d932ea27531f42dbb91ab57d9ff68687~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_d932ea27531f42dbb91ab57d9ff68687~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_d932ea27531f42dbb91ab57d9ff68687~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_d932ea27531f42dbb91ab57d9ff68687~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_c8bfc03eaabc4ce8bc38d5e558f8f712~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_8bf48c1f406f46a4bd02629af619b3c7~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_8bf48c1f406f46a4bd02629af619b3c7~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_8bf48c1f406f46a4bd02629af619b3c7~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_8bf48c1f406f46a4bd02629af619b3c7~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+            <div class="ig-image"><img src="https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_420,h_420/file.webp" srcset="https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_200%2Ch_200/file.webp 200w, https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_300%2Ch_300/file.webp 300w, https://static.wixstatic.com/media/c569b3_07c53dc6d5644e7dbd2dfc732ea52d1e~mv2.jpg/v1/fill/w_420%2Ch_420/file.webp 420w" sizes="22vw" alt="Gallery photo" loading="lazy" width="420" height="420" /></div>
+          </div>
         </div>
       </section>
 
