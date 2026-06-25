@@ -57,7 +57,7 @@
       .shop-hero {
         max-width: var(--container-max);
         margin: 0 auto;
-        padding: 48px var(--page-padding) 32px;
+        padding: 88px var(--page-padding) 32px;
       }
 
       .shop-hero .page-title {
@@ -68,12 +68,6 @@
         color: var(--text-secondary);
         font-size: 15px;
         max-width: 480px;
-      }
-
-      .shop-hero .category-count {
-        font-size: 13px;
-        color: var(--text-muted);
-        margin-top: 4px;
       }
 
       /* Shop Layout — sidebar left + grid right */
@@ -98,26 +92,26 @@
       }
 
       .sidebar-section-title {
-        font-size: 13px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
         font-weight: 700;
         color: var(--text-primary);
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        margin-bottom: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid var(--border);
+        letter-spacing: 0.01em;
+        margin-bottom: 12px;
+        padding-bottom: 0;
       }
 
       .category-list {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 0;
       }
 
       .category-list a {
         display: block;
-        padding: 6px 0;
-        font-size: 14px;
+        padding: 3px 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
         color: var(--text-secondary);
         text-decoration: none;
         transition: color var(--transition-fast);
@@ -129,59 +123,108 @@
 
       .category-list a.active {
         color: var(--text-primary);
-        font-weight: 600;
+        text-decoration: underline;
       }
 
-      .sidebar-price-range {
+      /* Price slider */
+      .price-filter-header {
         display: flex;
-        gap: 12px;
-      }
-
-      .sidebar-price-range .input {
-        width: 100%;
-        padding: 10px 12px;
-      }
-
-      .in-stock-label {
-        display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
-        font-size: 14px;
-        color: var(--text-secondary);
-        cursor: pointer;
-        transition: color var(--transition-fast);
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 16px;
       }
 
-      .in-stock-label:hover {
+      .price-filter-label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
         color: var(--text-primary);
       }
 
-      .clear-filters-btn {
-        margin-top: 8px;
+      .price-filter-toggle {
+        font-size: 20px;
+        color: var(--text-secondary);
+        line-height: 1;
+      }
+
+      .price-slider-track {
+        position: relative;
+        height: 36px;
+        display: flex;
+        align-items: center;
+      }
+
+      .price-slider-track::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--text-primary);
+      }
+
+      .price-slider-track input[type="range"] {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        pointer-events: none;
+        margin: 0;
+        padding: 0;
+        height: 36px;
+        z-index: 1;
+      }
+
+      .price-slider-track input[type="range"]::-webkit-slider-runnable-track {
+        height: 2px;
+        background: transparent;
+      }
+
+      .price-slider-track input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        background: var(--text-primary);
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: auto;
+        margin-top: -8px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .price-slider-track input[type="range"]::-moz-range-track {
+        height: 2px;
+        background: transparent;
+        border: none;
+      }
+
+      .price-slider-track input[type="range"]::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        background: var(--text-primary);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        pointer-events: auto;
+      }
+
+      .price-slider-values {
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        color: var(--text-secondary);
+        margin-top: 2px;
       }
 
       /* Results Area */
       .shop-results {
         min-width: 0;
-      }
-
-      .results-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 24px;
-        padding-bottom: 16px;
-        border-bottom: 1px solid var(--border);
-      }
-
-      .results-count {
-        font-size: 14px;
-        color: var(--text-secondary);
-      }
-
-      .results-count strong {
-        color: var(--text-primary);
-        font-weight: 600;
       }
 
       /* 3-column product grid */
@@ -272,7 +315,7 @@
         }
 
         .shop-hero {
-          padding: 32px var(--page-padding) 24px;
+          padding: 72px var(--page-padding) 24px;
         }
 
         .shop-breadcrumbs {
@@ -303,7 +346,6 @@
       <section class="shop-hero">
         <h1 class="page-title">{productSearch.categoryHeader.name}</h1>
         <p class="page-subtitle" if="productSearch.categoryHeader.description">{productSearch.categoryHeader.description}</p>
-        <p class="category-count">{productSearch.categoryHeader.productCount} products</p>
       </section>
 
       <!-- Main Shop Layout -->
@@ -324,60 +366,37 @@
           <!-- Filter by Price -->
           <div class="sidebar-section">
             <h2 class="sidebar-section-title">filter by</h2>
-            <p class="label" style="margin-bottom: 10px;">price range</p>
-            <div class="sidebar-price-range">
+            <div class="price-filter-header">
+              <span class="price-filter-label">Price</span>
+              <span class="price-filter-toggle">−</span>
+            </div>
+            <div class="price-slider-track">
               <input
-                class="input"
-                type="number"
-                placeholder="Min"
+                type="range"
+                min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
                 value="{productSearch.filters.priceRange.minPrice}"
                 ref="productSearch.filters.priceRange.minPrice"
                 aria-label="Minimum price"
               />
               <input
-                class="input"
-                type="number"
-                placeholder="Max"
+                type="range"
+                min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
                 value="{productSearch.filters.priceRange.maxPrice}"
                 ref="productSearch.filters.priceRange.maxPrice"
                 aria-label="Maximum price"
               />
             </div>
-          </div>
-
-          <!-- In Stock Only -->
-          <div class="sidebar-section">
-            <label class="in-stock-label">
-              <input type="checkbox" ref="productSearch.filters.inStockOnly" />
-              in stock only
-            </label>
-          </div>
-
-          <!-- Clear Filters -->
-          <div class="sidebar-section">
-            <button class="btn btn-ghost btn-sm btn-block clear-filters-btn" ref="productSearch.filters.clearFilters">
-              clear filters
-            </button>
+            <div class="price-slider-values">
+              <span>${productSearch.filters.priceRange.minPrice}</span>
+              <span>${productSearch.filters.priceRange.maxPrice}</span>
+            </div>
           </div>
         </aside>
 
         <!-- Results -->
         <section class="shop-results">
-          <!-- Results Header -->
-          <div class="results-header">
-            <p class="results-count">
-              showing <strong>{productSearch.loadedCount}</strong> of <strong>{productSearch.totalCount}</strong> products
-            </p>
-            <select class="select" ref="productSearch.sortBy.sortDropdown" aria-label="Sort products">
-              <option value="relevance">relevance</option>
-              <option value="newest">newest</option>
-              <option value="priceAsc">price: low to high</option>
-              <option value="priceDesc">price: high to low</option>
-              <option value="nameAsc">name: A–Z</option>
-              <option value="nameDesc">name: Z–A</option>
-            </select>
-          </div>
-
           <!-- Empty State -->
           <div class="empty-state" if="!productSearch.hasResults">
             <div class="empty-state-icon">✻</div>
