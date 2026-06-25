@@ -60,16 +60,22 @@
         align-items: center;
         gap: 6px;
         font-family: 'Poppins', sans-serif;
-        font-size: 22px;
+        font-size: 32px;
         font-weight: 600;
-        color: var(--text-primary);
-        letter-spacing: 0.02em;
+        color: rgb(45, 81, 67);
+        letter-spacing: -0.96px;
         white-space: nowrap;
       }
 
       .home-logo-icon {
-        color: var(--accent);
-        font-size: 24px;
+        display: flex;
+        align-items: center;
+        color: rgb(45, 81, 67);
+      }
+
+      .home-logo-icon svg {
+        width: 24px;
+        height: 24px;
       }
 
       .home-nav {
@@ -80,11 +86,15 @@
 
       .home-nav a {
         font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 500;
         color: #2D5143;
         padding: 4px 0;
         transition: color var(--transition-fast);
+      }
+
+      .home-nav a.active {
+        color: #AE3A00;
       }
 
       .home-nav a:hover {
@@ -100,9 +110,9 @@
       }
 
       .home-action-text {
-        font-family: 'din-next-w01-light', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
         color: var(--text-secondary);
         transition: color var(--transition-fast);
         white-space: nowrap;
@@ -155,9 +165,9 @@
       }
 
       .home-search-label {
-        font-family: 'din-next-w01-light', sans-serif;
-        font-size: 14px;
-        font-weight: 400;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
         color: var(--text-secondary);
         white-space: nowrap;
       }
@@ -225,7 +235,7 @@
       .hero-content {
         position: relative;
         z-index: 2;
-        max-width: 520px;
+        max-width: 800px;
       }
 
       .hero-line-clip {
@@ -246,7 +256,7 @@
 
       .hero h1 {
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(12px, 4.30vw, 55px);
+        font-size: clamp(12px, 6.3vw, 120px);
         font-weight: 600;
         line-height: 1;
         margin-bottom: 0;
@@ -255,9 +265,9 @@
       }
 
       .hero p {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(12px, 2.19vw, 28px);
-        font-weight: 600;
+        font-family: 'kepler-w03-light-scd-cp', serif;
+        font-size: clamp(12px, 3.19vw, 64px);
+        font-weight: 400;
         font-style: normal;
         margin-bottom: 15px;
         line-height: 1.3;
@@ -265,10 +275,10 @@
       }
 
       .hero .btn-cta {
-        font-family: 'Poppins', sans-serif;
-        font-weight: 200;
+        font-family: poppins-semibold, 'Poppins', sans-serif;
+        font-weight: 600;
         padding: 10px 64px;
-        font-size: 16px;
+        font-size: 20px;
         background: transparent;
         color: #F2F0EB;
         border: 2px solid rgba(255, 255, 255, 0.8);
@@ -318,15 +328,15 @@
 
       .best-sellers-header .section-title {
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(12px, 2.19vw, 28px);
+        font-size: clamp(12px, 2.19vw, 45px);
         font-weight: 600;
         color: #2D5143;
       }
 
       .view-more-link {
         font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        font-weight: 200;
+        font-size: 20px;
+        font-weight: 600;
         color: var(--text-primary);
         padding: 10px 28px;
         border: 2px solid var(--border, #d4d4d4);
@@ -373,7 +383,7 @@
         z-index: 2;
         background: #bdd8f1;
         color: var(--text-primary);
-        font-family: 'din-next-w01-light', sans-serif;
+        font-family: poppins-extralight, poppins, sans-serif;
         font-size: 12px;
         font-weight: 400;
         padding: 3px 10px;
@@ -413,12 +423,12 @@
         position: relative;
         z-index: 2;
         padding: 60px 40px 40px;
-        max-width: 520px;
+        max-width: 800px;
       }
 
       .fold3-banner-content h2 {
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(12px, 3.28vw, 42px);
+        font-size: clamp(12px, 3.28vw, 64px);
         font-weight: 600;
         line-height: 1.1;
         color: #2B312F;
@@ -428,7 +438,7 @@
 
       .fold3-banner-content p {
         font-family: 'kepler-w03-light-scd-cp', serif;
-        font-size: clamp(12px, 3.28vw, 42px);
+        font-size: clamp(12px, 3.28vw, 64px);
         font-weight: 400;
         line-height: 1;
         color: #2B312F;
@@ -441,8 +451,8 @@
         align-items: center;
         justify-content: center;
         padding: 10px 36px;
-        font-size: 16px;
-        font-weight: 200;
+        font-size: 20px;
+        font-weight: 600;
         color: #2B312F;
         background: transparent;
         border: 2px solid #2B312F;
@@ -486,8 +496,8 @@
 
       .marquee span {
         font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        font-weight: 200;
+        font-size: clamp(12px, 3.28vw, 24px);
+        font-weight: 600;
         color: var(--text-primary);
         display: flex;
         align-items: center;
@@ -520,7 +530,7 @@
       .shop-by-category h2 {
         font-family: 'Poppins', sans-serif;
         text-align: left;
-        font-size: clamp(12px, 2.19vw, 28px);
+        font-size: clamp(12px, 2.19vw, 64px);
         font-weight: 600;
         color: #2D5143;
         margin-bottom: 0;
@@ -581,11 +591,13 @@
 
       .category-card-label {
         font-family: 'Poppins', sans-serif;
-        display: inline-block;
-        padding: 10px 36px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 30px;
         border: 2px solid #2D5143;
         border-radius: var(--radius-lg);
-        font-size: clamp(12px, 1.56vw, 20px);
+        font-size: clamp(12px, 3.56vw, 64px);
         font-weight: 600;
         text-align: center;
         color: #2D5143;
@@ -637,7 +649,7 @@
 
       .our-story-text-content h2 {
           font-family: 'Poppins', sans-serif;
-          font-size: clamp(12px, 2.19vw, 28px);
+          font-size: clamp(12px, 4vw, 64px);
           font-weight: 600;
           text-transform: lowercase;
           letter-spacing: 0.02em;
@@ -647,7 +659,7 @@
 
       .our-story-text-content p {
           font-family: 'kepler-w03-light-scd-cp', serif;
-          font-size: clamp(12px, 3.28vw, 42px);
+          font-size: clamp(12px, 5vw, 90px);
           font-weight: 400;
           font-style: normal;
           line-height: 1;
@@ -766,16 +778,16 @@
 
       .instagram-section h2 {
         font-family: 'Poppins', sans-serif;
-        font-size: clamp(12px, 2.19vw, 28px);
+        font-size: clamp(12px, 3vw, 64px);
         font-weight: 600;
         margin-bottom: 8px;
         color: #2D5143;
       }
 
       .instagram-section p {
-        font-family: 'Poppins', sans-serif;
+        font-family: 'kepler-w03-light-scd-cp', serif;
         font-weight: 200;
-        font-size: 14px;
+        font-size: clamp(12px, 3vw, 50px);;
         color: var(--text-secondary);
         margin-bottom: 32px;
       }
@@ -861,9 +873,9 @@
       <header class="home-header {headerHidden ? header-hidden}">
         <div class="home-header-bar">
           <div class="home-header-inner">
-            <a href="/" class="home-logo"><span class="home-logo-icon">✻</span> onsko</a>
+            <a href="/" class="home-logo"><span class="home-logo-icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.009 19" height="19" width="19" role="presentation" aria-hidden="true"><path fill="currentColor" d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413"/></svg></span> onsko</a>
             <nav class="home-nav">
-              <a href="/">home</a>
+              <a href="/" class="active">home</a>
               <a href="/products">shop</a>
               <a href="#">about</a>
               <a href="#">blog</a>

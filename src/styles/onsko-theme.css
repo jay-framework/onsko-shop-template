@@ -263,14 +263,14 @@ input, select, textarea { font-family: inherit; }
 
 .footer-columns {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  grid-template-columns: auto auto auto 1fr;
   gap: 48px;
   margin-bottom: 64px;
 }
 
 .footer-col h3 {
   font-family: var(--font-primary);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
@@ -278,8 +278,8 @@ input, select, textarea { font-family: inherit; }
 
 .footer-col a {
   display: block;
-  font-family: var(--font-caption);
-  font-size: 13px;
+  font-family: var(--font-primary);
+  font-size: 14px;
   opacity: 0.7;
   margin-bottom: 10px;
   transition: opacity var(--transition-fast);
