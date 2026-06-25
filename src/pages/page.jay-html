@@ -608,9 +608,9 @@
       .our-story-wrapper {
         position: relative;
         z-index: 2;
-        margin: 0 25px 100px 25px;
+        margin: 0 25px 0 25px;
         background: var(--bg-primary);
-        height: 2000px;
+        height: 160vw;
       }
 
       /* Layer 1: background (bottom) */
@@ -631,17 +631,16 @@
         position: sticky;
         top: 13vh;
         z-index: 3;
-        height: 0;
+        height: 40vw;
         overflow: visible;
         pointer-events: none;
-        padding-bottom: 500px;
-        margin-top: calc(-52vh)
+        margin-top: calc(-40vw)
       }
 
       .our-story-text-content {
         text-align: center;
         color: #2D5143;
-        padding: clamp(50px, 4vw, 100px) var(--page-padding);
+        padding: clamp(50px, 7vw, 150px) var(--page-padding);
         pointer-events: auto;
         width: 78%;
         margin: auto;
@@ -680,22 +679,22 @@
       /* Layer 2: images (middle) */
       .our-story-float-right {
         position: sticky;
-        top: 35vh;
+        top: 18vw;
         height: 0;
         z-index: 2;
         pointer-events: none;
-        margin-top: 300px;
-        margin-bottom: 400px;
+        margin-top: 30vw;
+        margin-bottom: 30vw;
       }
 
       .our-story-float-left {
         position: sticky;
-        top: 25vh;
+        top: 13vw;
         height: 0;
         z-index: 2;
         pointer-events: none;
-        margin-top: 700px;
-        margin-bottom: 500px;
+        margin-top: 70vw;
+        margin-bottom: 35vw;
       }
 
       .our-story-img-left,
