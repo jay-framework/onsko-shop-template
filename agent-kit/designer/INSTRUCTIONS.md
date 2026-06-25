@@ -136,4 +136,16 @@ jay-stack dev
 
 | File | Plugin | Description |
 | --- | --- | --- |
+| [accordion.md](accordion.md) | ui-kit | Collapsible sections using native `<details>` / `<summary>`. Pure HTML, no component needed. |
+| [click-popover.md](click-popover.md) | ui-kit | Popup dialog on button click with auto-dismiss on click outside. Pure HTML using `popovertarget`, no component needed. |
+| [clipboard-copy.md](clipboard-copy.md) | ui-kit | Copy-to-clipboard button with "Copied!" feedback. Headless component — requires import. |
+| [letter-split.md](letter-split.md) | ui-kit | Splits dynamic text into one span per letter for individual character styling. Headless component — requires import. |
+| [popover-menu.md](popover-menu.md) | ui-kit | Dropdown menu that opens on hover and closes when the mouse leaves. Headless component — requires import. For click-triggered popups, use `click-popover.md` instead (pure HTML). |
+| [scroll-carousel.md](scroll-carousel.md) | ui-kit | Horizontal slider with prev/next buttons and edge detection. Headless component — requires import. |
+| [spring-button-hover.md](spring-button-hover.md) | ui-kit | Bouncy hover on buttons (and button-like controls) using CSS `linear()` easing — no JavaScript or animation libraries. |
+| [sticky-header-scroll.md](sticky-header-scroll.md) | ui-kit | A site header that stays `position: sticky` and **morphs on scroll**: padding compresses and a **wavy bottom edge** appears, driven by scroll-linked CSS (`animation-timeline: scroll()` + `clip-path: shape()`). |
+| [tabs.md](tabs.md) | ui-kit | Switch between content panels with tab buttons. Pure CSS using radio inputs, no component needed. |
+| [toggle-switch.md](toggle-switch.md) | ui-kit | On/off toggle styled as a switch. Pure CSS using a checkbox input, no component needed. |
+| [tooltip.md](tooltip.md) | ui-kit | Hover tooltip showing extra info. Pure CSS using `::after` pseudo-element, no component needed. |
+| [word-split.md](word-split.md) | ui-kit | Splits dynamic text into one span per word for individual word styling. Headless component — requires import. |
 | [wix-media.md](wix-media.md) | wix-media | How to use images, video, documents, and audio from Wix Media Manager in jay-html templates. |

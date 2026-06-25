@@ -1,4 +1,30 @@
 plugins:
+  - name: ui-kit
+    path: ./node_modules/@jay-framework/ui-kit
+    contracts:
+      - name: popover-menu
+        description: Hover-triggered popover using the Popover API — adds showPopover()
+          on mouseenter
+        type: static
+        path: ./node_modules/@jay-framework/ui-kit/dist/popover-menu.jay-contract
+      - name: scroll-carousel
+        description: Prev/next scroll buttons for CSS scroll-snap containers — tracks
+          atStart/atEnd
+        type: static
+        path: ./node_modules/@jay-framework/ui-kit/dist/scroll-carousel.jay-contract
+      - name: clipboard-copy
+        description: Copy text to clipboard with visual feedback — toggles copied state
+          for 2 seconds
+        type: static
+        path: ./node_modules/@jay-framework/ui-kit/dist/clipboard-copy.jay-contract
+      - name: word-split
+        description: Splits text into a span per word for individual word styling
+        type: static
+        path: ./node_modules/@jay-framework/ui-kit/dist/word-split.jay-contract
+      - name: letter-split
+        description: Splits text into a span per letter for individual letter styling
+        type: static
+        path: ./node_modules/@jay-framework/ui-kit/dist/letter-split.jay-contract
   - name: wix-cart
     path: ./node_modules/@jay-framework/wix-cart
     contracts:
