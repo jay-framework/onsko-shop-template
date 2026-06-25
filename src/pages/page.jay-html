@@ -676,6 +676,12 @@
         top: 30px;
         width: clamp(100px, 15vw, 350px);
         object-fit: contain;
+        animation: float-gentle 6s ease-in-out infinite;
+      }
+
+      @keyframes float-gentle {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
       }
 
       .our-story-img-right {
@@ -683,6 +689,18 @@
         top: 40px;
         width: clamp(80px, 15vw, 450px);
         object-fit: contain;
+        animation: float-complex 23s ease-in-out infinite;
+      }
+
+      @keyframes float-complex {
+        0% { transform: translateY(0); }
+        13% { transform: translateY(-20px); }
+        26% { transform: translateY(0); }
+        39% { transform: translateY(-8px); }
+        52% { transform: translateY(0); }
+        74% { transform: translateY(0); }
+        87% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
       }
 
       @media (max-width: 768px) {
