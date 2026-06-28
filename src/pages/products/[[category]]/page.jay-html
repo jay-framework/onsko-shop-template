@@ -22,37 +22,6 @@
         min-height: 100vh;
       }
 
-      /* Breadcrumbs */
-      .shop-breadcrumbs {
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 16px var(--page-padding) 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 13px;
-        color: var(--text-muted);
-      }
-
-      .shop-breadcrumbs a {
-        color: var(--text-secondary);
-        text-decoration: none;
-        transition: color var(--transition-fast);
-      }
-
-      .shop-breadcrumbs a:hover {
-        color: var(--text-primary);
-      }
-
-      .shop-breadcrumbs .breadcrumb-separator {
-        color: var(--text-muted);
-      }
-
-      .shop-breadcrumbs .breadcrumb-current {
-        color: var(--text-primary);
-        font-weight: 600;
-      }
-
       /* Page Hero */
       .shop-hero {
         max-width: var(--container-max);
@@ -317,10 +286,6 @@
         .shop-hero {
           padding: 72px var(--page-padding) 24px;
         }
-
-        .shop-breadcrumbs {
-          padding-top: 12px;
-        }
       }
     </style>
   </head>
@@ -333,14 +298,6 @@
       <div class="loading-overlay" if="productSearch.isSearching">
         <div class="loading-spinner"></div>
       </div>
-
-      <!-- Breadcrumbs -->
-      <nav class="shop-breadcrumbs" aria-label="Breadcrumb" if="productSearch.categoryHeader.breadcrumbs">
-        <span forEach="productSearch.categoryHeader.breadcrumbs" trackBy="categoryId">
-          <span class="breadcrumb-separator">/</span>
-          <a href="{url}">{name}</a>
-        </span>
-      </nav>
 
       <!-- Page Hero -->
       <section class="shop-hero">
