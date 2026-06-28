@@ -24,7 +24,7 @@
 
       /* Shop Layout — sidebar left + grid right */
       .shop-layout {
-        padding: 188px var(--page-padding) 80px;
+        padding: 170px var(--page-padding) 80px;
         display: grid;
         grid-template-columns: 240px 1fr;
         gap: 48px;

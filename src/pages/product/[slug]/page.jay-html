@@ -30,7 +30,7 @@
       .product-container {
         max-width: var(--container-max);
         margin: 0 auto;
-        padding: 48px var(--page-padding) 80px;
+        padding: 120px var(--page-padding) 80px;
       }
 
       /* Two Column Layout */
