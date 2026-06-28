@@ -22,28 +22,9 @@
         min-height: 100vh;
       }
 
-      /* Page Hero */
-      .shop-hero {
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 88px var(--page-padding) 32px;
-      }
-
-      .shop-hero .page-title {
-        margin-bottom: 8px;
-      }
-
-      .shop-hero .page-subtitle {
-        color: var(--text-secondary);
-        font-size: 15px;
-        max-width: 480px;
-      }
-
       /* Shop Layout — sidebar left + grid right */
       .shop-layout {
-        max-width: var(--container-max);
-        margin: 0 auto;
-        padding: 0 var(--page-padding) 80px;
+        padding: 188px var(--page-padding) 80px;
         display: grid;
         grid-template-columns: 240px 1fr;
         gap: 48px;
@@ -67,7 +48,8 @@
         color: var(--text-primary);
         letter-spacing: 0.01em;
         margin-bottom: 12px;
-        padding-bottom: 0;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
       }
 
       .category-list {
@@ -100,8 +82,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 0;
         padding-bottom: 8px;
-        border-bottom: 1px solid var(--border);
         margin-bottom: 16px;
       }
 
@@ -111,10 +93,31 @@
         color: var(--text-primary);
       }
 
+      .price-filter-details {
+        border: none;
+      }
+
+      .price-filter-details summary {
+        list-style: none;
+        cursor: pointer;
+      }
+
+      .price-filter-details summary::-webkit-details-marker {
+        display: none;
+      }
+
       .price-filter-toggle {
         font-size: 20px;
         color: var(--text-secondary);
         line-height: 1;
+      }
+
+      .price-filter-details[open] .price-filter-toggle::before {
+        content: '−';
+      }
+
+      .price-filter-details:not([open]) .price-filter-toggle::before {
+        content: '+';
       }
 
       .price-slider-track {
@@ -189,6 +192,8 @@
         font-size: 14px;
         color: var(--text-secondary);
         margin-top: 2px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
       }
 
       /* Results Area */
@@ -203,25 +208,48 @@
         gap: 24px;
       }
 
-      /* Product card layout consistency */
+      /* Product card — clean style, no background */
       .products-grid .product-card {
         display: flex;
         flex-direction: column;
         height: auto;
+        background: none;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+      }
+
+      .products-grid .product-card:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .products-grid .product-card .product-card-image {
+        aspect-ratio: 2 / 3;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .products-grid .product-card .ribbon {
+        background: #bdd8f1;
+        color: var(--text-primary);
+        font-family: poppins-extralight, poppins, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 3px 10px;
+        border-radius: 2px;
+        letter-spacing: 0.02em;
       }
 
       .products-grid .product-card-content {
         flex: 1;
         display: flex;
         flex-direction: column;
+        padding: 12px 0 0;
       }
 
       .products-grid .product-card-price {
-        margin-top: auto;
-      }
-
-      .products-grid .btn-block {
-        margin-top: 12px;
+        margin-top: 0;
       }
 
       /* Pagination */
@@ -282,10 +310,6 @@
         .products-grid {
           grid-template-columns: 1fr;
         }
-
-        .shop-hero {
-          padding: 72px var(--page-padding) 24px;
-        }
       }
     </style>
   </head>
@@ -298,12 +322,6 @@
       <div class="loading-overlay" if="productSearch.isSearching">
         <div class="loading-spinner"></div>
       </div>
-
-      <!-- Page Hero -->
-      <section class="shop-hero">
-        <h1 class="page-title">{productSearch.categoryHeader.name}</h1>
-        <p class="page-subtitle" if="productSearch.categoryHeader.description">{productSearch.categoryHeader.description}</p>
-      </section>
 
       <!-- Main Shop Layout -->
       <div class="shop-layout">
@@ -323,32 +341,34 @@
           <!-- Filter by Price -->
           <div class="sidebar-section">
             <h2 class="sidebar-section-title">filter by</h2>
-            <div class="price-filter-header">
-              <span class="price-filter-label">Price</span>
-              <span class="price-filter-toggle">−</span>
-            </div>
-            <div class="price-slider-track">
-              <input
-                type="range"
-                min="{productSearch.filters.priceRange.minBound}"
-                max="{productSearch.filters.priceRange.maxBound}"
-                value="{productSearch.filters.priceRange.minPrice}"
-                ref="productSearch.filters.priceRange.minPrice"
-                aria-label="Minimum price"
-              />
-              <input
-                type="range"
-                min="{productSearch.filters.priceRange.minBound}"
-                max="{productSearch.filters.priceRange.maxBound}"
-                value="{productSearch.filters.priceRange.maxPrice}"
-                ref="productSearch.filters.priceRange.maxPrice"
-                aria-label="Maximum price"
-              />
-            </div>
-            <div class="price-slider-values">
-              <span>${productSearch.filters.priceRange.minPrice}</span>
-              <span>${productSearch.filters.priceRange.maxPrice}</span>
-            </div>
+            <details class="price-filter-details" open>
+              <summary class="price-filter-header">
+                <span class="price-filter-label">Price</span>
+                <span class="price-filter-toggle"></span>
+              </summary>
+              <div class="price-slider-track">
+                <input
+                  type="range"
+                  min="{productSearch.filters.priceRange.minBound}"
+                  max="{productSearch.filters.priceRange.maxBound}"
+                  value="{productSearch.filters.priceRange.minPrice}"
+                  ref="productSearch.filters.priceRange.minPrice"
+                  aria-label="Minimum price"
+                />
+                <input
+                  type="range"
+                  min="{productSearch.filters.priceRange.minBound}"
+                  max="{productSearch.filters.priceRange.maxBound}"
+                  value="{productSearch.filters.priceRange.maxPrice}"
+                  ref="productSearch.filters.priceRange.maxPrice"
+                  aria-label="Maximum price"
+                />
+              </div>
+              <div class="price-slider-values">
+                <span>${productSearch.filters.priceRange.minPrice}</span>
+                <span>${productSearch.filters.priceRange.maxPrice}</span>
+              </div>
+            </details>
           </div>
         </aside>
 
@@ -387,34 +407,6 @@
                   <span class="original-price" if="hasDiscount">{strikethroughPrice}</span>
                   <span class="badge badge-error" if="hasDiscount">sale</span>
                 </div>
-
-                <!-- Quick Add — simple product in stock -->
-                <button
-                  class="btn btn-primary btn-block"
-                  ref="productSearch.searchResults.addToCartButton"
-                  if="quickAddType === SIMPLE && inventory.availabilityStatus === IN_STOCK"
-                >
-                  add to cart
-                </button>
-
-                <!-- View Options — needs configuration, not out of stock -->
-                <a
-                  href="{productUrl}"
-                  class="btn btn-secondary btn-block"
-                  ref="productSearch.searchResults.viewOptionsButton"
-                  if="quickAddType === NEEDS_CONFIGURATION && inventory.availabilityStatus !== OUT_OF_STOCK"
-                >
-                  view options
-                </a>
-
-                <!-- Sold Out -->
-                <button
-                  class="btn btn-ghost btn-block"
-                  disabled
-                  if="inventory.availabilityStatus === OUT_OF_STOCK"
-                >
-                  sold out
-                </button>
               </div>
             </article>
           </div>
