@@ -2,6 +2,7 @@ import { makeJayStackComponent, phaseOutput } from '@jay-framework/fullstack-com
 import { createSignal, createEffect } from '@jay-framework/component';
 
 export const SiteHeader = makeJayStackComponent()
+  .withProps()
   .withFastRender(async () => {
     return phaseOutput({ headerHidden: false }, {});
   })
