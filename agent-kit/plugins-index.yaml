@@ -217,6 +217,12 @@ plugins:
       - name: writePluginSourceAction
         description: Add or update a local plugin source in .aiditor/plugin-sources.yaml
         path: ./node_modules/@jay-framework/aiditor/dist/actions/write-plugin-source.jay-action
+      - name: checkAiditorPublishAction
+        description: Check whether the Jay project defines an aiditor:publish npm script
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/check-aiditor-publish.jay-action
+      - name: runAiditorPublishAction
+        description: Run the Jay project's aiditor:publish npm script (stream)
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/run-aiditor-publish.jay-action
     routes:
       - path: /aiditor
         description: AIditor — visual AI-driven code editor
