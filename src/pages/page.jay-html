@@ -876,7 +876,7 @@
             <nav class="home-nav">
               <a href="/" class="active">home</a>
               <a href="/products">shop</a>
-              <a href="#">about</a>
+              <a href="#our-story">about</a>
               <a href="#">blog</a>
             </nav>
             <div class="home-header-actions">
@@ -979,7 +979,7 @@
         </div>
       </section>
 
-      <div class="our-story-wrapper">
+      <div id="our-story" class="our-story-wrapper">
         <section class="our-story-background">
         </section>
         <div class="our-story-text">
