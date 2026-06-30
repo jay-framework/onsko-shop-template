@@ -128,6 +128,17 @@
         margin-bottom: 24px;
       }
 
+      .quantity-input::-webkit-inner-spin-button,
+      .quantity-input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .quantity-input {
+        -moz-appearance: textfield;
+        appearance: textfield;
+      }
+
       /* Action Buttons */
       .product-actions {
         display: flex;

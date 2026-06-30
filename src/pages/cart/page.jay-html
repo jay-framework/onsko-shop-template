@@ -22,13 +22,12 @@
 
         .cart-page {
             min-height: 100vh;
-            padding-bottom: 160px;
         }
 
         /* Cart Header Section */
         .cart-hero {
             text-align: center;
-            padding: 48px var(--page-padding) 36px;
+            padding: 120px var(--page-padding) 36px;
             border-bottom: 1px solid var(--border);
             background: var(--bg-secondary);
         }
@@ -168,16 +167,13 @@
             padding-top: 8px;
         }
 
-        /* Floating Summary Bar */
+        /* Cart Summary Bar */
         .floating-summary {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            position: static;
+            z-index: auto;
+            box-shadow: none;
             background: var(--bg-card);
             border-top: 1px solid var(--border);
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
-            z-index: 100;
         }
 
         .summary-bar-inner {
@@ -330,10 +326,6 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .cart-page {
-                padding-bottom: 220px;
-            }
-
             .cart-item {
                 grid-template-columns: 80px 1fr;
                 gap: 12px;
@@ -397,7 +389,7 @@
         <!-- Cart Header -->
         <section class="cart-hero">
             <h1 class="page-title">your cart</h1>
-            <p class="item-count">{cartPage.summary.itemCount} items</p>
+            <p class="item-count" if="cartPage.summary.itemCount >= 0">{cartPage.summary.itemCount} items</p>
             <div class="cart-hero-actions">
                 <a href="/products" ref="cartPage.continueShoppingLink" class="btn btn-ghost">
                     continue shopping
@@ -430,7 +422,7 @@
                          forEach="cartPage.lineItems"
                          trackBy="lineItemId">
 
-                    <a href="{productUrl}" class="cart-item-image-link" ref="cartPage.lineItems.productLink">
+                    <a href="{productUrl}" class="cart-item-image-link">
                         <img class="cart-item-image"
                              src="{image.url}/v1/fill/w_200,h_240/file.webp"
                              alt="{image.altText}"
@@ -530,8 +522,8 @@
                 </div>
             </div>
         </div>
-    <!-- Site Footer -->
-    <jay:SiteFooter />
+        <!-- Site Footer -->
+        <jay:SiteFooter />
     </main>
 </body>
 </html>
