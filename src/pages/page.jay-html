@@ -613,6 +613,17 @@
         height: 160vw;
       }
 
+      @keyframes our-story-rise {
+        0% {
+          opacity: 0;
+          transform: translateY(60px) scale(0.98);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
       /* Layer 1: background (bottom) */
       .our-story-background {
         position: sticky;
@@ -624,6 +635,16 @@
         z-index: 1;
         height: 40vw;
         color: transparent;
+      }
+
+      .our-story-background.scroll-animate {
+        opacity: 0;
+        transform: translateY(60px) scale(0.98);
+        transition: none;
+      }
+
+      .our-story-background.scroll-animate.in-view {
+        animation: our-story-rise 0.9s ease-out both;
       }
 
       /* Layer 3: text (top) */
@@ -980,7 +1001,7 @@
       </section>
 
       <div id="our-story" class="our-story-wrapper">
-        <section class="our-story-background">
+        <section class="our-story-background scroll-animate">
         </section>
         <div class="our-story-text">
           <div class="our-story-text-content">
