@@ -553,7 +553,7 @@
       .shop-by-category h2 {
         font-family: 'Poppins', sans-serif;
         text-align: left;
-        font-size: clamp(12px, 2.19vw, 64px);
+        font-size: clamp(12px, 2.19vw, 45px);
         font-weight: 600;
         color: #2D5143;
         margin-bottom: 0;
@@ -564,13 +564,13 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 10px 36px;
-        font-size: 16px;
-        font-weight: 200;
-        color: #2B312F;
+        padding: 10px 28px;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--text-primary);
         background: transparent;
-        border: 2px solid #2B312F;
-        border-radius: var(--radius-lg);
+        border: 2px solid var(--border, #d4d4d4);
+        border-radius: 8px;
         text-transform: lowercase;
         letter-spacing: 0.02em;
         transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -798,7 +798,7 @@
         background: var(--bg-secondary);
         color: var(--text-primary);
         text-align: center;
-        padding: 64px var(--page-padding);
+        padding: 64px 0;
       }
 
       .instagram-icon {
@@ -852,8 +852,8 @@
       }
 
       @keyframes ig-scroll-left {
-        from { transform: translateX(200px); }
-        to { transform: translateX(-200px); }
+        from { transform: translateX(300px); }
+        to { transform: translateX(-100px); }
       }
 
       @keyframes ig-scroll-right {
@@ -884,6 +884,7 @@
           height: 53vw;
         }
         .view-more-link { font-size: 14px; }
+        .shop-by-category .btn-shop-now { font-size: 14px; }
         .best-sellers-grid {
           display: flex;
           overflow-x: auto;
@@ -915,8 +916,10 @@
           margin: 0 auto;
         }
         .best-sellers-header { margin-bottom: 24px; gap: 16px; }
-        .best-sellers-header .section-title { font-size: clamp(26px, 5vw, 32px); }
+        .best-sellers-header .section-title { font-size: clamp(12px, 5vw, 32px); }
         .view-more-link { padding: 8px 20px; }
+        .shop-by-category h2 { font-size: clamp(12px, 5vw, 32px); }
+        .shop-by-category .btn-shop-now { padding: 8px 20px; }
         .best-sellers-grid {
           padding: 0;
         }
@@ -926,8 +929,21 @@
         .best-sellers .product-card-image {
           aspect-ratio: 4 / 5;
         }
-        .category-cards { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-        .instagram-grid { grid-template-columns: repeat(2, 1fr); }
+        .category-cards { grid-template-columns: 1fr; }
+        .instagram-grid { grid-template-columns: repeat(2, 1fr); gap: clamp(4px, 2.5vw, 16px)}
+
+        .our-story-wrapper {height: 95vw; padding-bottom: 0}
+        .our-story-float-right {margin-top: -60vw;margin-bottom: 0}
+        .our-story-float-left {margin-top: -80vw;margin-bottom: 0}
+        .our-story-text-content {padding-top: 10%; width: 95%}
+        .our-story-text-content h2 { font-size: clamp(12px, 5.27vw, 32px); }
+        .our-story-text-content p { font-size: clamp(12px, 8.23vw, 64px); }
+        .our-story-background {height: 95vw}
+        .our-story-text {
+            height: 95vw;
+            margin-top: -95vw
+        }
+        .ig-row {gap: clamp(4px, 2.5vw, 16px);}
       }
     </style>
   </head>
