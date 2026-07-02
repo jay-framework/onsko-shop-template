@@ -124,6 +124,31 @@ plugins:
         marker: WIX_STORES_CONTEXT
         description: Client-side stores access with product variant resolution and
           delegated cart operations
+  - name: wix-members
+    path: ./node_modules/@jay-framework/wix-members
+    contracts:
+      - name: login-indicator
+        description: Shows member auth state in site header, with login/register/logout
+          buttons
+        type: static
+        path: ./node_modules/@jay-framework/wix-members/dist/contracts/login-indicator.jay-contract
+      - name: auth-callback
+        description: Handles OAuth callback after Wix-hosted login/register
+        type: static
+        path: ./node_modules/@jay-framework/wix-members/dist/contracts/auth-callback.jay-contract
+      - name: protected-page
+        description: Page-level login guard — redirects visitors to login page
+        type: static
+        path: ./node_modules/@jay-framework/wix-members/dist/contracts/protected-page.jay-contract
+    services:
+      - name: wix-members
+        marker: WIX_MEMBERS_SERVICE
+        description: Server-side member operations via Wix Members API
+    contexts:
+      - name: wix-members
+        marker: WIX_MEMBERS_CONTEXT
+        description: Client-side member auth state, redirect login/register/logout
+          operations
   - name: aiditor
     path: ./node_modules/@jay-framework/aiditor
     contracts:

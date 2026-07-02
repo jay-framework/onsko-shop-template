@@ -25,7 +25,8 @@
     "@jay-framework/wix-cart": "^0.19.7",
     "@jay-framework/wix-deploy": "^0.19.7",
     "@jay-framework/wix-server-client": "^0.19.7",
-    "@jay-framework/wix-stores": "^0.19.7"
+    "@jay-framework/wix-stores": "^0.19.7",
+    "@jay-framework/wix-members": "^0.19.7"
   },
   "devDependencies": {
     "@jay-framework/aiditor": "^0.19.7",
