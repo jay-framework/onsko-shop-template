@@ -5,6 +5,7 @@
     <script type="application/jay-headless" plugin="@jay-framework/wix-cart" contract="cart-indicator"></script>
     <script type="application/jay-headless" plugin="@jay-framework/wix-members" contract="login-indicator"></script>
     <script type="application/jay-headless" plugin="@jay-framework/wix-stores" contract="category-products"></script>
+    <script type="application/jay-headless" plugin="@jay-framework/ui-kit" contract="scroll-carousel"></script>
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data" contract="./page.jay-contract"></script>
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
@@ -189,18 +190,14 @@
         white-space: nowrap;
       }
 
-      @media (max-width: 768px) {
-        .home-header { padding: 24px 16px 0; margin-bottom: -71px; }
-        .home-header-inner { padding: 0 16px; gap: 16px; }
+      @media (max-width: 750px) {
+        .home-header { padding: 50px 50px 0; margin-bottom: -97px; }
+        .home-header-inner { padding: 0 16px; gap: 16px; flex-wrap: wrap; gap: 10px; }
         .home-nav { gap: 14px; }
+        .home-nav a { font-size: 13px; }
         .home-header-actions { gap: 12px; }
         .home-search-label { display: none; }
         .home-action-text { display: none; }
-      }
-
-      @media (max-width: 600px) {
-        .home-header-inner { flex-wrap: wrap; gap: 10px; }
-        .home-nav a { font-size: 13px; }
       }
 
       /* ── Hero Section ── */
@@ -316,6 +313,12 @@
       @media (max-width: 750px) {
         .hero {
           aspect-ratio: 1 / 2;
+        }
+        .hero h1 {
+          font-size: clamp(12px, 12.27vw, 92px);
+        }
+        .hero p {
+          font-size: clamp(12px, 6.67vw, 50px);
         }
       }
 
@@ -493,13 +496,7 @@
         border-color: #2d3436;
       }
 
-      @media (max-width: 768px) {
-        .fold3-banner-content {
-          padding: 48px 32px;
-        }
-      }
-
-      @media (max-width: 480px) {
+      @media (max-width: 750px) {
         .fold3-banner-content {
           padding: 32px 24px;
           max-width: 100%;
@@ -775,7 +772,7 @@
         100% { transform: translateY(0); }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 750px) {
         .our-story-wrapper {
           padding-bottom: 600px;
         }
@@ -881,28 +878,16 @@
         object-fit: cover;
       }
 
-      @media (max-width: 1024px) {
+      @media (max-width: 1000px) {
         .best-sellers-grid { grid-template-columns: repeat(2, 1fr); }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 750px) {
         .best-sellers { padding: 48px var(--page-padding); }
-        .best-sellers-header { margin-bottom: 24px; }
+        .best-sellers-header { margin-bottom: 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
         .best-sellers-header .section-title { font-size: clamp(26px, 5vw, 32px); }
-        .view-more-link { padding: 8px 20px; font-size: 14px; }
-        .best-sellers-grid { gap: 16px; }
+        .view-more-link { padding: 8px 20px; font-size: 14px; align-self: flex-start; }
         .category-cards { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-        .instagram-grid { grid-template-columns: repeat(3, 1fr); }
-      }
-
-      @media (max-width: 600px) {
-        .best-sellers-header {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 16px;
-        }
-        .view-more-link { align-self: flex-start; }
-        .best-sellers-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
         .instagram-grid { grid-template-columns: repeat(2, 1fr); }
       }
     </style>
