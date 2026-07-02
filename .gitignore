@@ -6,6 +6,8 @@ dist/
 .wix/
 serve.mjs
 *.d.ts
+references
+.aiditor
 
 # Credentials — never commit real values
 config/.wix.yaml
