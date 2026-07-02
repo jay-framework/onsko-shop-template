@@ -2,7 +2,7 @@
 
 A minimal e-commerce storefront built with [Jay Framework](https://github.com/jay-framework/jay) and Wix Stores. Features product listing, product detail pages with variants, and a shopping cart.
 
-**Live demo:** [jay-store-736aca87-yoav68.wix-site-host.com](https://jay-store-736aca87-yoav68.wix-site-host.com)
+**Live demo:** [jay-onsko-52654f57-yoav68.wix-site-host.com](https://jay-onsko-52654f57-yoav68.wix-site-host.com)
 
 <p>
   <img src="docs/screenshot-collection.png" alt="Product collection page" width="400">
