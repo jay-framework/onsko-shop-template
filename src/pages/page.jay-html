@@ -879,9 +879,9 @@
       }
 
       @media (max-width: 1000px) {
-        .best-sellers {
+        .fold3-banner {
+          aspect-ratio: unset;
           height: 53vw;
-          overflow: hidden;
         }
         .view-more-link { font-size: 14px; }
         .best-sellers-grid {
@@ -907,12 +907,21 @@
       }
 
       @media (max-width: 750px) {
-        .best-sellers { padding: 48px var(--page-padding); height: 134.67vw; }
-        .best-sellers-header { margin-bottom: 24px; flex-direction: column; align-items: flex-start; gap: 16px; }
+        .best-sellers { padding: 48px 0; }
+        .fold3-banner {
+          aspect-ratio: unset;
+          height: 134.67vw;
+          width: 100%;
+          margin: 0 auto;
+        }
+        .best-sellers-header { margin-bottom: 24px; gap: 16px; }
         .best-sellers-header .section-title { font-size: clamp(26px, 5vw, 32px); }
-        .view-more-link { padding: 8px 20px; align-self: flex-start; }
+        .view-more-link { padding: 8px 20px; }
+        .best-sellers-grid {
+          padding: 0;
+        }
         .best-sellers-grid .product-card {
-          flex: 0 0 90%;
+          flex: 0 0 80%;
         }
         .best-sellers .product-card-image {
           aspect-ratio: 4 / 5;
