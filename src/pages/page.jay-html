@@ -190,14 +190,127 @@
         white-space: nowrap;
       }
 
+      /* ── Hamburger Button ── */
+      .hamburger-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: #2D5143;
+      }
+      .hamburger-btn svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* ── Mobile Menu (Popover) ── */
+      .mobile-menu {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: #f5f3ef;
+        z-index: 200;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
+      }
+      .mobile-menu:popover-open {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      @starting-style {
+        .mobile-menu:popover-open {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+      .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 32px;
+      }
+      .mobile-menu-logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 28px;
+        font-weight: 600;
+        color: #2D5143;
+        letter-spacing: -0.96px;
+      }
+      .mobile-menu-logo svg {
+        width: 20px;
+        height: 20px;
+        color: #2D5143;
+      }
+      .mobile-menu-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        color: #2D5143;
+      }
+      .mobile-menu-close svg {
+        width: 24px;
+        height: 24px;
+      }
+      .mobile-menu-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 32px;
+        gap: 12px;
+      }
+      .mobile-menu-nav a {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #2D5143;
+        padding: 8px 0;
+      }
+      .mobile-menu-nav a.active {
+        color: #AE3A00;
+      }
+      .mobile-menu-login {
+        display: none;
+        padding: 0 32px;
+      }
+      .mobile-menu-login button,
+      .mobile-menu-login span {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #2D5143;
+        background: none;
+        border: none;
+        padding: 8px 0;
+        cursor: pointer;
+      }
+
+      @media (max-width: 1000px) {
+        .home-nav { display: none; }
+        .hamburger-btn { display: flex; }
+      }
+
       @media (max-width: 750px) {
         .home-header { padding: 50px 50px 0; margin-bottom: -97px; }
-        .home-header-inner { padding: 0 16px; gap: 16px; flex-wrap: wrap; gap: 10px; }
-        .home-nav { gap: 14px; }
-        .home-nav a { font-size: 13px; }
-        .home-header-actions { gap: 12px; }
-        .home-search-label { display: none; }
+        .home-header-inner { padding: 0 16px; gap: 12px; }
         .home-action-text { display: none; }
+        .home-search-label { display: none; }
+        .mobile-menu-login { display: block; }
       }
 
       /* ── Hero Section ── */
@@ -972,10 +1085,34 @@
                   <span class="home-cart-badge">{itemCount}</span>
                 </a>
               </jay:cart-indicator>
+              <button class="hamburger-btn" popovertarget="mobile-menu" aria-label="Open menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+              </button>
             </div>
           </div>
         </div>
       </header>
+
+      <div id="mobile-menu" popover class="mobile-menu">
+        <div class="mobile-menu-header">
+          <a href="/" class="mobile-menu-logo"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.009 19" height="19" width="19" role="presentation" aria-hidden="true"><path fill="currentColor" d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413"/></svg> onsko</a>
+          <button popovertarget="mobile-menu" popovertargetaction="hide" class="mobile-menu-close" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+          </button>
+        </div>
+        <nav class="mobile-menu-nav">
+          <a href="/" class="active">home</a>
+          <a href="/products">shop</a>
+          <a href="#our-story">about</a>
+        </nav>
+        <div class="mobile-menu-login">
+          <jay:login-indicator>
+            <button if="!isLoggedIn" ref="loginButton" class="mobile-login-btn" popovertarget="mobile-menu" popovertargetaction="hide">log in</button>
+            <span if="isLoggedIn">{memberName}</span>
+            <button if="isLoggedIn" ref="logoutButton" class="mobile-login-btn" popovertarget="mobile-menu" popovertargetaction="hide">log out</button>
+          </jay:login-indicator>
+        </div>
+      </div>
 
       <section class="hero">
         <img class="hero-bg-image" src="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920,h_1080/file.webp" srcset="https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_640%2Ch_360/file.webp 640w, https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1200%2Ch_675/file.webp 1200w, https://static.wixstatic.com/media/c569b3_16f4fe34ac024db1a4f6fd3a685a8513~mv2.jpg/v1/fill/w_1920%2Ch_1080/file.webp 1920w" sizes="100vw" alt="Onsko beauty products" loading="eager" width="1920" height="1080" fetchpriority="high" />

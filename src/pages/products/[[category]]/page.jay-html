@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
     <style>
       /* =====================================================
-         ONSKO PRODUCTS PAGE - SIDEBAR + 3-COLUMN GRID
+         ONSKO PRODUCTS PAGE - SIDEBAR + GRID (DESKTOP)
+         FILTER POPOVER (MOBILE < 1000px)
          ===================================================== */
 
       .shop-page {
         min-height: 100vh;
       }
 
-      /* Shop Layout — sidebar left + grid right */
+      /* Shop Layout — sidebar left + grid right on desktop */
       .shop-layout {
         padding: 170px var(--page-padding) 80px;
         display: grid;
@@ -30,7 +31,7 @@
         gap: 48px;
       }
 
-      /* Sidebar */
+      /* Sidebar — visible on desktop */
       .shop-sidebar {
         position: sticky;
         top: 80px;
@@ -52,6 +53,119 @@
         border-bottom: 1px solid var(--border);
       }
 
+      /* Filter bar — hidden on desktop, shown on mobile */
+      .filter-bar {
+        display: none;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 24px;
+      }
+
+      .filter-toggle-btn {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--text-primary);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: color var(--transition-fast);
+      }
+
+      .filter-toggle-btn:hover {
+        color: var(--text-secondary);
+      }
+
+      /* ── Filter Popover (mobile only) ── */
+      .filter-popover {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background: var(--bg-primary, #f5f3ef);
+        z-index: 200;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
+        overflow-y: auto;
+      }
+
+      .filter-popover:popover-open {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      @starting-style {
+        .filter-popover:popover-open {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+
+      .filter-popover-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 32px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .filter-popover-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--text-primary);
+        letter-spacing: -0.01em;
+      }
+
+      .filter-popover-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        color: var(--text-primary);
+      }
+
+      .filter-popover-close svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .filter-popover-body {
+        padding: 32px;
+      }
+
+      .filter-section {
+        margin-bottom: 36px;
+      }
+
+      .filter-section:last-child {
+        margin-bottom: 0;
+      }
+
+      .filter-section-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: 0.01em;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      /* Shared styles for category list & price filter */
       .category-list {
         display: flex;
         flex-direction: column;
@@ -280,21 +394,20 @@
         backdrop-filter: blur(4px);
       }
 
-      /* Responsive */
-      @media (max-width: 1024px) {
+      /* ── Below 1000px: hide sidebar, show filter link + popover ── */
+      @media (max-width: 1000px) {
         .shop-layout {
           grid-template-columns: 1fr;
+          padding-top: 120px;
+          gap: 0;
         }
 
         .shop-sidebar {
-          position: static;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 24px;
+          display: none;
         }
 
-        .sidebar-section {
-          margin-bottom: 0;
+        .filter-bar {
+          display: flex;
         }
 
         .products-grid {
@@ -303,10 +416,6 @@
       }
 
       @media (max-width: 600px) {
-        .shop-sidebar {
-          grid-template-columns: 1fr;
-        }
-
         .products-grid {
           grid-template-columns: 1fr;
         }
@@ -323,9 +432,64 @@
         <div class="loading-spinner"></div>
       </div>
 
+      <!-- Filter Popover -->
+      <div id="shop-filter-popover" popover class="filter-popover">
+        <div class="filter-popover-header">
+          <span class="filter-popover-title">Filter</span>
+          <button popovertarget="shop-filter-popover" popovertargetaction="hide" class="filter-popover-close" aria-label="Close filters">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+          </button>
+        </div>
+        <div class="filter-popover-body">
+          <!-- Browse by Category -->
+          <div class="filter-section">
+            <h2 class="filter-section-title">browse by</h2>
+            <div class="category-list">
+              <a href="/products">all products</a>
+              <a href="{categoryUrl}" class="{isSelected ? active}" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
+                {categoryName}
+              </a>
+            </div>
+          </div>
+
+          <!-- Filter by Price -->
+          <div class="filter-section">
+            <h2 class="filter-section-title">filter by</h2>
+            <details class="price-filter-details" open>
+              <summary class="price-filter-header">
+                <span class="price-filter-label">Price</span>
+                <span class="price-filter-toggle"></span>
+              </summary>
+              <div class="price-slider-track">
+                <input
+                  type="range"
+                  min="{productSearch.filters.priceRange.minBound}"
+                  max="{productSearch.filters.priceRange.maxBound}"
+                  value="{productSearch.filters.priceRange.minPrice}"
+                  ref="productSearch.filters.priceRange.minPrice"
+                  aria-label="Minimum price"
+                />
+                <input
+                  type="range"
+                  min="{productSearch.filters.priceRange.minBound}"
+                  max="{productSearch.filters.priceRange.maxBound}"
+                  value="{productSearch.filters.priceRange.maxPrice}"
+                  ref="productSearch.filters.priceRange.maxPrice"
+                  aria-label="Maximum price"
+                />
+              </div>
+              <div class="price-slider-values">
+                <span>${productSearch.filters.priceRange.minPrice}</span>
+                <span>${productSearch.filters.priceRange.maxPrice}</span>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+
       <!-- Main Shop Layout -->
       <div class="shop-layout">
-        <!-- Sidebar -->
+        <!-- Sidebar (desktop) -->
         <aside class="shop-sidebar" aria-label="Product filters">
           <!-- Browse by Category -->
           <div class="sidebar-section">
@@ -371,6 +535,11 @@
             </details>
           </div>
         </aside>
+
+        <!-- Filter Bar (mobile) -->
+        <div class="filter-bar">
+          <button class="filter-toggle-btn" popovertarget="shop-filter-popover" aria-label="Open filters">Filter</button>
+        </div>
 
         <!-- Results -->
         <section class="shop-results">
