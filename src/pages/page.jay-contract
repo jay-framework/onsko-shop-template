@@ -5,3 +5,8 @@ tags:
     dataType: boolean
     phase: fast+interactive
     description: Whether the header is hidden due to scroll position
+  - tag: headerReady
+    type: variant
+    dataType: boolean
+    phase: fast+interactive
+    description: Whether the header has been initialized by the client

@@ -245,6 +245,13 @@ input, select, textarea { font-family: inherit; }
   color: #ffffff;
 }
 
+.site-login-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .site-header-action-icon {
   display: flex;
   align-items: center;

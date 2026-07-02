@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Signing in... | Onsko</title>
+    <script type="application/jay-headless" plugin="@jay-framework/wix-members" contract="auth-callback"></script>
+    <script type="application/jay-data">
+      data:
+    </script>
+    <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
+    <style>
+      body {
+        background: var(--bg-primary);
+      }
+
+      .auth-callback {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: var(--page-padding);
+      }
+
+      .auth-callback-content {
+        text-align: center;
+        max-width: 400px;
+      }
+
+      .auth-callback-content h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+        color: #2D5143;
+        margin-bottom: 12px;
+      }
+
+      .auth-callback-content p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        color: var(--text-secondary);
+      }
+
+      .auth-error {
+        color: var(--error, #c0392b);
+      }
+    </style>
+  </head>
+  <body>
+    <jay:auth-callback>
+      <main class="auth-callback">
+        <div class="auth-callback-content">
+          <div if="isProcessing">
+            <h1>signing you in...</h1>
+            <p>please wait while we complete your login.</p>
+          </div>
+          <div if="hasError">
+            <h1>something went wrong</h1>
+            <p class="auth-error">{errorMessage}</p>
+            <p><a href="/">return to homepage</a></p>
+          </div>
+        </div>
+      </main>
+    </jay:auth-callback>
+  </body>
+</html>
