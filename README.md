@@ -1,4 +1,4 @@
-# Jay Wix Store — Light
+# Jay Wix Onsko Store Template
 
 A Wix Stores template using the [Jay Framework](https://github.com/jay-framework/jay) and Wix Headless. Features animated homepage, product listing, product detail pages, and a shopping cart.
 
