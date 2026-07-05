@@ -11,7 +11,7 @@ Jay Stack is a full-stack framework where:
 - **jay-html** templates provide the UI that binds to contract data
 - **Rendering phases** determine when data is available (build-time, request-time, client-side)
 
-Your job is to create `.jay-html` pages that bind to the data and interactions defined by contracts.
+Your job is to create `.jay-html` pages that bind to the data and interactions defined by contracts. **All visible UI structure belongs in jay-html** — not in `page.ts` via `document.createElement`. Behavior and state live in `page.ts`; elements are reached through **refs** declared in the template.
 
 ## Rendering Phases
 
@@ -141,7 +141,7 @@ jay-stack dev
 | [clipboard-copy.md](clipboard-copy.md) | ui-kit | Copy-to-clipboard button with "Copied!" feedback. Headless component — requires import. |
 | [letter-split.md](letter-split.md) | ui-kit | Splits dynamic text into one span per letter for individual character styling. Headless component — requires import. |
 | [popover-menu.md](popover-menu.md) | ui-kit | Dropdown menu that opens on hover and closes when the mouse leaves. Headless component — requires import. For click-triggered popups, use `click-popover.md` instead (pure HTML). |
-| [scroll-carousel.md](scroll-carousel.md) | ui-kit | Horizontal slider with prev/next buttons and edge detection. Headless component — requires import. |
+| [scroll-carousel.md](scroll-carousel.md) | ui-kit | Horizontal slider with CSS scroll snap. Headless component — requires import. |
 | [spring-button-hover.md](spring-button-hover.md) | ui-kit | Bouncy hover on buttons (and button-like controls) using CSS `linear()` easing — no JavaScript or animation libraries. |
 | [sticky-header-scroll.md](sticky-header-scroll.md) | ui-kit | A site header that stays `position: sticky` and **morphs on scroll**: padding compresses and a **wavy bottom edge** appears, driven by scroll-linked CSS (`animation-timeline: scroll()` + `clip-path: shape()`). |
 | [tabs.md](tabs.md) | ui-kit | Switch between content panels with tab buttons. Pure CSS using radio inputs, no component needed. |

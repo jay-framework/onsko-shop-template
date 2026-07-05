@@ -1,13 +1,14 @@
 # Jay Wix Store — Light
 
-A minimal e-commerce storefront built with [Jay Framework](https://github.com/jay-framework/jay) and Wix Stores. Features product listing, product detail pages with variants, and a shopping cart.
+A Wix Stores template using the [Jay Framework](https://github.com/jay-framework/jay) and Wix Headless. Features animated homepage, product listing, product detail pages, and a shopping cart.
 
 **Live demo:** [jay-onsko-52654f57-yoav68.wix-site-host.com](https://jay-onsko-52654f57-yoav68.wix-site-host.com)
 
 <p>
-  <img src="docs/screenshot-collection.png" alt="Product collection page" width="400">
-  <img src="docs/screenshot-product-detail.png" alt="Product detail page" width="400">
-  <img src="docs/screenshot-product-page.png" alt="Product page with options" width="400">
+  <img src="docs/homepage.png" alt="Homepage" width="400"/>
+  <img src="docs/product%20gallery.png" alt="Product Gallery" width="400"/>
+  <img src="docs/product%20page.png" alt="Product page" width="400"/>
+  <img src="docs/cart.png" alt="Cart" width="400"/>
 </p>
 
 ## Prerequisites
