@@ -20,29 +20,34 @@ A Wix Stores template using the [Jay Framework](https://github.com/jay-framework
 
 ```bash
 npm install
+npx @wix/cli login
 npm create @wix/new@latest init
 npm run setup
 ```
 
 Here's what each command does:
 
-1. **`npm create @wix/new@latest init`** — Creates a new headless Wix site, generating a `wix.config.json` with:
+1. **`npm install`** — Installs project dependencies.
+
+2. **`npx @wix/cli login`** — Authenticates the Wix CLI with your Wix account. Required before connecting this project to Wix and before deploying to Wix BaaS. Opens a browser window to complete sign-in.
+
+3. **`npm create @wix/new@latest init`** — Provisions a headless Wix site for this project and writes `wix.config.json` with:
    - `siteId` — the Wix site identifier (also known as metasite ID in Wix)
    - `appId` — a client ID for headless API access
 
-   This command is only required for Wix-hosted sites.
+   This command is only required for Wix-hosted sites. It must be run while logged in to Wix CLI.
 
-2. **`npm run setup`** — Creates `config/.wix.yaml`. If a valid `wix.config.json` exists, it reads the `siteId` and `clientId` from it.
+4. **`npm run setup`** — Creates `config/.wix.yaml`. If a valid `wix.config.json` exists, it reads the `siteId` and `clientId` from it.
 
    > **Note:** `appId` (in `wix.config.json`) and `clientId` (in `config/.wix.yaml`) are the same value. Both can also be generated manually from **Wix Dashboard → Site Settings → Headless Settings → Headless Client**.
 
-3. **Generate an API key** — Go to **Wix Dashboard → Account Settings → API Keys**, create a new key, and paste it into `config/.wix.yaml` under `apiKeyStrategy.apiKey`.
+5. **Generate an API key** — Go to **Wix Dashboard → Account Settings → API Keys**, create a new key, and paste it into `config/.wix.yaml` under `apiKeyStrategy.apiKey`.
 
-4. **Install Wix Stores** — In the **Wix Business Manager → Apps → Manage Apps → App Market**, find **Wix Stores** and add it to the site.
+6. **Install Wix Stores** — In the **Wix Business Manager → Apps → Manage Apps → App Market**, find **Wix Stores** and add it to the site.
 
-5. **Create the `jay-backend-files` collection** — In the **Wix Business Manager** of the same site (or the site referenced in `config/.wix.yaml`, if those are different), go to **CMS** and create a new collection named **`jay-backend-files`**. No specific schema is required. This collection stores pre-compiled page data for Wix BaaS deployment.
+7. **Create the `jay-backend-files` collection** — In the **Wix Business Manager** of the same site (or the site referenced in `config/.wix.yaml`, if those are different), go to **CMS** and create a new collection named **`jay-backend-files`**. No specific schema is required. This collection stores pre-compiled page data for Wix BaaS deployment.
 
-6. **Run `npm run setup` again** to validate that all credentials are configured correctly.
+8. **Run `npm run setup` again** to validate that all credentials are configured correctly.
 
 When everything is set up, the output should look like:
 
@@ -123,6 +128,8 @@ Then open `http://localhost:3000/aiditor` in your browser.
 ## 5. Deploy to Wix BaaS
 
 This project includes the `wix-deploy` package for deploying to Wix BaaS. If you don't need Wix deployment, remove `wix-deploy` from your dependencies.
+
+Make sure you're logged in to Wix CLI (`npx @wix/cli login`) before deploying.
 
 ```bash
 npm run build:production
