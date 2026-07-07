@@ -10,3 +10,8 @@ tags:
     dataType: boolean
     phase: fast+interactive
     description: Whether the header has been initialized by the client
+  - tag: headerHasScrolled
+    type: variant
+    dataType: boolean
+    phase: fast+interactive
+    description: Whether the user has scrolled past the header hide threshold (controls re-show animation)

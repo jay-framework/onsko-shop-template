@@ -155,15 +155,24 @@ input, select, textarea { font-family: inherit; }
   z-index: 100;
   padding: 50px 50px 0;
   margin-bottom: -97px;
-  animation: site-header-float-in 0.7s ease-out backwards;
   background: rgba(238, 238, 238, 0);
-  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.site-header:not(.header-hidden):not(.header-has-scrolled) {
+  animation: site-header-float-in 0.7s ease-out backwards;
+}
+
+.site-header:not(.header-hidden).header-has-scrolled {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease;
 }
 
 .site-header.header-hidden {
   transform: translateY(-110%);
   opacity: 0;
   transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.5s;
+  animation: none;
 }
 
 .site-header-bar {

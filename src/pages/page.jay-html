@@ -31,16 +31,21 @@
         z-index: 100;
         padding: 50px 50px 0;
         margin-bottom: -97px;
-        /* Hidden until JS evaluates scroll position */
+        /* Hidden until JS evaluates scroll position; match animation start */
         opacity: 0;
-        transform: translateY(-110%);
+        transform: translateY(-30px);
       }
 
-      .home-header.header-ready {
+      /* Initial load: single fly-in + fade animation */
+      .home-header.header-ready:not(.header-hidden):not(.header-has-scrolled) {
+        animation: header-float-in 0.7s ease-out both;
+      }
+
+      /* After scroll: re-show with fade only (transform snaps to 0) */
+      .home-header.header-ready:not(.header-hidden).header-has-scrolled {
         opacity: 1;
         transform: translateY(0);
-        transition: transform 0.5s ease, opacity 0.5s ease;
-        animation: header-float-in 0.7s ease-out both;
+        transition: opacity 0.5s ease;
       }
 
       .home-header.header-hidden {
@@ -1065,7 +1070,7 @@
   </head>
   <body>
     <main class="home-page">
-      <header class="home-header {headerReady ? header-ready} {headerHidden ? header-hidden}">
+      <header class="home-header {headerReady ? header-ready} {headerHidden ? header-hidden} {headerHasScrolled ? header-has-scrolled}">
         <div class="home-header-bar">
           <div class="home-header-inner">
             <a href="/" class="home-logo"><span class="home-logo-icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.009 19" height="19" width="19" role="presentation" aria-hidden="true"><path fill="currentColor" d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413"/></svg></span> onsko</a>

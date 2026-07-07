@@ -4,15 +4,21 @@ import { createSignal, createEffect } from '@jay-framework/component';
 export const page = makeJayStackComponent()
     .withProps()
     .withFastRender(async () => {
-        return phaseOutput({ headerHidden: false, headerReady: false }, {});
+        return phaseOutput({ headerHidden: false, headerReady: false, headerHasScrolled: false }, {});
     })
     .withInteractive(function HomePage() {
         const threshold = window.innerHeight * 0.5;
-        const [isHidden, setIsHidden] = createSignal(window.scrollY > threshold);
+        const initiallyHidden = window.scrollY > threshold;
+        const [isHidden, setIsHidden] = createSignal(initiallyHidden);
+        const [hasScrolled, setHasScrolled] = createSignal(initiallyHidden);
 
         createEffect(() => {
             const handler = () => {
-                setIsHidden(window.scrollY > threshold);
+                const hidden = window.scrollY > threshold;
+                if (hidden) {
+                    setHasScrolled(true);
+                }
+                setIsHidden(hidden);
             };
             window.addEventListener('scroll', handler, { passive: true });
             return () => window.removeEventListener('scroll', handler);
@@ -22,6 +28,7 @@ export const page = makeJayStackComponent()
             render: () => ({
                 headerHidden: isHidden(),
                 headerReady: true,
+                headerHasScrolled: hasScrolled(),
             }),
         };
     });
