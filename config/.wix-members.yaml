@@ -1,0 +1,6 @@
+# Wix Members Configuration
+#
+# Auth callback URL — the route that handles the OAuth redirect after login/register.
+# Must match a page in your site (e.g. src/pages/auth/callback/page.jay-html).
+# Relative paths are resolved against the site origin at runtime.
+authCallbackUrl: "/auth/callback"
