@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Signing in... | Onsko</title>
+    <meta name="description" content="Authentication callback page for Onsko. Please wait while we sign you in.">
     <script type="application/jay-headless" plugin="@jay-framework/wix-members" contract="auth-callback"></script>
     <script type="application/jay-data">
       data:
@@ -25,7 +26,8 @@
         max-width: 400px;
       }
 
-      .auth-callback-content h1 {
+      .auth-callback-content h1,
+      .auth-callback-content h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
         font-weight: 600;
@@ -53,7 +55,7 @@
             <p>please wait while we complete your login.</p>
           </div>
           <div if="hasError">
-            <h1>something went wrong</h1>
+            <h2>something went wrong</h2>
             <p class="auth-error">{errorMessage}</p>
             <p><a href="/">return to homepage</a></p>
           </div>

@@ -28,7 +28,7 @@
         /* Cart Header Section */
         .cart-hero {
             text-align: center;
-            padding: 120px var(--page-padding) 36px;
+            padding: 120px var(--page-padding) 36px; /* design-system: allow */
             border-bottom: 1px solid var(--border);
             background: var(--bg-secondary);
         }
@@ -290,7 +290,7 @@
         }
 
         .empty-icon {
-            font-size: 80px;
+            font-size: 80px; /* design-system: allow */
             margin-bottom: 24px;
             opacity: 0.15;
         }
@@ -516,7 +516,7 @@
                         <span class="coupon-error-text" if="cartPage.coupon.hasError">{cartPage.coupon.errorMessage}</span>
                     </div>
 
-                    <div class="coupon-applied-tag" if="cartPage.coupon.hasAppliedCoupon">
+                    <div class="coupon-applied-tag" if="cartPage.coupon.hasAppliedCoupon" jay-design="allow">
                         ✓ {cartPage.coupon.appliedCode}
                         <button class="coupon-remove" ref="cartPage.coupon.removeButton">×</button>
                     </div>

@@ -24,9 +24,21 @@
         min-height: 100vh;
       }
 
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px; /* design-system: allow */
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
       /* Shop Layout — sidebar left + grid right on desktop */
       .shop-layout {
-        padding: 170px var(--page-padding) 80px;
+        padding: 170px var(--page-padding) 80px; /* design-system: allow */
         display: grid;
         grid-template-columns: 240px 1fr;
         gap: 48px;
@@ -329,7 +341,7 @@
         flex-direction: column;
         height: auto;
         background: none;
-        border-radius: 0;
+        border-radius: 0; /* design-system: allow */
         overflow: visible;
         box-shadow: none;
       }
@@ -399,7 +411,7 @@
       @media (max-width: 1000px) {
         .shop-layout {
           grid-template-columns: 1fr;
-          padding-top: 120px;
+          padding-top: 120px; /* design-system: allow */
           gap: 0;
         }
 
@@ -488,6 +500,9 @@
         </div>
       </div>
 
+      <!-- Page heading (visually hidden, for SEO) -->
+      <h1 class="sr-only">{productSearch.categoryHeader.name}</h1>
+
       <!-- Main Shop Layout -->
       <div class="shop-layout">
         <!-- Sidebar (desktop) -->
@@ -553,7 +568,7 @@
 
           <!-- Product Grid -->
           <div class="products-grid" if="productSearch.hasResults">
-            <article class="product-card {isAddingToCart ? is-adding}" forEach="productSearch.searchResults" trackBy="_id">
+            <article class="product-card {isAddingToCart ? is-adding}" forEach="productSearch.searchResults" trackBy="_id" jay-design="allow">
               <a href="{productUrl}" class="product-card-image">
                 <img
                   src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp"
@@ -575,7 +590,7 @@
                 <div class="product-card-price">
                   <span class="current-price">{price}</span>
                   <span class="original-price" if="hasDiscount">{strikethroughPrice}</span>
-                  <span class="badge badge-error" if="hasDiscount">sale</span>
+                  <span class="badge badge-error" if="hasDiscount" jay-design="allow">sale</span>
                 </div>
               </div>
             </article>

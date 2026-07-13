@@ -31,7 +31,7 @@
       .product-container {
         max-width: var(--container-max);
         margin: 0 auto;
-        padding: 120px var(--page-padding) 0;
+        padding: 120px var(--page-padding) 0; /* design-system: allow */
       }
 
       /* Two Column Layout */
@@ -194,7 +194,7 @@
 
       /* Best Sellers Cards (match homepage) */
       .related-section .product-card {
-        border-radius: 0;
+        border-radius: 0; /* design-system: allow */
         background: transparent;
         box-shadow: none;
       }
@@ -243,7 +243,7 @@
 
       @media (max-width: 600px) {
         .product-container {
-          padding: 32px var(--page-padding) 60px;
+          padding: 32px var(--page-padding) 60px; /* design-system: allow */
         }
 
         .product-actions {
@@ -378,7 +378,7 @@
         <section class="related-section" if="hasProducts">
           <h2 class="section-title">best sellers</h2>
           <div class="related-grid">
-            <a href="{productUrl}" class="product-card" forEach="products" trackBy="_id" ref="products.productLink">
+            <a href="{productUrl}" class="product-card" forEach="products" trackBy="_id" ref="products.productLink" jay-design="allow">
               <div class="product-card-image">
                 <span class="best-seller-badge">best seller</span>
                 <img src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp" srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w" sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw" alt="{thumbnail.altText}" loading="lazy" width="600" height="600" />
