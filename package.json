@@ -32,6 +32,7 @@
     "@jay-framework/aiditor": "^0.21.0",
     "@jay-framework/jay-cli": "^0.21.0",
     "@jay-framework/wix-media": "^0.21.0",
+    "@jay-framework/design-system-validator": "^0.21.0",
     "@jay-framework/a11y-validator": "^0.21.0",
     "@jay-framework/seo-validator": "^0.21.0",
     "@types/node": "^22.10.0",

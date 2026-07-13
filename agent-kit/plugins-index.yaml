@@ -278,6 +278,9 @@ plugins:
     commands:
       - name: upload-public
       - name: rebuild-index
+  - name: design-system-validator
+    path: ./node_modules/@jay-framework/design-system-validator
+    contracts: []
   - name: a11y-validator
     path: ./node_modules/@jay-framework/a11y-validator
     contracts: []

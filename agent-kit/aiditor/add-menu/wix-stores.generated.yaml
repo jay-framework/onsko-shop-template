@@ -25,9 +25,10 @@ items:
         category-products — pass categorySlug="best-sellers" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:body-products
@@ -54,9 +55,10 @@ items:
         category-products — pass categorySlug="body-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:new-arrivals
@@ -83,9 +85,10 @@ items:
         category-products — pass categorySlug="new-arrivals" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:all-products
@@ -112,9 +115,10 @@ items:
         category-products — pass categorySlug="all-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:hair-products
@@ -141,9 +145,10 @@ items:
         category-products — pass categorySlug="hair-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
   - id: wix-stores:category:face-products
@@ -170,8 +175,9 @@ items:
         category-products — pass categorySlug="face-products" to show products from this category; optionally pass productId to exclude a product
 
       Contracts:
-        agent-kit/materialized-contracts/wix-stores/product-search.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-list.jay-contract
-        agent-kit/materialized-contracts/wix-stores/category-products.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/product-search.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-list.jay-contract
+        node_modules/@jay-framework/wix-stores/dist/contracts/category-products.jay-contract
+        Related products on a product page: agent-kit/designer/related-products.md
 
       Bind ViewState and refs per agent-kit/designer/INSTRUCTIONS.md.
