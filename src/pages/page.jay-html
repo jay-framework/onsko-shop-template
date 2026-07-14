@@ -175,7 +175,7 @@
         color: #fff;
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 600;
         border-radius: var(--radius-full);
       }
 
@@ -301,12 +301,12 @@
         cursor: pointer;
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         .home-nav { display: none; }
         .hamburger-btn { display: flex; }
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 768px) {
         .home-header { padding: 50px 50px 0; margin-bottom: -97px; /* design-system: allow */ }
         .home-header-inner { padding: 0 16px; gap: 12px; }
         .home-action-text { display: none; }
@@ -481,13 +481,13 @@
         border-color: #fff;
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         .hero {
           aspect-ratio: 4 / 3;
         }
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 768px) {
         .hero {
           aspect-ratio: 1 / 2;
         }
@@ -589,7 +589,7 @@
         font-family: poppins-extralight, poppins, sans-serif;
         font-size: 12px;
         font-weight: 400;
-        padding: 3px 10px;
+        padding: 4px 10px;
         border-radius: 2px;
         letter-spacing: 0.02em;
       }
@@ -673,7 +673,7 @@
         border-color: #2d3436;
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 768px) {
         .fold3-banner-content {
           padding: 32px 24px;
           max-width: 100%;
@@ -770,8 +770,8 @@
         align-items: center;
         border-radius: var(--radius-xl);
         border: none;
-        background: #e0ddd9;
-        padding: 29px;
+        background: #e0dbd4;
+        padding: 30px;
         gap: 12px;
         transition: transform var(--transition-base), background-color 0.3s ease;
       }
@@ -949,7 +949,7 @@
         100% { transform: translateY(0); }
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 768px) {
         .our-story-wrapper {
           padding-bottom: 600px;
         }
@@ -1055,7 +1055,7 @@
         object-fit: cover;
       }
 
-      @media (max-width: 1000px) {
+      @media (max-width: 1024px) {
         .fold3-banner {
           aspect-ratio: unset;
           height: 53vw;
@@ -1084,7 +1084,7 @@
         }
       }
 
-      @media (max-width: 750px) {
+      @media (max-width: 768px) {
         .best-sellers { padding: 48px 0; }
         .fold3-banner {
           aspect-ratio: unset;

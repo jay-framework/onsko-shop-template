@@ -8,20 +8,16 @@ colors:
   bg-primary: '#f9f5f0'
   bg-secondary: '#f0ebe4'
   bg-card: '#ffffff'
-  bg-hover: '#f5f0e8'
   bg-product-image: '#c5d8e8'
-  bg-header: '#2d4d3f'
   bg-footer: '#2d4d3f'
   bg-mobile-menu: '#f5f3ef'
   bg-story: '#a0c8ff'
-  header-transparent: 'rgba(238, 238, 238, 0)'
 
   # Text
   text-primary: '#1a1a1a'
   text-secondary: '#555555'
   text-muted: '#888888'
   text-inverse: '#ffffff'
-  text-on-header: '#ffffff'
   text-dark: '#2B312F'
 
   # Brand
@@ -51,7 +47,7 @@ colors:
   blue-accent: '#bdd8f1'
   lime: '#d5e955'
   warm-orange: '#e8874a'
-  neutral-card: '#e0ddd9'
+  neutral-card: '#e0dbd4'
 
 typography:
   hero-headline:
@@ -68,11 +64,6 @@ typography:
   section-title:
     fontFamily: Poppins
     fontSize: clamp(12px, 2.19vw, 45px)
-    fontWeight: 600
-    letterSpacing: -0.01em
-  section-title-sm:
-    fontFamily: Poppins
-    fontSize: 24px
     fontWeight: 600
     letterSpacing: -0.01em
   page-title:
@@ -123,26 +114,16 @@ typography:
     fontFamily: Poppins
     fontSize: clamp(12px, 3.28vw, 24px)
     fontWeight: 600
-  body-base:
+  body:
     fontFamily: Poppins
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.6
-  body-md:
-    fontFamily: Poppins
-    fontSize: 15px
-    fontWeight: 400
-    lineHeight: 1.7
   body-sm:
     fontFamily: Poppins
     fontSize: 14px
     fontWeight: 200
     lineHeight: 1.6
-  body-detail:
-    fontFamily: Poppins
-    fontSize: 15px
-    fontWeight: 400
-    lineHeight: 1.8
   nav-link:
     fontFamily: Poppins
     fontSize: 16px
@@ -160,18 +141,6 @@ typography:
     fontFamily: Poppins
     fontSize: 20px
     fontWeight: 600
-  button-text-bold:
-    fontFamily: Poppins
-    fontSize: 20px
-    fontWeight: 700
-  caption:
-    fontFamily: Poppins
-    fontSize: 12px
-    fontWeight: 600
-  caption-bold:
-    fontFamily: Poppins
-    fontSize: 12px
-    fontWeight: 700
   label:
     fontFamily: Poppins
     fontSize: 12px
@@ -181,10 +150,6 @@ typography:
     fontFamily: Poppins
     fontSize: 11px
     fontWeight: 600
-  micro-bold:
-    fontFamily: Poppins
-    fontSize: 11px
-    fontWeight: 700
   small:
     fontFamily: Poppins
     fontSize: 13px
@@ -195,28 +160,28 @@ typography:
     fontWeight: 400
   price:
     fontFamily: Poppins
-    fontSize: 24px
-    fontWeight: 700
+    fontSize: clamp(18px, 1.88vw, 24px)
+    fontWeight: 600
   price-strikethrough:
     fontFamily: Poppins
     fontSize: 18px
     fontWeight: 400
   summary-total:
     fontFamily: Poppins
-    fontSize: 22px
-    fontWeight: 700
+    fontSize: clamp(16px, 1.72vw, 22px)
+    fontWeight: 600
   policy-heading:
     fontFamily: kepler-w03-light-scd-cp
-    fontSize: 28px
+    fontSize: clamp(20px, 2.19vw, 28px)
     fontWeight: 400
     lineHeight: 1.2
   policy-title:
     fontFamily: Poppins
-    fontSize: 28px
+    fontSize: clamp(20px, 2.19vw, 28px)
     fontWeight: 600
   footer-heading:
     fontFamily: Poppins
-    fontSize: 20px
+    fontSize: clamp(16px, 1.56vw, 20px)
     fontWeight: 600
     letterSpacing: 0.02em
   footer-body:
@@ -225,15 +190,11 @@ typography:
     fontWeight: 400
   footer-logo:
     fontFamily: Poppins
-    fontSize: 48px
-    fontWeight: 600
-  footer-logo-icon:
-    fontFamily: Poppins
-    fontSize: 52px
+    fontSize: clamp(32px, 3.75vw, 48px)
     fontWeight: 600
   logo:
     fontFamily: Poppins
-    fontSize: 32px
+    fontSize: clamp(24px, 2.5vw, 32px)
     fontWeight: 600
     letterSpacing: -0.96px
   tagline:
@@ -241,16 +202,12 @@ typography:
     fontSize: 14px
     fontWeight: 200
     letterSpacing: 0.05em
-  empty-state-title:
-    fontFamily: Poppins
-    fontSize: 24px
-    fontWeight: 600
   empty-state-icon:
     fontSize: 64px
   filter-title:
     fontFamily: Poppins
     fontSize: 14px
-    fontWeight: 700
+    fontWeight: 600
   badge-font:
     fontFamily: poppins-extralight, poppins, sans-serif
     fontSize: 12px
@@ -281,17 +238,6 @@ typography:
     fontSize: clamp(12px, 8.23vw, 64px)
     fontWeight: 400
     lineHeight: 1
-  filter-section-title:
-    fontFamily: Poppins
-    fontSize: 20px
-    fontWeight: 700
-    letterSpacing: 0.01em
-  empty-state-icon-lg:
-    fontSize: 80px
-  cta-hero:
-    fontFamily: poppins-semibold, Poppins, sans-serif
-    fontSize: 20px
-    fontWeight: 600
   sku:
     fontFamily: Poppins
     fontSize: 11px
@@ -300,40 +246,35 @@ typography:
 
 spacing:
   2xs: 2px
-  3xs: 3px
   4xs: 4px
   xs: 6px
   sm: 8px
   base: 10px
   md: 12px
-  sm-plus: 14px
   lg: 16px
-  info-section: 18px
   xl: 20px
   2xl: 24px
-  header-gap: 50px
   section-sides: 25px
   lg-plus: 28px
-  xl-plus: 29px
   xl-2: 30px
   3xl: 32px
   xl-3: 36px
   4xl: 40px
-  5xl: 48px
-  6xl: 64px
+  page-padding-desktop: 48px
+  header-gap: 50px
+  section-gap: 64px
   7xl: 80px
   8xl: 100px
-  page-padding-desktop: 48px
-  page-padding-tablet: 24px
-  page-padding-mobile: 16px
-  section-gap: 64px
-  card-gap: 24px
+
+breakpoints:
+  mobile: 600px
+  tablet: 768px
+  desktop: 1024px
 
 rounded:
   xs: 2px
   sm: 6px
   md: 8px
-  md-plus: 10px
   lg: 12px
   xl: 16px
   2xl: 20px
@@ -429,7 +370,7 @@ animations:
     easing: linear
 
 rules:
-  max-font-weights: 6
+  max-font-weights: 4
   require-contrast-aa: true
 ---
 
@@ -466,11 +407,18 @@ Three font families:
 2. **Kepler W03 Light** — serif accent font for hero subtitles and banner descriptions
 3. **DIN Next W01 Light** — small captions in the footer
 
-Font weights in use: **200** (light body, tagline), **400** (regular, serif), **500** (nav links, choice buttons), **600** (headings, buttons), **700** (badges, CTA bold, prices).
+Font weights in use: **200** (light body, tagline), **400** (regular, serif), **500** (nav links, choice buttons), **600** (headings, buttons, badges, prices).
+
+## Breakpoints
+
+Three responsive tiers using `max-width` media queries:
+- **Mobile** (`600px`) — single-column grids, stacked layouts, smallest text sizes
+- **Tablet** (`768px`) — compact header, mobile menu, two-column grids, reduced spacing
+- **Desktop** (`1024px`) — sidebar/hamburger switch, horizontal scroll carousels, responsive page padding
 
 ## Rounded Corners
 
-All corners follow the scale: `2px` (xs) / `6px` (sm) / `8px` (md) / `10px` (md-plus) / `12px` (lg) / `16px` (xl) / `20px` (2xl, hero/banners) / `50%` (circle, spinners) / `9999px` (pill shapes for header bar, badges).
+All corners follow the scale: `2px` (xs) / `6px` (sm) / `8px` (md) / `12px` (lg) / `16px` (xl) / `20px` (2xl, hero/banners) / `50%` (circle, spinners) / `9999px` (pill shapes for header bar, badges).
 
 ## Shadows
 

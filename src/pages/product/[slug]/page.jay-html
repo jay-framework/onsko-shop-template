@@ -82,8 +82,8 @@
       }
 
       .product-pricing .current-price {
-        font-size: 24px;
-        font-weight: 700;
+        font-size: clamp(18px, 1.88vw, 24px);
+        font-weight: 600;
         color: var(--text-primary);
       }
 
@@ -94,8 +94,8 @@
       }
 
       .product-description {
-        font-size: 15px;
-        line-height: 1.7;
+        font-size: 16px;
+        line-height: 1.6;
         color: var(--text-secondary);
         margin-bottom: 28px;
       }
@@ -164,26 +164,37 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 0;
+        padding: 20px 0;
         cursor: pointer;
+        list-style: none;
+      }
+
+      .info-section-header::-webkit-details-marker {
+        display: none;
+      }
+
+      .info-section-header::after {
+        content: '+';
+        font-size: 20px;
+        color: var(--text-muted);
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .info-section[open] > .info-section-header::after {
+        content: '−';
       }
 
       .info-section-title {
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
         color: var(--text-primary);
       }
 
-      .info-section-toggle {
-        font-size: 20px;
-        color: var(--text-muted);
-        line-height: 1;
-      }
-
       .info-section-content {
-        padding: 0 0 18px;
+        padding: 0 0 20px;
         font-size: 14px;
-        line-height: 1.7;
+        line-height: 1.6;
         color: var(--text-secondary);
       }
 
@@ -224,7 +235,7 @@
         font-family: poppins-extralight, poppins, sans-serif;
         font-size: 12px;
         font-weight: 400;
-        padding: 3px 10px;
+        padding: 4px 10px;
         border-radius: 2px;
         letter-spacing: 0.02em;
       }
@@ -361,13 +372,12 @@
 
             <!-- Info Sections Accordion -->
             <div class="info-sections" if="productPage.infoSections">
-              <div class="info-section" forEach="productPage.infoSections" trackBy="_id">
-                <div class="info-section-header">
+              <details class="info-section" forEach="productPage.infoSections" trackBy="_id" name="product-info">
+                <summary class="info-section-header">
                   <h2 class="info-section-title">{title}</h2>
-                  <span class="info-section-toggle">+</span>
-                </div>
+                </summary>
                 <div class="info-section-content">{plainDescription}</div>
-              </div>
+              </details>
             </div>
           </div>
         </div>

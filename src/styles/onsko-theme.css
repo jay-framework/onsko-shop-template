@@ -28,16 +28,13 @@
   --bg-primary: #f9f5f0;
   --bg-secondary: #f0ebe4;
   --bg-card: #ffffff;
-  --bg-hover: #f5f0e8;
   --bg-product-image: #c5d8e8;
-  --bg-header: #2d4d3f;
   --bg-footer: #2d4d3f;
 
   --text-primary: #1a1a1a;
   --text-secondary: #555555;
   --text-muted: #888888;
   --text-inverse: #ffffff;
-  --text-on-header: #ffffff;
 
   --accent: #bb5538;
   --accent-hover: #a44c31;
@@ -118,7 +115,7 @@ input, select, textarea { font-family: inherit; }
 
 .section-title {
   font-family: var(--font-primary);
-  font-size: 24px;
+  font-size: clamp(12px, 2.19vw, 45px);
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: -0.01em;
@@ -185,7 +182,7 @@ input, select, textarea { font-family: inherit; }
   align-items: center;
   gap: 6px;
   font-family: var(--font-primary);
-  font-size: 32px;
+  font-size: clamp(24px, 2.5vw, 32px);
   font-weight: 600;
   color: #ffffff;
   letter-spacing: -0.96px;
@@ -284,7 +281,7 @@ input, select, textarea { font-family: inherit; }
   color: #1a1a1a;
   font-family: var(--font-primary);
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: var(--radius-full);
 }
 
@@ -415,7 +412,7 @@ input, select, textarea { font-family: inherit; }
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .site-nav { display: none; }
   .site-hamburger-btn { display: flex; }
   .site-header { padding: 50px 25px 0; }
@@ -445,7 +442,7 @@ input, select, textarea { font-family: inherit; }
 
 .footer-col h3 {
   font-family: var(--font-primary);
-  font-size: 20px;
+  font-size: clamp(16px, 1.56vw, 20px);
   font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: 0.02em;
@@ -476,7 +473,7 @@ input, select, textarea { font-family: inherit; }
   border-radius: var(--radius-md);
   width: 100%;
   margin-bottom: 12px;
-  padding: 10px 14px;
+  padding: 10px 12px;
   font-size: 14px;
 }
 
@@ -519,7 +516,7 @@ input, select, textarea { font-family: inherit; }
 
 .footer-logo {
   font-family: var(--font-primary);
-  font-size: 48px;
+  font-size: clamp(32px, 3.75vw, 48px);
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -528,7 +525,6 @@ input, select, textarea { font-family: inherit; }
 
 .footer-logo .logo-icon-large {
   color: var(--accent);
-  font-size: 52px;
 }
 
 .footer-meta {
@@ -612,7 +608,7 @@ input, select, textarea { font-family: inherit; }
   background: var(--cta);
   color: var(--cta-text);
   border-color: var(--cta);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .btn-cta:hover:not(:disabled) {
@@ -682,7 +678,7 @@ input, select, textarea { font-family: inherit; }
   align-items: center;
   padding: 4px 10px;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: var(--radius-sm);
 }
 
@@ -870,7 +866,7 @@ input, select, textarea { font-family: inherit; }
 }
 
 .suggestion-btn {
-  padding: 6px 14px;
+  padding: 6px 12px;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
@@ -901,9 +897,9 @@ input, select, textarea { font-family: inherit; }
 
 .filter-group-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .filter-link-list {
@@ -1015,8 +1011,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 .product-price .price {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: clamp(18px, 1.88vw, 24px);
+  font-weight: 600;
   color: var(--text-primary);
 }
 
@@ -1027,8 +1023,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 .product-description {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--text-secondary);
   margin-bottom: 28px;
 }
@@ -1084,7 +1080,7 @@ input, select, textarea { font-family: inherit; }
   justify-content: center;
   color: #ffffff;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
@@ -1146,12 +1142,12 @@ input, select, textarea { font-family: inherit; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
+  padding: 20px 0;
   cursor: pointer;
 }
 
 .info-section-title {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -1163,9 +1159,9 @@ input, select, textarea { font-family: inherit; }
 }
 
 .info-section-content {
-  padding: 0 0 18px;
+  padding: 0 0 20px;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
@@ -1403,8 +1399,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 .summary-item.total .value {
-  font-size: 22px;
-  font-weight: 700;
+  font-size: clamp(16px, 1.72vw, 22px);
+  font-weight: 600;
   color: var(--accent);
 }
 
@@ -1460,8 +1456,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 .empty-state-icon { font-size: 64px; margin-bottom: 24px; opacity: 0.2; }
-.empty-state-title { font-size: 24px; font-weight: 600; margin-bottom: 12px; }
-.empty-state-message { color: var(--text-secondary); font-size: 15px; margin-bottom: 32px; }
+.empty-state-title { font-size: clamp(12px, 2.19vw, 45px); font-weight: 600; margin-bottom: 12px; }
+.empty-state-message { color: var(--text-secondary); font-size: 16px; margin-bottom: 32px; }
 
 .loading-overlay {
   position: fixed;
@@ -1529,7 +1525,7 @@ input, select, textarea { font-family: inherit; }
 
 .policy-title {
   font-family: var(--font-primary);
-  font-size: 28px;
+  font-size: clamp(20px, 2.19vw, 28px);
   font-weight: 600;
   text-align: center;
   margin-bottom: 48px;
@@ -1545,15 +1541,15 @@ input, select, textarea { font-family: inherit; }
 
 .policy-heading {
   font-family: var(--font-serif);
-  font-size: 28px;
+  font-size: clamp(20px, 2.19vw, 28px);
   font-weight: 400;
   line-height: 1.2;
   color: var(--text-primary);
 }
 
 .policy-body {
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--text-secondary);
 }
 
@@ -1563,13 +1559,6 @@ input, select, textarea { font-family: inherit; }
 .policy-body a { color: var(--accent); text-decoration: underline; }
 .policy-body a:hover { color: var(--accent-hover); }
 
-@media (max-width: 768px) {
-  .policy-section {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
-
 /* ============================================================================
    Responsive
    ============================================================================ */
@@ -1578,12 +1567,14 @@ input, select, textarea { font-family: inherit; }
   :root { --page-padding: 24px; }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 768px) {
   .site-header-inner { padding: 0 16px; gap: 12px; }
   .site-header-actions { gap: 12px; }
   .site-search-label { display: none; }
   .site-header-action-text { display: none; }
   .site-mobile-menu-login { display: block; }
+
+  .policy-section { grid-template-columns: 1fr; gap: 16px; }
 
   .cart-item { grid-template-columns: 80px 1fr; gap: 12px; padding: 16px; }
   .cart-item-image { width: 80px; height: 100px; }

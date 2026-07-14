@@ -29,7 +29,7 @@
       .auth-callback-content h1,
       .auth-callback-content h2 {
         font-family: 'Poppins', sans-serif;
-        font-size: 24px;
+        font-size: clamp(12px, 2.19vw, 45px);
         font-weight: 600;
         color: #2D5143;
         margin-bottom: 12px;

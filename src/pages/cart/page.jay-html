@@ -38,7 +38,7 @@
         }
 
         .cart-hero .item-count {
-            font-size: 15px;
+            font-size: 16px;
             color: var(--text-secondary);
         }
 
@@ -213,8 +213,8 @@
         }
 
         .summary-item.total .value {
-            font-size: 22px;
-            font-weight: 700;
+            font-size: clamp(16px, 1.72vw, 22px);
+            font-weight: 600;
             color: var(--accent);
         }
 
@@ -296,7 +296,7 @@
         }
 
         .empty-title {
-            font-size: 28px;
+            font-size: clamp(20px, 2.19vw, 28px);
             font-weight: 600;
             margin-bottom: 12px;
             color: var(--text-primary);
@@ -371,7 +371,7 @@
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 600px) {
             .cart-hero-actions {
                 flex-direction: column;
             }
