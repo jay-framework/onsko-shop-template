@@ -1,0 +1,721 @@
+items:
+  - id: design-system:color-bg-primary
+    title: bg-primary (#f9f5f0)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-primary" with value #f9f5f0 from DESIGN.md.'
+  - id: design-system:color-bg-secondary
+    title: bg-secondary (#f0ebe4)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-secondary" with value #f0ebe4 from DESIGN.md.'
+  - id: design-system:color-bg-card
+    title: bg-card (#ffffff)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-card" with value #ffffff from DESIGN.md.'
+  - id: design-system:color-bg-product-image
+    title: bg-product-image (#c5d8e8)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-product-image" with value #c5d8e8 from DESIGN.md.'
+  - id: design-system:color-bg-footer
+    title: bg-footer (#2d4d3f)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-footer" with value #2d4d3f from DESIGN.md.'
+  - id: design-system:color-bg-mobile-menu
+    title: bg-mobile-menu (#f5f3ef)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-mobile-menu" with value #f5f3ef from DESIGN.md.'
+  - id: design-system:color-bg-story
+    title: bg-story (#a0c8ff)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "bg-story" with value #a0c8ff from DESIGN.md.'
+  - id: design-system:color-text-primary
+    title: text-primary (#1a1a1a)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "text-primary" with value #1a1a1a from DESIGN.md.'
+  - id: design-system:color-text-secondary
+    title: text-secondary (#555555)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "text-secondary" with value #555555 from DESIGN.md.'
+  - id: design-system:color-text-muted
+    title: text-muted (#888888)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "text-muted" with value #888888 from DESIGN.md.'
+  - id: design-system:color-text-inverse
+    title: text-inverse (#ffffff)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "text-inverse" with value #ffffff from DESIGN.md.'
+  - id: design-system:color-text-dark
+    title: text-dark (#2B312F)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "text-dark" with value #2B312F from DESIGN.md.'
+  - id: design-system:color-brand-green
+    title: brand-green (#2D5143)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "brand-green" with value #2D5143 from DESIGN.md.'
+  - id: design-system:color-brand-orange
+    title: brand-orange (#AE3A00)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "brand-orange" with value #AE3A00 from DESIGN.md.'
+  - id: design-system:color-hero-text
+    title: hero-text (#F2F0EB)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "hero-text" with value #F2F0EB from DESIGN.md.'
+  - id: design-system:color-accent
+    title: accent (#bb5538)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "accent" with value #bb5538 from DESIGN.md.'
+  - id: design-system:color-accent-hover
+    title: accent-hover (#a44c31)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "accent-hover" with value #a44c31 from DESIGN.md.'
+  - id: design-system:color-cta
+    title: cta (#f5c542)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "cta" with value #f5c542 from DESIGN.md.'
+  - id: design-system:color-cta-hover
+    title: cta-hover (#e0b135)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "cta-hover" with value #e0b135 from DESIGN.md.'
+  - id: design-system:color-cta-text
+    title: cta-text (#1a1a1a)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "cta-text" with value #1a1a1a from DESIGN.md.'
+  - id: design-system:color-success
+    title: success (#437346)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "success" with value #437346 from DESIGN.md.'
+  - id: design-system:color-success-bg
+    title: success-bg (#e8eee9)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "success-bg" with value #e8eee9 from DESIGN.md.'
+  - id: design-system:color-error
+    title: error (#b33838)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "error" with value #b33838 from DESIGN.md.'
+  - id: design-system:color-error-bg
+    title: error-bg (#f7ebeb)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "error-bg" with value #f7ebeb from DESIGN.md.'
+  - id: design-system:color-border
+    title: border (#e0dbd4)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "border" with value #e0dbd4 from DESIGN.md.'
+  - id: design-system:color-border-hover
+    title: border-hover (#ccc6bc)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "border-hover" with value #ccc6bc from DESIGN.md.'
+  - id: design-system:color-border-light
+    title: border-light (#ebe7e1)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "border-light" with value #ebe7e1 from DESIGN.md.'
+  - id: design-system:color-blue-accent
+    title: blue-accent (#bdd8f1)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "blue-accent" with value #bdd8f1 from DESIGN.md.'
+  - id: design-system:color-lime
+    title: lime (#d5e955)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "lime" with value #d5e955 from DESIGN.md.'
+  - id: design-system:color-warm-orange
+    title: warm-orange (#e8874a)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "warm-orange" with value #e8874a from DESIGN.md.'
+  - id: design-system:color-neutral-card
+    title: neutral-card (#e0dbd4)
+    category: Design System
+    subCategory: Colors
+    prompt: 'Use color token "neutral-card" with value #e0dbd4 from DESIGN.md.'
+  - id: design-system:typography-hero-headline
+    title: hero-headline
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-headline" from DESIGN.md: Poppins, clamp(12px, 6.3vw, 120px), weight 600,
+      line-height 1, letter-spacing -0.03em.
+  - id: design-system:typography-hero-subtitle
+    title: hero-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3.19vw, 64px), weight
+      400, line-height 1.3.
+  - id: design-system:typography-section-title
+    title: section-title
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "section-title" from DESIGN.md: Poppins, clamp(12px, 2.19vw, 45px), weight 600,
+      letter-spacing -0.01em.
+  - id: design-system:typography-page-title
+    title: page-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "page-title" from DESIGN.md: Poppins, clamp(32px, 5vw, 48px), weight 600, line-height 1.1.'
+  - id: design-system:typography-product-name
+    title: product-name
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "product-name" from DESIGN.md: Poppins, clamp(28px, 4vw, 40px), weight 600, line-height
+      1.15, letter-spacing -0.01em.
+  - id: design-system:typography-banner-heading
+    title: banner-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "banner-heading" from DESIGN.md: Poppins, clamp(12px, 3.28vw, 64px), weight 600,
+      line-height 1.1, letter-spacing -0.03em.
+  - id: design-system:typography-banner-subtitle
+    title: banner-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "banner-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3.28vw, 64px),
+      weight 400, line-height 1.
+  - id: design-system:typography-story-heading
+    title: story-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-heading" from DESIGN.md: Poppins, clamp(12px, 4vw, 64px), weight 600,
+      letter-spacing 0.02em.
+  - id: design-system:typography-story-body
+    title: story-body
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-body" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 5vw, 90px), weight 400,
+      line-height 1.
+  - id: design-system:typography-instagram-heading
+    title: instagram-heading
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "instagram-heading" from DESIGN.md: Poppins, clamp(12px, 3vw, 64px), weight 600.'
+  - id: design-system:typography-instagram-subtitle
+    title: instagram-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "instagram-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3vw, 50px),
+      weight 200.
+  - id: design-system:typography-category-label
+    title: category-label
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "category-label" from DESIGN.md: Poppins, clamp(12px, 3.56vw, 64px), weight 600.'
+  - id: design-system:typography-marquee
+    title: marquee
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "marquee" from DESIGN.md: Poppins, clamp(12px, 3.28vw, 24px), weight 600.'
+  - id: design-system:typography-body
+    title: body
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "body" from DESIGN.md: Poppins, 16px, weight 400, line-height 1.6.'
+  - id: design-system:typography-body-sm
+    title: body-sm
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "body-sm" from DESIGN.md: Poppins, 14px, weight 200, line-height 1.6.'
+  - id: design-system:typography-nav-link
+    title: nav-link
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "nav-link" from DESIGN.md: Poppins, 16px, weight 500.'
+  - id: design-system:typography-mobile-nav
+    title: mobile-nav
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "mobile-nav" from DESIGN.md: Poppins, 22px, weight 600.'
+  - id: design-system:typography-mobile-logo
+    title: mobile-logo
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "mobile-logo" from DESIGN.md: Poppins, 28px, weight 600, letter-spacing -0.96px.'
+  - id: design-system:typography-button-text
+    title: button-text
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "button-text" from DESIGN.md: Poppins, 20px, weight 600.'
+  - id: design-system:typography-label
+    title: label
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "label" from DESIGN.md: Poppins, 12px, weight 600, letter-spacing 0.08em.'
+  - id: design-system:typography-micro
+    title: micro
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "micro" from DESIGN.md: Poppins, 11px, weight 600.'
+  - id: design-system:typography-small
+    title: small
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "small" from DESIGN.md: Poppins, 13px, weight 500.'
+  - id: design-system:typography-social-icon
+    title: social-icon
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "social-icon" from DESIGN.md: Poppins, 18px, weight 400.'
+  - id: design-system:typography-price
+    title: price
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "price" from DESIGN.md: Poppins, clamp(18px, 1.88vw, 24px), weight 600.'
+  - id: design-system:typography-price-strikethrough
+    title: price-strikethrough
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "price-strikethrough" from DESIGN.md: Poppins, 18px, weight 400.'
+  - id: design-system:typography-summary-total
+    title: summary-total
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "summary-total" from DESIGN.md: Poppins, clamp(16px, 1.72vw, 22px), weight 600.'
+  - id: design-system:typography-policy-heading
+    title: policy-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "policy-heading" from DESIGN.md: kepler-w03-light-scd-cp, clamp(20px, 2.19vw, 28px),
+      weight 400, line-height 1.2.
+  - id: design-system:typography-policy-title
+    title: policy-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "policy-title" from DESIGN.md: Poppins, clamp(20px, 2.19vw, 28px), weight 600.'
+  - id: design-system:typography-footer-heading
+    title: footer-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "footer-heading" from DESIGN.md: Poppins, clamp(16px, 1.56vw, 20px), weight 600,
+      letter-spacing 0.02em.
+  - id: design-system:typography-footer-body
+    title: footer-body
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "footer-body" from DESIGN.md: din-next-w01-light, 13px, weight 400.'
+  - id: design-system:typography-footer-logo
+    title: footer-logo
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "footer-logo" from DESIGN.md: Poppins, clamp(32px, 3.75vw, 48px), weight 600.'
+  - id: design-system:typography-logo
+    title: logo
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "logo" from DESIGN.md: Poppins, clamp(24px, 2.5vw, 32px), weight 600, letter-spacing
+      -0.96px.
+  - id: design-system:typography-tagline
+    title: tagline
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "tagline" from DESIGN.md: Poppins, 14px, weight 200, letter-spacing 0.05em.'
+  - id: design-system:typography-empty-state-icon
+    title: empty-state-icon
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "empty-state-icon" from DESIGN.md: 64px.'
+  - id: design-system:typography-filter-title
+    title: filter-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "filter-title" from DESIGN.md: Poppins, 14px, weight 600.'
+  - id: design-system:typography-badge-font
+    title: badge-font
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "badge-font" from DESIGN.md: poppins-extralight, poppins, sans-serif, 12px, weight 400,
+      letter-spacing 0.02em.
+  - id: design-system:typography-hero-headline-mobile
+    title: hero-headline-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-headline-mobile" from DESIGN.md: Poppins, clamp(12px, 12.27vw, 92px), weight 600,
+      line-height 1, letter-spacing -0.03em.
+  - id: design-system:typography-hero-subtitle-mobile
+    title: hero-subtitle-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-subtitle-mobile" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 6.67vw, 50px),
+      weight 400, line-height 1.3.
+  - id: design-system:typography-section-title-mobile
+    title: section-title-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "section-title-mobile" from DESIGN.md: Poppins, clamp(12px, 5vw, 32px), weight 600.'
+  - id: design-system:typography-story-heading-mobile
+    title: story-heading-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-heading-mobile" from DESIGN.md: Poppins, clamp(12px, 5.27vw, 32px), weight 600,
+      letter-spacing 0.02em.
+  - id: design-system:typography-story-body-mobile
+    title: story-body-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-body-mobile" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 8.23vw, 64px),
+      weight 400, line-height 1.
+  - id: design-system:typography-sku
+    title: sku
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "sku" from DESIGN.md: Poppins, 11px, weight 400, letter-spacing 0.04em.'
+  - id: design-system:spacing-2xs
+    title: 2xs (2px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "2xs" with value 2px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-4xs
+    title: 4xs (4px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "4xs" with value 4px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-xs
+    title: xs (6px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xs" with value 6px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-sm
+    title: sm (8px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "sm" with value 8px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-base
+    title: base (10px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "base" with value 10px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-md
+    title: md (12px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "md" with value 12px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-lg
+    title: lg (16px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "lg" with value 16px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-xl
+    title: xl (20px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl" with value 20px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-2xl
+    title: 2xl (24px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "2xl" with value 24px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-section-sides
+    title: section-sides (25px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "section-sides" with value 25px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-lg-plus
+    title: lg-plus (28px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "lg-plus" with value 28px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-xl-2
+    title: xl-2 (30px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl-2" with value 30px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-3xl
+    title: 3xl (32px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "3xl" with value 32px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-xl-3
+    title: xl-3 (36px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl-3" with value 36px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-4xl
+    title: 4xl (40px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "4xl" with value 40px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-page-padding-desktop
+    title: page-padding-desktop (48px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "page-padding-desktop" with value 48px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-header-gap
+    title: header-gap (50px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "header-gap" with value 50px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-section-gap
+    title: section-gap (64px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "section-gap" with value 64px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-7xl
+    title: 7xl (80px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "7xl" with value 80px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:spacing-8xl
+    title: 8xl (100px)
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "8xl" with value 100px from DESIGN.md for padding, margin, or gap.
+  - id: design-system:rounded-xs
+    title: xs (2px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "xs" with value 2px from DESIGN.md.
+  - id: design-system:rounded-sm
+    title: sm (6px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "sm" with value 6px from DESIGN.md.
+  - id: design-system:rounded-md
+    title: md (8px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "md" with value 8px from DESIGN.md.
+  - id: design-system:rounded-lg
+    title: lg (12px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "lg" with value 12px from DESIGN.md.
+  - id: design-system:rounded-xl
+    title: xl (16px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "xl" with value 16px from DESIGN.md.
+  - id: design-system:rounded-2xl
+    title: 2xl (20px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "2xl" with value 20px from DESIGN.md.
+  - id: design-system:rounded-circle
+    title: circle (50%)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "circle" with value 50% from DESIGN.md.
+  - id: design-system:rounded-full
+    title: full (9999px)
+    category: Design System
+    subCategory: Rounded
+    prompt: Use border-radius token "full" with value 9999px from DESIGN.md.
+  - id: design-system:breakpoint-mobile
+    title: mobile (600px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "mobile" at max-width 600px from DESIGN.md: @media (max-width: 600px) { ... }'
+  - id: design-system:breakpoint-tablet
+    title: tablet (768px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "tablet" at max-width 768px from DESIGN.md: @media (max-width: 768px) { ... }'
+  - id: design-system:breakpoint-desktop
+    title: desktop (1024px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "desktop" at max-width 1024px from DESIGN.md: @media (max-width: 1024px) { ... }'
+  - id: design-system:animation-fast
+    title: fast
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "fast" from DESIGN.md: 150ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-base
+    title: base
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "base" from DESIGN.md: 250ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-slow
+    title: slow
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "slow" from DESIGN.md: 400ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-smooth
+    title: smooth
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "smooth" from DESIGN.md: 500ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-float-in
+    title: float-in
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "float-in" from DESIGN.md: 700ms, ease-out. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-slide-up
+    title: slide-up
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "slide-up" from DESIGN.md: 800ms, ease-out. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-cart-flash
+    title: cart-flash
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "cart-flash" from DESIGN.md: 400ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-mobile-menu
+    title: mobile-menu
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "mobile-menu" from DESIGN.md: 300ms, ease. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-spin
+    title: spin
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "spin" from DESIGN.md: 700ms, linear. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:animation-marquee
+    title: marquee
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "marquee" from DESIGN.md: 20s, linear. Apply to transition-duration and
+      transition-timing-function.
+  - id: design-system:component-product-card
+    title: product-card
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card}
+      (#ffffff), rounded: {rounded.lg} (12px). The design-system validator will flag mismatches.
+  - id: design-system:component-product-card-image
+    title: product-card-image
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-image" component spec from DESIGN.md. Required styles: backgroundColor:
+      {colors.bg-product-image} (#c5d8e8). The design-system validator will flag mismatches.
+  - id: design-system:component-product-card-name
+    title: product-card-name
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-name" component spec from DESIGN.md. Required styles: fontFamily: Poppins, fontSize: 14px,
+      fontWeight: 200, textColor: {colors.text-dark} (#2B312F). The design-system validator will flag mismatches.
+  - id: design-system:component-product-card-price
+    title: product-card-price
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-price" component spec from DESIGN.md. Required styles: fontFamily: Poppins, fontSize:
+      14px, fontWeight: 200, textColor: {colors.text-dark} (#2B312F). The design-system validator will flag mismatches.
+  - id: design-system:component-btn-primary
+    title: btn-primary
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-primary" component spec from DESIGN.md. Required styles: backgroundColor: {colors.accent}
+      (#bb5538), textColor: #ffffff, rounded: {rounded.md} (8px). The design-system validator will flag mismatches.
+  - id: design-system:component-btn-secondary
+    title: btn-secondary
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-secondary" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card}
+      (#ffffff), textColor: {colors.text-primary} (#1a1a1a), borderColor: {colors.border} (#e0dbd4), rounded:
+      {rounded.md} (8px). The design-system validator will flag mismatches.
+  - id: design-system:component-btn-cta
+    title: btn-cta
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-cta" component spec from DESIGN.md. Required styles: backgroundColor: {colors.cta} (#f5c542),
+      textColor: {colors.cta-text} (#1a1a1a), rounded: {rounded.md} (8px). The design-system validator will flag
+      mismatches.
+  - id: design-system:component-btn-ghost
+    title: btn-ghost
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-ghost" component spec from DESIGN.md. Required styles: backgroundColor: transparent, textColor:
+      {colors.text-secondary} (#555555), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px). The
+      design-system validator will flag mismatches.
+  - id: design-system:component-site-header-bar
+    title: site-header-bar
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "site-header-bar" component spec from DESIGN.md. Required styles: backgroundColor: {colors.brand-orange}
+      (#AE3A00), rounded: {rounded.full} (9999px). The design-system validator will flag mismatches.
+  - id: design-system:component-category-card
+    title: category-card
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "category-card" component spec from DESIGN.md. Required styles: backgroundColor: {colors.neutral-card}
+      (#e0dbd4), rounded: {rounded.xl} (16px). The design-system validator will flag mismatches.
+  - id: design-system:component-best-seller-badge
+    title: best-seller-badge
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "best-seller-badge" component spec from DESIGN.md. Required styles: backgroundColor:
+      {colors.blue-accent} (#bdd8f1), textColor: {colors.text-primary} (#1a1a1a). The design-system validator will flag
+      mismatches.
+  - id: design-system:component-input
+    title: input
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "input" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card} (#ffffff),
+      borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px). The design-system validator will flag
+      mismatches.
+  - id: design-system:component-site-footer
+    title: site-footer
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "site-footer" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-footer}
+      (#2d4d3f), textColor: {colors.text-inverse} (#ffffff). The design-system validator will flag mismatches.
