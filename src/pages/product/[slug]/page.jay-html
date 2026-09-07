@@ -72,6 +72,7 @@
         line-height: 1.15;
         margin-bottom: 12px;
         letter-spacing: -0.01em;
+        color: green;
       }
 
       .product-pricing {
@@ -97,6 +98,7 @@
         font-size: 16px;
         line-height: 1.6;
         color: var(--text-secondary);
+        margin-top: 28px;
         margin-bottom: 28px;
       }
 
@@ -287,6 +289,16 @@
               <span class="strikethrough-price" if="productPage.strikethroughPrice">{productPage.strikethroughPrice}</span>
             </div>
 
+            <!-- Info Sections Accordion -->
+            <div class="info-sections" if="productPage.infoSections">
+              <details class="info-section" forEach="productPage.infoSections" trackBy="_id" name="product-info">
+                <summary class="info-section-header">
+                  <h2 class="info-section-title">{title}</h2>
+                </summary>
+                <div class="info-section-content">{plainDescription}</div>
+              </details>
+            </div>
+
             <div class="product-description">{productPage.description}</div>
 
             <!-- Options -->
@@ -368,16 +380,6 @@
             <div class="product-actions">
               <button class="btn btn-primary" ref="productPage.addToCartButton" aria-label="Add to cart">add to cart</button>
               <button class="btn btn-secondary" ref="productPage.buyNowButton" aria-label="Buy now">buy now</button>
-            </div>
-
-            <!-- Info Sections Accordion -->
-            <div class="info-sections" if="productPage.infoSections">
-              <details class="info-section" forEach="productPage.infoSections" trackBy="_id" name="product-info">
-                <summary class="info-section-header">
-                  <h2 class="info-section-title">{title}</h2>
-                </summary>
-                <div class="info-section-content">{plainDescription}</div>
-              </details>
             </div>
           </div>
         </div>
