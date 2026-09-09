@@ -1,0 +1,2682 @@
+items:
+  - id: design-system:color-bg-primary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-primary
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-primary" with value #f9f5f0 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-primary" (#f9f5f0) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#f9f5f0;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#f9f5f0</div>
+        </div></div>
+  - id: design-system:color-bg-secondary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-secondary
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-secondary" with value #f0ebe4 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-secondary" (#f0ebe4) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#f0ebe4;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#f0ebe4</div>
+        </div></div>
+  - id: design-system:color-bg-card
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-card
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-card" with value #ffffff from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-card" (#ffffff) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#ffffff;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#ffffff</div>
+        </div></div>
+  - id: design-system:color-bg-product-image
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-product-image
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-product-image" with value #c5d8e8 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-product-image" (#c5d8e8) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#c5d8e8;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#c5d8e8</div>
+        </div></div>
+  - id: design-system:color-bg-footer
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-footer
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-footer" with value #2d4d3f from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-footer" (#2d4d3f) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#2d4d3f;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#2d4d3f</div>
+        </div></div>
+  - id: design-system:color-bg-mobile-menu
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-mobile-menu
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-mobile-menu" with value #f5f3ef from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-mobile-menu" (#f5f3ef) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#f5f3ef;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#f5f3ef</div>
+        </div></div>
+  - id: design-system:color-bg-story
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: bg-story
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "bg-story" with value #a0c8ff from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "bg-story" (#a0c8ff) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#a0c8ff;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#a0c8ff</div>
+        </div></div>
+  - id: design-system:color-text-primary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: text-primary
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "text-primary" with value #1a1a1a from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "text-primary" (#1a1a1a) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#1a1a1a;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#1a1a1a</div>
+        </div></div>
+  - id: design-system:color-text-secondary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: text-secondary
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "text-secondary" with value #555555 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "text-secondary" (#555555) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#555555;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#555555</div>
+        </div></div>
+  - id: design-system:color-text-muted
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: text-muted
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "text-muted" with value #888888 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "text-muted" (#888888) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#888888;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#888888</div>
+        </div></div>
+  - id: design-system:color-text-inverse
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: text-inverse
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "text-inverse" with value #ffffff from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "text-inverse" (#ffffff) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#ffffff;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#ffffff</div>
+        </div></div>
+  - id: design-system:color-text-dark
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: text-dark
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "text-dark" with value #2B312F from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "text-dark" (#2B312F) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#2B312F;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#2B312F</div>
+        </div></div>
+  - id: design-system:color-brand-green
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: brand-green
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "brand-green" with value #2D5143 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "brand-green" (#2D5143) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#2D5143;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#2D5143</div>
+        </div></div>
+  - id: design-system:color-brand-orange
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: brand-orange
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "brand-orange" with value #AE3A00 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "brand-orange" (#AE3A00) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#AE3A00;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#AE3A00</div>
+        </div></div>
+  - id: design-system:color-hero-text
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: hero-text
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "hero-text" with value #F2F0EB from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "hero-text" (#F2F0EB) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#F2F0EB;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#F2F0EB</div>
+        </div></div>
+  - id: design-system:color-accent
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: accent
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "accent" with value #bb5538 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "accent" (#bb5538) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#bb5538;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#bb5538</div>
+        </div></div>
+  - id: design-system:color-accent-hover
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: accent-hover
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "accent-hover" with value #a44c31 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "accent-hover" (#a44c31) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#a44c31;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#a44c31</div>
+        </div></div>
+  - id: design-system:color-cta
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: cta
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "cta" with value #f5c542 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "cta" (#f5c542) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#f5c542;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#f5c542</div>
+        </div></div>
+  - id: design-system:color-cta-hover
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: cta-hover
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "cta-hover" with value #e0b135 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "cta-hover" (#e0b135) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e0b135;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#e0b135</div>
+        </div></div>
+  - id: design-system:color-cta-text
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: cta-text
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "cta-text" with value #1a1a1a from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "cta-text" (#1a1a1a) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#1a1a1a;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#1a1a1a</div>
+        </div></div>
+  - id: design-system:color-success
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: success
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "success" with value #437346 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "success" (#437346) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#437346;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#437346</div>
+        </div></div>
+  - id: design-system:color-success-bg
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: success-bg
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "success-bg" with value #e8eee9 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "success-bg" (#e8eee9) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e8eee9;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#e8eee9</div>
+        </div></div>
+  - id: design-system:color-error
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: error
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "error" with value #b33838 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "error" (#b33838) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#b33838;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#b33838</div>
+        </div></div>
+  - id: design-system:color-error-bg
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: error-bg
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "error-bg" with value #f7ebeb from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "error-bg" (#f7ebeb) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#f7ebeb;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#f7ebeb</div>
+        </div></div>
+  - id: design-system:color-border
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: border
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "border" with value #e0dbd4 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "border" (#e0dbd4) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e0dbd4;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#e0dbd4</div>
+        </div></div>
+  - id: design-system:color-border-hover
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: border-hover
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "border-hover" with value #ccc6bc from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "border-hover" (#ccc6bc) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#ccc6bc;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#ccc6bc</div>
+        </div></div>
+  - id: design-system:color-border-light
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: border-light
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "border-light" with value #ebe7e1 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "border-light" (#ebe7e1) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#ebe7e1;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#ebe7e1</div>
+        </div></div>
+  - id: design-system:color-blue-accent
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: blue-accent
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "blue-accent" with value #bdd8f1 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "blue-accent" (#bdd8f1) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#bdd8f1;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#bdd8f1</div>
+        </div></div>
+  - id: design-system:color-lime
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: lime
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "lime" with value #d5e955 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "lime" (#d5e955) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#d5e955;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#d5e955</div>
+        </div></div>
+  - id: design-system:color-warm-orange
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: warm-orange
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "warm-orange" with value #e8874a from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "warm-orange" (#e8874a) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e8874a;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#e8874a</div>
+        </div></div>
+  - id: design-system:color-neutral-card
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: neutral-card
+    category: Design System
+    subCategory: Colors
+    browse:
+      size: small
+    prompt: 'Use color token "neutral-card" with value #e0dbd4 from DESIGN.md.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the color token "neutral-card" (#e0dbd4) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e0dbd4;border:1px solid rgba(0,0,0,0.1);"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">#e0dbd4</div>
+        </div></div>
+  - id: design-system:typography-hero-headline
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: hero-headline
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-headline" from DESIGN.md: Poppins, clamp(12px, 6.3vw, 120px), weight 600,
+      line-height 1, letter-spacing -0.03em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "hero-headline" (Poppins, clamp(12px, 6.3vw, 120px), weight 600, line-height 1,
+        letter-spacing -0.03em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 6.3vw, 120px);font-weight:600;line-height:1;letter-spacing:-0.03em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">hero-headline: Poppins, clamp(12px, 6.3vw, 120px), weight 600, line-height 1, letter-spacing -0.03em</div>
+        </div></div>
+  - id: design-system:typography-hero-subtitle
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: hero-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3.19vw, 64px), weight
+      400, line-height 1.3.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "hero-subtitle" (kepler-w03-light-scd-cp, clamp(12px, 3.19vw, 64px), weight 400,
+        line-height 1.3) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 3.19vw, 64px);font-weight:400;line-height:1.3;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">hero-subtitle: kepler-w03-light-scd-cp, clamp(12px, 3.19vw, 64px), weight 400, line-height 1.3</div>
+        </div></div>
+  - id: design-system:typography-section-title
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: section-title
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "section-title" from DESIGN.md: Poppins, clamp(12px, 2.19vw, 45px), weight 600,
+      letter-spacing -0.01em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "section-title" (Poppins, clamp(12px, 2.19vw, 45px), weight 600, letter-spacing
+        -0.01em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 2.19vw, 45px);font-weight:600;letter-spacing:-0.01em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">section-title: Poppins, clamp(12px, 2.19vw, 45px), weight 600, letter-spacing -0.01em</div>
+        </div></div>
+  - id: design-system:typography-page-title
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: page-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "page-title" from DESIGN.md: Poppins, clamp(32px, 5vw, 48px), weight 600, line-height 1.1.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "page-title" (Poppins, clamp(32px, 5vw, 48px), weight 600, line-height 1.1) from
+        DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(32px, 5vw, 48px);font-weight:600;line-height:1.1;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">page-title: Poppins, clamp(32px, 5vw, 48px), weight 600, line-height 1.1</div>
+        </div></div>
+  - id: design-system:typography-product-name
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: product-name
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "product-name" from DESIGN.md: Poppins, clamp(28px, 4vw, 40px), weight 600, line-height
+      1.15, letter-spacing -0.01em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "product-name" (Poppins, clamp(28px, 4vw, 40px), weight 600, line-height 1.15,
+        letter-spacing -0.01em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(28px, 4vw, 40px);font-weight:600;line-height:1.15;letter-spacing:-0.01em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">product-name: Poppins, clamp(28px, 4vw, 40px), weight 600, line-height 1.15, letter-spacing -0.01em</div>
+        </div></div>
+  - id: design-system:typography-banner-heading
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: banner-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "banner-heading" from DESIGN.md: Poppins, clamp(12px, 3.28vw, 64px), weight 600,
+      line-height 1.1, letter-spacing -0.03em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "banner-heading" (Poppins, clamp(12px, 3.28vw, 64px), weight 600, line-height 1.1,
+        letter-spacing -0.03em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 3.28vw, 64px);font-weight:600;line-height:1.1;letter-spacing:-0.03em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">banner-heading: Poppins, clamp(12px, 3.28vw, 64px), weight 600, line-height 1.1, letter-spacing -0.03em</div>
+        </div></div>
+  - id: design-system:typography-banner-subtitle
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: banner-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "banner-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3.28vw, 64px),
+      weight 400, line-height 1.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "banner-subtitle" (kepler-w03-light-scd-cp, clamp(12px, 3.28vw, 64px), weight 400,
+        line-height 1) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 3.28vw, 64px);font-weight:400;line-height:1;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">banner-subtitle: kepler-w03-light-scd-cp, clamp(12px, 3.28vw, 64px), weight 400, line-height 1</div>
+        </div></div>
+  - id: design-system:typography-story-heading
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: story-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-heading" from DESIGN.md: Poppins, clamp(12px, 4vw, 64px), weight 600,
+      letter-spacing 0.02em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "story-heading" (Poppins, clamp(12px, 4vw, 64px), weight 600, letter-spacing 0.02em)
+        from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 4vw, 64px);font-weight:600;letter-spacing:0.02em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">story-heading: Poppins, clamp(12px, 4vw, 64px), weight 600, letter-spacing 0.02em</div>
+        </div></div>
+  - id: design-system:typography-story-body
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: story-body
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-body" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 5vw, 90px), weight 400,
+      line-height 1.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "story-body" (kepler-w03-light-scd-cp, clamp(12px, 5vw, 90px), weight 400,
+        line-height 1) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 5vw, 90px);font-weight:400;line-height:1;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">story-body: kepler-w03-light-scd-cp, clamp(12px, 5vw, 90px), weight 400, line-height 1</div>
+        </div></div>
+  - id: design-system:typography-instagram-heading
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: instagram-heading
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "instagram-heading" from DESIGN.md: Poppins, clamp(12px, 3vw, 64px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "instagram-heading" (Poppins, clamp(12px, 3vw, 64px), weight 600) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 3vw, 64px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">instagram-heading: Poppins, clamp(12px, 3vw, 64px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-instagram-subtitle
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: instagram-subtitle
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "instagram-subtitle" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 3vw, 50px),
+      weight 200.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "instagram-subtitle" (kepler-w03-light-scd-cp, clamp(12px, 3vw, 50px), weight 200)
+        from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 3vw, 50px);font-weight:200;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">instagram-subtitle: kepler-w03-light-scd-cp, clamp(12px, 3vw, 50px), weight 200</div>
+        </div></div>
+  - id: design-system:typography-category-label
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: category-label
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "category-label" from DESIGN.md: Poppins, clamp(12px, 3.56vw, 64px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "category-label" (Poppins, clamp(12px, 3.56vw, 64px), weight 600) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 3.56vw, 64px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">category-label: Poppins, clamp(12px, 3.56vw, 64px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-marquee
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: marquee
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "marquee" from DESIGN.md: Poppins, clamp(12px, 3.28vw, 24px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "marquee" (Poppins, clamp(12px, 3.28vw, 24px), weight 600) from DESIGN.md at this
+        location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 3.28vw, 24px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">marquee: Poppins, clamp(12px, 3.28vw, 24px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-body
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: body
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "body" from DESIGN.md: Poppins, 16px, weight 400, line-height 1.6.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "body" (Poppins, 16px, weight 400, line-height 1.6) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:16px;font-weight:400;line-height:1.6;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">body: Poppins, 16px, weight 400, line-height 1.6</div>
+        </div></div>
+  - id: design-system:typography-body-sm
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: body-sm
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "body-sm" from DESIGN.md: Poppins, 14px, weight 200, line-height 1.6.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "body-sm" (Poppins, 14px, weight 200, line-height 1.6) from DESIGN.md at this
+        location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:14px;font-weight:200;line-height:1.6;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">body-sm: Poppins, 14px, weight 200, line-height 1.6</div>
+        </div></div>
+  - id: design-system:typography-nav-link
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: nav-link
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "nav-link" from DESIGN.md: Poppins, 16px, weight 500.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "nav-link" (Poppins, 16px, weight 500) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:16px;font-weight:500;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">nav-link: Poppins, 16px, weight 500</div>
+        </div></div>
+  - id: design-system:typography-mobile-nav
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: mobile-nav
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "mobile-nav" from DESIGN.md: Poppins, 22px, weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "mobile-nav" (Poppins, 22px, weight 600) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:22px;font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">mobile-nav: Poppins, 22px, weight 600</div>
+        </div></div>
+  - id: design-system:typography-mobile-logo
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: mobile-logo
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "mobile-logo" from DESIGN.md: Poppins, 28px, weight 600, letter-spacing -0.96px.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "mobile-logo" (Poppins, 28px, weight 600, letter-spacing -0.96px) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:28px;font-weight:600;letter-spacing:-0.96px;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">mobile-logo: Poppins, 28px, weight 600, letter-spacing -0.96px</div>
+        </div></div>
+  - id: design-system:typography-button-text
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: button-text
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "button-text" from DESIGN.md: Poppins, 20px, weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "button-text" (Poppins, 20px, weight 600) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:20px;font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">button-text: Poppins, 20px, weight 600</div>
+        </div></div>
+  - id: design-system:typography-label
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: label
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "label" from DESIGN.md: Poppins, 12px, weight 600, letter-spacing 0.08em.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "label" (Poppins, 12px, weight 600, letter-spacing 0.08em) from DESIGN.md at this
+        location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">label: Poppins, 12px, weight 600, letter-spacing 0.08em</div>
+        </div></div>
+  - id: design-system:typography-micro
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: micro
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "micro" from DESIGN.md: Poppins, 11px, weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "micro" (Poppins, 11px, weight 600) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:11px;font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">micro: Poppins, 11px, weight 600</div>
+        </div></div>
+  - id: design-system:typography-small
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: small
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "small" from DESIGN.md: Poppins, 13px, weight 500.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "small" (Poppins, 13px, weight 500) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:13px;font-weight:500;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">small: Poppins, 13px, weight 500</div>
+        </div></div>
+  - id: design-system:typography-social-icon
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: social-icon
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "social-icon" from DESIGN.md: Poppins, 18px, weight 400.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "social-icon" (Poppins, 18px, weight 400) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:18px;font-weight:400;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">social-icon: Poppins, 18px, weight 400</div>
+        </div></div>
+  - id: design-system:typography-price
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: price
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "price" from DESIGN.md: Poppins, clamp(18px, 1.88vw, 24px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "price" (Poppins, clamp(18px, 1.88vw, 24px), weight 600) from DESIGN.md at this
+        location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(18px, 1.88vw, 24px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">price: Poppins, clamp(18px, 1.88vw, 24px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-price-strikethrough
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: price-strikethrough
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "price-strikethrough" from DESIGN.md: Poppins, 18px, weight 400.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "price-strikethrough" (Poppins, 18px, weight 400) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:18px;font-weight:400;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">price-strikethrough: Poppins, 18px, weight 400</div>
+        </div></div>
+  - id: design-system:typography-summary-total
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: summary-total
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "summary-total" from DESIGN.md: Poppins, clamp(16px, 1.72vw, 22px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "summary-total" (Poppins, clamp(16px, 1.72vw, 22px), weight 600) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(16px, 1.72vw, 22px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">summary-total: Poppins, clamp(16px, 1.72vw, 22px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-policy-heading
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: policy-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "policy-heading" from DESIGN.md: kepler-w03-light-scd-cp, clamp(20px, 2.19vw, 28px),
+      weight 400, line-height 1.2.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "policy-heading" (kepler-w03-light-scd-cp, clamp(20px, 2.19vw, 28px), weight 400,
+        line-height 1.2) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(20px, 2.19vw, 28px);font-weight:400;line-height:1.2;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">policy-heading: kepler-w03-light-scd-cp, clamp(20px, 2.19vw, 28px), weight 400, line-height 1.2</div>
+        </div></div>
+  - id: design-system:typography-policy-title
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: policy-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "policy-title" from DESIGN.md: Poppins, clamp(20px, 2.19vw, 28px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "policy-title" (Poppins, clamp(20px, 2.19vw, 28px), weight 600) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(20px, 2.19vw, 28px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">policy-title: Poppins, clamp(20px, 2.19vw, 28px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-footer-heading
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: footer-heading
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "footer-heading" from DESIGN.md: Poppins, clamp(16px, 1.56vw, 20px), weight 600,
+      letter-spacing 0.02em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "footer-heading" (Poppins, clamp(16px, 1.56vw, 20px), weight 600, letter-spacing
+        0.02em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(16px, 1.56vw, 20px);font-weight:600;letter-spacing:0.02em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">footer-heading: Poppins, clamp(16px, 1.56vw, 20px), weight 600, letter-spacing 0.02em</div>
+        </div></div>
+  - id: design-system:typography-footer-body
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: footer-body
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "footer-body" from DESIGN.md: din-next-w01-light, 13px, weight 400.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "footer-body" (din-next-w01-light, 13px, weight 400) from DESIGN.md at this
+        location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:din-next-w01-light,sans-serif;font-size:13px;font-weight:400;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">footer-body: din-next-w01-light, 13px, weight 400</div>
+        </div></div>
+  - id: design-system:typography-footer-logo
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: footer-logo
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "footer-logo" from DESIGN.md: Poppins, clamp(32px, 3.75vw, 48px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "footer-logo" (Poppins, clamp(32px, 3.75vw, 48px), weight 600) from DESIGN.md at
+        this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(32px, 3.75vw, 48px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">footer-logo: Poppins, clamp(32px, 3.75vw, 48px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-logo
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: logo
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "logo" from DESIGN.md: Poppins, clamp(24px, 2.5vw, 32px), weight 600, letter-spacing
+      -0.96px.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "logo" (Poppins, clamp(24px, 2.5vw, 32px), weight 600, letter-spacing -0.96px) from
+        DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(24px, 2.5vw, 32px);font-weight:600;letter-spacing:-0.96px;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">logo: Poppins, clamp(24px, 2.5vw, 32px), weight 600, letter-spacing -0.96px</div>
+        </div></div>
+  - id: design-system:typography-tagline
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: tagline
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "tagline" from DESIGN.md: Poppins, 14px, weight 200, letter-spacing 0.05em.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "tagline" (Poppins, 14px, weight 200, letter-spacing 0.05em) from DESIGN.md at this
+        location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:14px;font-weight:200;letter-spacing:0.05em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">tagline: Poppins, 14px, weight 200, letter-spacing 0.05em</div>
+        </div></div>
+  - id: design-system:typography-empty-state-icon
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: empty-state-icon
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "empty-state-icon" from DESIGN.md: 64px.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "empty-state-icon" (64px) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-size:64px;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">empty-state-icon: 64px</div>
+        </div></div>
+  - id: design-system:typography-filter-title
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: filter-title
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "filter-title" from DESIGN.md: Poppins, 14px, weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the typography preset "filter-title" (Poppins, 14px, weight 600) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:14px;font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">filter-title: Poppins, 14px, weight 600</div>
+        </div></div>
+  - id: design-system:typography-badge-font
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: badge-font
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "badge-font" from DESIGN.md: poppins-extralight, poppins, sans-serif, 12px, weight 400,
+      letter-spacing 0.02em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "badge-font" (poppins-extralight, poppins, sans-serif, 12px, weight 400,
+        letter-spacing 0.02em) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:poppins-extralight, poppins, sans-serif,sans-serif;font-size:12px;font-weight:400;letter-spacing:0.02em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">badge-font: poppins-extralight, poppins, sans-serif, 12px, weight 400, letter-spacing 0.02em</div>
+        </div></div>
+  - id: design-system:typography-hero-headline-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: hero-headline-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-headline-mobile" from DESIGN.md: Poppins, clamp(12px, 12.27vw, 92px), weight 600,
+      line-height 1, letter-spacing -0.03em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "hero-headline-mobile" (Poppins, clamp(12px, 12.27vw, 92px), weight 600, line-height
+        1, letter-spacing -0.03em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 12.27vw, 92px);font-weight:600;line-height:1;letter-spacing:-0.03em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">hero-headline-mobile: Poppins, clamp(12px, 12.27vw, 92px), weight 600, line-height 1, letter-spacing -0.03em</div>
+        </div></div>
+  - id: design-system:typography-hero-subtitle-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: hero-subtitle-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "hero-subtitle-mobile" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 6.67vw, 50px),
+      weight 400, line-height 1.3.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "hero-subtitle-mobile" (kepler-w03-light-scd-cp, clamp(12px, 6.67vw, 50px), weight
+        400, line-height 1.3) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 6.67vw, 50px);font-weight:400;line-height:1.3;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">hero-subtitle-mobile: kepler-w03-light-scd-cp, clamp(12px, 6.67vw, 50px), weight 400, line-height 1.3</div>
+        </div></div>
+  - id: design-system:typography-section-title-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: section-title-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "section-title-mobile" from DESIGN.md: Poppins, clamp(12px, 5vw, 32px), weight 600.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "section-title-mobile" (Poppins, clamp(12px, 5vw, 32px), weight 600) from DESIGN.md
+        at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 5vw, 32px);font-weight:600;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">section-title-mobile: Poppins, clamp(12px, 5vw, 32px), weight 600</div>
+        </div></div>
+  - id: design-system:typography-story-heading-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: story-heading-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-heading-mobile" from DESIGN.md: Poppins, clamp(12px, 5.27vw, 32px), weight 600,
+      letter-spacing 0.02em.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "story-heading-mobile" (Poppins, clamp(12px, 5.27vw, 32px), weight 600,
+        letter-spacing 0.02em) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:clamp(12px, 5.27vw, 32px);font-weight:600;letter-spacing:0.02em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">story-heading-mobile: Poppins, clamp(12px, 5.27vw, 32px), weight 600, letter-spacing 0.02em</div>
+        </div></div>
+  - id: design-system:typography-story-body-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: story-body-mobile
+    category: Design System
+    subCategory: Typography
+    prompt: >-
+      Apply typography preset "story-body-mobile" from DESIGN.md: kepler-w03-light-scd-cp, clamp(12px, 8.23vw, 64px),
+      weight 400, line-height 1.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "story-body-mobile" (kepler-w03-light-scd-cp, clamp(12px, 8.23vw, 64px), weight 400,
+        line-height 1) from DESIGN.md at this location.
+    browse:
+      size: large
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:kepler-w03-light-scd-cp,sans-serif;font-size:clamp(12px, 8.23vw, 64px);font-weight:400;line-height:1;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">story-body-mobile: kepler-w03-light-scd-cp, clamp(12px, 8.23vw, 64px), weight 400, line-height 1</div>
+        </div></div>
+  - id: design-system:typography-sku
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: sku
+    category: Design System
+    subCategory: Typography
+    prompt: 'Apply typography preset "sku" from DESIGN.md: Poppins, 11px, weight 400, letter-spacing 0.04em.'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the typography preset "sku" (Poppins, 11px, weight 400, letter-spacing 0.04em) from DESIGN.md at this
+        location.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="font-family:Poppins,sans-serif;font-size:11px;font-weight:400;letter-spacing:0.04em;margin:0;">The quick brown fox</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">sku: Poppins, 11px, weight 400, letter-spacing 0.04em</div>
+        </div></div>
+  - id: design-system:spacing-2xs
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 2xs
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "2xs" with value 2px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "2xs" (2px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:2px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">2px</div>
+        </div></div>
+  - id: design-system:spacing-4xs
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 4xs
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "4xs" with value 4px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "4xs" (4px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:4px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">4px</div>
+        </div></div>
+  - id: design-system:spacing-xs
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xs
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xs" with value 6px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "xs" (6px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:6px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">6px</div>
+        </div></div>
+  - id: design-system:spacing-sm
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: sm
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "sm" with value 8px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "sm" (8px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:8px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">8px</div>
+        </div></div>
+  - id: design-system:spacing-base
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: base
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "base" with value 10px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "base" (10px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:10px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">10px</div>
+        </div></div>
+  - id: design-system:spacing-md
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: md
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "md" with value 12px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "md" (12px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:12px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">12px</div>
+        </div></div>
+  - id: design-system:spacing-lg
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: lg
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "lg" with value 16px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "lg" (16px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:16px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">16px</div>
+        </div></div>
+  - id: design-system:spacing-xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl" with value 20px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "xl" (20px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:20px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">20px</div>
+        </div></div>
+  - id: design-system:spacing-2xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 2xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "2xl" with value 24px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "2xl" (24px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:24px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">24px</div>
+        </div></div>
+  - id: design-system:spacing-section-sides
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: section-sides
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "section-sides" with value 25px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "section-sides" (25px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:25px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">25px</div>
+        </div></div>
+  - id: design-system:spacing-lg-plus
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: lg-plus
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "lg-plus" with value 28px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "lg-plus" (28px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:28px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">28px</div>
+        </div></div>
+  - id: design-system:spacing-xl-2
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xl-2
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl-2" with value 30px from DESIGN.md for padding, margin, or gap.
+    browse:
+      size: small
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "xl-2" (30px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:30px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">30px</div>
+        </div></div>
+  - id: design-system:spacing-3xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 3xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "3xl" with value 32px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "3xl" (32px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:32px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">32px</div>
+        </div></div>
+  - id: design-system:spacing-xl-3
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xl-3
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "xl-3" with value 36px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "xl-3" (36px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:36px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">36px</div>
+        </div></div>
+  - id: design-system:spacing-4xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 4xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "4xl" with value 40px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "4xl" (40px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:40px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">40px</div>
+        </div></div>
+  - id: design-system:spacing-page-padding-desktop
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: page-padding-desktop
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "page-padding-desktop" with value 48px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "page-padding-desktop" (48px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:48px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">48px</div>
+        </div></div>
+  - id: design-system:spacing-header-gap
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: header-gap
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "header-gap" with value 50px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "header-gap" (50px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:50px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">50px</div>
+        </div></div>
+  - id: design-system:spacing-section-gap
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: section-gap
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "section-gap" with value 64px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "section-gap" (64px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:64px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">64px</div>
+        </div></div>
+  - id: design-system:spacing-7xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 7xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "7xl" with value 80px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "7xl" (80px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:80px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">80px</div>
+        </div></div>
+  - id: design-system:spacing-8xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 8xl
+    category: Design System
+    subCategory: Spacing
+    prompt: Use spacing token "8xl" with value 100px from DESIGN.md for padding, margin, or gap.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the spacing token "8xl" (100px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="display:flex;align-items:center;gap:0;">
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:2px 0 0 2px;"></div>
+            <div style="width:100px;height:24px;background:repeating-linear-gradient(45deg,#e0f2fe,#e0f2fe 2px,#bae6fd 2px,#bae6fd 4px);"></div>
+            <div style="width:16px;height:24px;background:#cbd5e1;border-radius:0 2px 2px 0;"></div>
+          </div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">100px</div>
+        </div></div>
+  - id: design-system:rounded-xs
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xs
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "xs" with value 2px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "xs" (2px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:2px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">2px</div>
+        </div></div>
+  - id: design-system:rounded-sm
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: sm
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "sm" with value 6px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "sm" (6px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:6px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">6px</div>
+        </div></div>
+  - id: design-system:rounded-md
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: md
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "md" with value 8px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "md" (8px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:8px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">8px</div>
+        </div></div>
+  - id: design-system:rounded-lg
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: lg
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "lg" with value 12px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "lg" (12px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:12px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">12px</div>
+        </div></div>
+  - id: design-system:rounded-xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: xl
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "xl" with value 16px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "xl" (16px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:16px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">16px</div>
+        </div></div>
+  - id: design-system:rounded-2xl
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: 2xl
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "2xl" with value 20px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "2xl" (20px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:20px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">20px</div>
+        </div></div>
+  - id: design-system:rounded-circle
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: circle
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "circle" with value 50% from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "circle" (50%) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:50%;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">50%</div>
+        </div></div>
+  - id: design-system:rounded-full
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: full
+    category: Design System
+    subCategory: Rounded
+    browse:
+      size: small
+    prompt: Use border-radius token "full" with value 9999px from DESIGN.md.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the border-radius token "full" (9999px) from DESIGN.md at this location.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope {  }</style><div
+        style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:sans-serif;height:100%;">
+          <div style="width:40px;height:40px;border-radius:9999px;background:#e2e8f0;border:1.5px solid #94a3b8;"></div>
+          <div style="font-size:10px;color:#888;font-family:monospace;">9999px</div>
+        </div></div>
+  - id: design-system:breakpoint-mobile
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: mobile (600px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "mobile" at max-width 600px from DESIGN.MD: @media (max-width: 600px) { ... }'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Add a responsive breakpoint at "mobile" (600px) from DESIGN.md for this element.
+  - id: design-system:breakpoint-tablet
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: tablet (768px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "tablet" at max-width 768px from DESIGN.MD: @media (max-width: 768px) { ... }'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Add a responsive breakpoint at "tablet" (768px) from DESIGN.md for this element.
+  - id: design-system:breakpoint-desktop
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: desktop (1024px)
+    category: Design System
+    subCategory: Breakpoints
+    prompt: 'Use breakpoint "desktop" at max-width 1024px from DESIGN.MD: @media (max-width: 1024px) { ... }'
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Add a responsive breakpoint at "desktop" (1024px) from DESIGN.md for this element.
+  - id: design-system:animation-fast
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: fast
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "fast" from DESIGN.md: 150ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "fast" (150ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 150ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">fast</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">150ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-base
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: base
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "base" from DESIGN.md: 250ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "base" (250ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 250ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">base</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">250ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-slow
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: slow
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "slow" from DESIGN.md: 400ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "slow" (400ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 400ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">slow</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">400ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-smooth
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: smooth
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "smooth" from DESIGN.md: 500ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "smooth" (500ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 500ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">smooth</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">500ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-float-in
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: float-in
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "float-in" from DESIGN.md: 700ms, ease-out. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "float-in" (700ms, ease-out) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 700ms ease-out;cursor:pointer;
+        } .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">float-in</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">700ms, ease-out</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-slide-up
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: slide-up
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "slide-up" from DESIGN.md: 800ms, ease-out. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "slide-up" (800ms, ease-out) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 800ms ease-out;cursor:pointer;
+        } .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">slide-up</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">800ms, ease-out</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-cart-flash
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: cart-flash
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "cart-flash" from DESIGN.md: 400ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "cart-flash" (400ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 400ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">cart-flash</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">400ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-mobile-menu
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: mobile-menu
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "mobile-menu" from DESIGN.md: 300ms, ease. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "mobile-menu" (300ms, ease) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 300ms ease;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">mobile-menu</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">300ms, ease</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-spin
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: spin
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "spin" from DESIGN.md: 700ms, linear. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "spin" (700ms, linear) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 700ms linear;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">spin</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">700ms, linear</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:animation-marquee
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: marquee
+    category: Design System
+    subCategory: Animations
+    prompt: >-
+      Use animation preset "marquee" from DESIGN.md: 20s, linear. Apply to transition-duration and
+      transition-timing-function.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: Apply the animation preset "marquee" (20s, linear) from DESIGN.md to this element's transitions.
+    presentation:
+      type: html-fragment
+      html: >-
+        <div><style>@scope { .anim-preview {
+        width:40px;height:40px;border-radius:6px;background:#8b5cf6;transition:transform 20s linear;cursor:pointer; }
+        .anim-preview:hover { transform:scale(1.3); } }</style><div
+        style="display:flex;align-items:center;gap:10px;font-family:sans-serif;">
+            <div class="anim-preview"></div>
+            <div>
+              <div style="font-size:12px;font-weight:600;">marquee</div>
+              <div style="font-size:11px;color:#888;font-family:monospace;">20s, linear</div>
+              <div style="font-size:10px;color:#aaa;">hover to preview</div>
+            </div>
+          </div></div>
+  - id: design-system:component-product-card
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: product-card
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card}
+      (#ffffff), rounded: {rounded.lg} (12px). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "product-card" component styles (backgroundColor: {colors.bg-card} (#ffffff), rounded: {rounded.lg}
+        (12px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#ffffff;border-radius:12px;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">product-card</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.bg-card} (#ffffff), rounded: {rounded.lg} (12px)</div>
+        </div></div>
+  - id: design-system:component-product-card-image
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: product-card-image
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-image" component spec from DESIGN.md. Required styles: backgroundColor:
+      {colors.bg-product-image} (#c5d8e8). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "product-card-image" component styles (backgroundColor: {colors.bg-product-image} (#c5d8e8)) from
+        DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#c5d8e8;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">product-card-image</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.bg-product-image} (#c5d8e8)</div>
+        </div></div>
+  - id: design-system:component-product-card-name
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: product-card-name
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-name" component spec from DESIGN.md. Required styles: fontFamily: Poppins, fontSize: 14px,
+      fontWeight: 200, textColor: {colors.text-dark} (#2B312F). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "product-card-name" component styles (fontFamily: Poppins, fontSize: 14px, fontWeight: 200, textColor:
+        {colors.text-dark} (#2B312F)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="fontFamily:Poppins;fontSize:14px;fontWeight:200;color:#2B312F;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">product-card-name</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">fontFamily: Poppins, fontSize: 14px, fontWeight: 200, textColor: {colors.text-dark} (#2B312F)</div>
+        </div></div>
+  - id: design-system:component-product-card-price
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: product-card-price
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "product-card-price" component spec from DESIGN.md. Required styles: fontFamily: Poppins, fontSize:
+      14px, fontWeight: 200, textColor: {colors.text-dark} (#2B312F). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "product-card-price" component styles (fontFamily: Poppins, fontSize: 14px, fontWeight: 200,
+        textColor: {colors.text-dark} (#2B312F)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="fontFamily:Poppins;fontSize:14px;fontWeight:200;color:#2B312F;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">product-card-price</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">fontFamily: Poppins, fontSize: 14px, fontWeight: 200, textColor: {colors.text-dark} (#2B312F)</div>
+        </div></div>
+  - id: design-system:component-btn-primary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: btn-primary
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-primary" component spec from DESIGN.md. Required styles: backgroundColor: {colors.accent}
+      (#bb5538), textColor: #ffffff, rounded: {rounded.md} (8px). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "btn-primary" component styles (backgroundColor: {colors.accent} (#bb5538), textColor: #ffffff,
+        rounded: {rounded.md} (8px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#bb5538;color:#ffffff;border-radius:8px;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">btn-primary</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.accent} (#bb5538), textColor: #ffffff, rounded: {rounded.md} (8px)</div>
+        </div></div>
+  - id: design-system:component-btn-secondary
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: btn-secondary
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-secondary" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card}
+      (#ffffff), textColor: {colors.text-primary} (#1a1a1a), borderColor: {colors.border} (#e0dbd4), rounded:
+      {rounded.md} (8px). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "btn-secondary" component styles (backgroundColor: {colors.bg-card} (#ffffff), textColor:
+        {colors.text-primary} (#1a1a1a), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px)) from
+        DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#ffffff;color:#1a1a1a;border-color:#e0dbd4;border-radius:8px;padding:8px 16px;border:1.5px solid #e0dbd4;display:inline-block;font-size:13px;min-width:80px;text-align:center;">btn-secondary</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.bg-card} (#ffffff), textColor: {colors.text-primary} (#1a1a1a), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px)</div>
+        </div></div>
+  - id: design-system:component-btn-cta
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: btn-cta
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-cta" component spec from DESIGN.md. Required styles: backgroundColor: {colors.cta} (#f5c542),
+      textColor: {colors.cta-text} (#1a1a1a), rounded: {rounded.md} (8px). The design-system validator will flag
+      mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "btn-cta" component styles (backgroundColor: {colors.cta} (#f5c542), textColor: {colors.cta-text}
+        (#1a1a1a), rounded: {rounded.md} (8px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#f5c542;color:#1a1a1a;border-radius:8px;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">btn-cta</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.cta} (#f5c542), textColor: {colors.cta-text} (#1a1a1a), rounded: {rounded.md} (8px)</div>
+        </div></div>
+  - id: design-system:component-btn-ghost
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: btn-ghost
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "btn-ghost" component spec from DESIGN.md. Required styles: backgroundColor: transparent, textColor:
+      {colors.text-secondary} (#555555), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px). The
+      design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "btn-ghost" component styles (backgroundColor: transparent, textColor: {colors.text-secondary}
+        (#555555), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:transparent;color:#555555;border-color:#e0dbd4;border-radius:8px;padding:8px 16px;border:1.5px solid #e0dbd4;display:inline-block;font-size:13px;min-width:80px;text-align:center;">btn-ghost</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: transparent, textColor: {colors.text-secondary} (#555555), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px)</div>
+        </div></div>
+  - id: design-system:component-site-header-bar
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: site-header-bar
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "site-header-bar" component spec from DESIGN.md. Required styles: backgroundColor: {colors.brand-orange}
+      (#AE3A00), rounded: {rounded.full} (9999px). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "site-header-bar" component styles (backgroundColor: {colors.brand-orange} (#AE3A00), rounded:
+        {rounded.full} (9999px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#AE3A00;border-radius:9999px;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">site-header-bar</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.brand-orange} (#AE3A00), rounded: {rounded.full} (9999px)</div>
+        </div></div>
+  - id: design-system:component-category-card
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: category-card
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "category-card" component spec from DESIGN.md. Required styles: backgroundColor: {colors.neutral-card}
+      (#e0dbd4), rounded: {rounded.xl} (16px). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "category-card" component styles (backgroundColor: {colors.neutral-card} (#e0dbd4), rounded:
+        {rounded.xl} (16px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#e0dbd4;border-radius:16px;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">category-card</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.neutral-card} (#e0dbd4), rounded: {rounded.xl} (16px)</div>
+        </div></div>
+  - id: design-system:component-best-seller-badge
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: best-seller-badge
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "best-seller-badge" component spec from DESIGN.md. Required styles: backgroundColor:
+      {colors.blue-accent} (#bdd8f1), textColor: {colors.text-primary} (#1a1a1a). The design-system validator will flag
+      mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "best-seller-badge" component styles (backgroundColor: {colors.blue-accent} (#bdd8f1), textColor:
+        {colors.text-primary} (#1a1a1a)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#bdd8f1;color:#1a1a1a;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">best-seller-badge</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.blue-accent} (#bdd8f1), textColor: {colors.text-primary} (#1a1a1a)</div>
+        </div></div>
+  - id: design-system:component-input
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: input
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "input" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-card} (#ffffff),
+      borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px). The design-system validator will flag
+      mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "input" component styles (backgroundColor: {colors.bg-card} (#ffffff), borderColor: {colors.border}
+        (#e0dbd4), rounded: {rounded.md} (8px)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#ffffff;border-color:#e0dbd4;border-radius:8px;padding:8px 16px;border:1.5px solid #e0dbd4;display:inline-block;font-size:13px;min-width:80px;text-align:center;">input</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.bg-card} (#ffffff), borderColor: {colors.border} (#e0dbd4), rounded: {rounded.md} (8px)</div>
+        </div></div>
+  - id: design-system:component-site-footer
+    pluginName: design-system-validator
+    packageName: '@jay-framework/design-system-validator'
+    title: site-footer
+    category: Design System
+    subCategory: Components
+    prompt: >-
+      Apply the "site-footer" component spec from DESIGN.md. Required styles: backgroundColor: {colors.bg-footer}
+      (#2d4d3f), textColor: {colors.text-inverse} (#ffffff). The design-system validator will flag mismatches.
+    interaction:
+      mode: stage-place
+      stagePromptTemplate: >-
+        Apply the "site-footer" component styles (backgroundColor: {colors.bg-footer} (#2d4d3f), textColor:
+        {colors.text-inverse} (#ffffff)) from DESIGN.md to this element.
+    presentation:
+      type: html-fragment
+      html: |-
+        <div><style>@scope {  }</style><div style="font-family:sans-serif;">
+          <div style="background-color:#2d4d3f;color:#ffffff;padding:8px 16px;display:inline-block;font-size:13px;min-width:80px;text-align:center;">site-footer</div>
+          <div style="font-size:10px;color:#888;margin-top:6px;font-family:monospace;">backgroundColor: {colors.bg-footer} (#2d4d3f), textColor: {colors.text-inverse} (#ffffff)</div>
+        </div></div>

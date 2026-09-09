@@ -8,6 +8,8 @@
 
     <script type="application/jay-headfull" src="../components/site-footer/site-footer" names="SiteFooter" contract="../components/site-footer/site-footer.jay-contract"></script>
     <script type="application/jay-data" contract="./page.jay-contract"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="../styles/onsko-theme.css" />
     <style>
@@ -71,8 +73,8 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        font-family: 'Poppins', sans-serif;
-        font-size: 32px;
+        font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+        font-size: clamp(24px, 2.5vw, 32px);
         font-weight: 600;
         color: rgb(45, 81, 67);
         letter-spacing: -0.96px;
@@ -580,8 +582,8 @@
 
       .best-seller-badge {
         position: absolute;
-        top: 14px;
-        left: 14px;
+        top: 12px;
+        left: 12px;
         z-index: 2;
         background: #bdd8f1;
         color: var(--text-primary);
@@ -1222,13 +1224,13 @@
               <div class="shipping-banner">
                   <div class="marquee">
                       <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
-                      <span>✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
+                      <span aria-hidden="true">✻ free shipping on orders over $50</span>
                   </div>
               </div>
           </div>

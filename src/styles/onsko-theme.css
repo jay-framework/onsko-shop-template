@@ -20,6 +20,39 @@
   font-display: swap;
 }
 
+/* ----------------------------------------------------------------------------
+   Metric-matched fallback fonts (reduce CLS while web fonts load).
+   Poppins overrides are exact (generated via design-system-validator/fontFallback).
+   The Wix web fonts (kepler / din-next) are not in the capsize metrics DB, so their
+   overrides are approximated from the closest metrically-known analog fonts —
+   PT Serif for kepler (transitional serif) and Barlow for din-next (geometric sans).
+   ---------------------------------------------------------------------------- */
+@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 93.6182%;
+  descent-override: 31.2061%;
+  line-gap-override: 8.916%;
+  size-adjust: 112.1577%;
+}
+
+@font-face {
+  font-family: "kepler-w03-light-scd-cp Fallback";
+  src: local('Georgia');
+  ascent-override: 103.39%;
+  descent-override: 28.4596%;
+  size-adjust: 100.4933%;
+}
+
+@font-face {
+  font-family: "din-next-w01-light Fallback";
+  src: local('Arial'), local('ArialMT');
+  ascent-override: 103.4341%;
+  descent-override: 20.6868%;
+  line-gap-override: 0%;
+  size-adjust: 96.68%;
+}
+
 /* ============================================================================
    Design Tokens
    ============================================================================ */
@@ -68,9 +101,9 @@
   --container-max: 1400px;
   --page-padding: 48px;
 
-  --font-primary: 'Poppins', sans-serif;
-  --font-serif: 'kepler-w03-light-scd-cp', serif;
-  --font-caption: 'din-next-w01-light', sans-serif;
+  --font-primary: 'Poppins', 'Poppins Fallback', sans-serif;
+  --font-serif: 'kepler-w03-light-scd-cp', 'kepler-w03-light-scd-cp Fallback', serif;
+  --font-caption: 'din-next-w01-light', 'din-next-w01-light Fallback', sans-serif;
 }
 
 /* ============================================================================
@@ -355,7 +388,7 @@ input, select, textarea { font-family: inherit; }
   display: flex;
   align-items: center;
   gap: 6px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Poppins Fallback', sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: #2D5143;
@@ -387,7 +420,7 @@ input, select, textarea { font-family: inherit; }
   gap: 12px;
 }
 .site-mobile-menu-nav a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Poppins Fallback', sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: #2D5143;
@@ -402,7 +435,7 @@ input, select, textarea { font-family: inherit; }
 }
 .site-mobile-menu-login button,
 .site-mobile-menu-login span {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Poppins Fallback', sans-serif;
   font-size: 22px;
   font-weight: 600;
   color: #2D5143;

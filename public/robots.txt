@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://onsko.example.com/sitemap.xml

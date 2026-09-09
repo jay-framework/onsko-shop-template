@@ -272,12 +272,34 @@ plugins:
       - name: runAiditorPublishAction
         description: Run the Jay project's aiditor:publish npm script (stream)
         path: ./node_modules/@jay-framework/aiditor/dist/actions/run-aiditor-publish.jay-action
+      - name: listCanvasDocumentsAction
+        description: List saved canvas documents for the current project
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/list-canvas-documents.jay-action
+      - name: getCanvasDocumentAction
+        description: Load a saved canvas document by id
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/get-canvas-document.jay-action
+      - name: saveCanvasDocumentAction
+        description: Save or update a canvas document
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/save-canvas-document.jay-action
+      - name: deleteCanvasDocumentAction
+        description: Delete a saved canvas document
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/delete-canvas-document.jay-action
+      - name: renameCanvasDocumentAction
+        description: Rename a saved canvas document
+        path: ./node_modules/@jay-framework/aiditor/dist/actions/rename-canvas-document.jay-action
     routes:
       - path: /aiditor
         description: AIditor — visual AI-driven code editor
   - name: design-system-validator
     path: ./node_modules/@jay-framework/design-system-validator
     contracts: []
+    actions:
+      - name: fontFallback
+        description: >
+          Generate a metric-matched fallback @font-face for a web font to
+          prevent layout shift (CLS). Uses pre-computed metrics from
+          @capsizecss/metrics for known Google and system fonts.
+        path: ./node_modules/@jay-framework/design-system-validator/dist/actions/font-fallback.jay-action
     routes:
       - path: /design-system/settings
         description: Design system project settings — token overview, analysis report,

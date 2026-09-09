@@ -16,6 +16,8 @@
     <script type="application/jay-data">
       data:
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,400;1,700&display=swap">
     <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
     <style>
@@ -229,8 +231,8 @@
 
       .best-seller-badge {
         position: absolute;
-        top: 14px;
-        left: 14px;
+        top: 12px;
+        left: 12px;
         z-index: 2;
         background: #bdd8f1;
         color: var(--text-primary);
@@ -304,13 +306,13 @@
             <!-- Options -->
             <div class="product-options" if="productPage.options">
               <div class="option-group" forEach="productPage.options" trackBy="_id">
-                <label class="option-label">{name}</label>
+                <label class="option-label" for="option-{_id}">{name}</label>
 
                 <!-- Text Choices -->
                 <select class="select"
+                        id="option-{_id}"
                         if="optionRenderType == TEXT_CHOICES"
-                        ref="productPage.options.textChoice"
-                        aria-label="{name}">
+                        ref="productPage.options.textChoice">
                   <option forEach="choices" trackBy="choiceId" value="{choiceId}">{name}</option>
                 </select>
 
@@ -331,12 +333,12 @@
             <!-- Modifiers -->
             <div class="product-modifiers" if="productPage.modifiers">
               <div class="modifier-group" forEach="productPage.modifiers" trackBy="_id">
-                <label class="option-label">{name}</label>
+                <label class="option-label" for="modifier-{_id}">{name}</label>
 
                 <select class="select"
+                        id="modifier-{_id}"
                         if="modifierType == TEXT_CHOICES"
-                        ref="productPage.modifiers.textModifier"
-                        aria-label="{name}">
+                        ref="productPage.modifiers.textModifier">
                   <option forEach="choices" trackBy="choiceId" value="{choiceId}">{name}</option>
                 </select>
 

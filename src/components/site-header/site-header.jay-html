@@ -10,6 +10,7 @@
     ></script>
     <script type="application/jay-data">
       data:
+        headerHidden: boolean
     </script>
   </head>
   <body>
