@@ -285,7 +285,7 @@
         }
       }
 
-      :scope {
+      .site-header-root {
         display: contents;
       }
 
@@ -571,7 +571,7 @@
     }
 
     @scope (.siteFooter) {
-      :scope {
+      .site-footer {
         background: var(--bg-footer);
         color: var(--text-inverse);
         padding: 64px var(--page-padding) 32px;
@@ -739,7 +739,7 @@
 
 <body>
   <main class="product-detail-page"><jay:site-header ref="siteHeader">
-      <div class="site-header-root siteHeader">
+      <div class="site-header-root">
         <header class="site-header {headerHidden ? header-hidden}">
           <div class="site-header-bar">
             <div class="site-header-inner"><a href="/" class="site-logo"><span
@@ -883,7 +883,7 @@
           </a></div>
       </section>
     </jay:category-products><jay:site-footer ref="siteFooter">
-      <footer class="site-footer siteFooter">
+      <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-columns">
             <div class="footer-col">
