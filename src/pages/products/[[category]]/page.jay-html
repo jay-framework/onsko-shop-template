@@ -1,159 +1,807 @@
 <html>
-  <head>
-    <script type="application/jay-headless"
-            plugin="@jay-framework/wix-stores"
-            contract="product-search"
-            key="productSearch"
-    ></script>
-    <title>{productSearch.categoryHeader.name} | Onsko</title>
-    <meta name="description" content="{productSearch.categoryHeader.description}">
-    <script type="application/jay-headfull" src="../../../components/site-header/site-header" names="SiteHeader" contract="../../../components/site-header/site-header.jay-contract"></script>
-    <script type="application/jay-headfull" src="../../../components/site-footer/site-footer" names="SiteFooter" contract="../../../components/site-footer/site-footer.jay-contract"></script>
-    <script type="application/jay-data">
+
+<head>
+  <script type="application/jay-headless" plugin="@jay-framework/wix-stores"
+    contract="product-search" key="productSearch"></script>
+  <title>{productSearch.categoryHeader.name} | Onsko</title>
+  <meta name="description" content="{productSearch.categoryHeader.description}">
+  <script type="application/jay-headless" src="../../../components/site-header/site-header"
+    contract="../../../components/site-header/site-header.jay-contract"
+    template="../../../components/site-header/site-header.jay-html"></script>
+  <script type="application/jay-headless" plugin="@jay-framework/wix-cart"
+    contract="cart-indicator"></script>
+  <script type="application/jay-headless" plugin="@jay-framework/wix-members"
+    contract="login-indicator"></script>
+  <script type="application/jay-headless" src="../../../components/site-footer/site-footer"
+    contract="../../../components/site-footer/site-footer.jay-contract"
+    template="../../../components/site-footer/site-footer.jay-html"></script>
+  <script type="application/jay-data">
       data:
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,400;1,700&display=swap">
-    <link rel="stylesheet" href="../../../styles/onsko-theme.css" />
-    <style>
-      /* =====================================================
-         ONSKO PRODUCTS PAGE - SIDEBAR + GRID (DESKTOP)
-         FILTER POPOVER (MOBILE < 1024px)
-         ===================================================== */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="../../../styles/onsko-theme.css">
+  <style>
+    /* ===================================================== ONSKO PRODUCTS PAGE - SIDEBAR + GRID (DESKTOP) FILTER POPOVER (MOBILE < 1024px) ===================================================== */
+    /* ── Fun filter animations ── */
+    @keyframes filterBounceIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
 
-      /* ── Fun filter animations ── */
+      60% {
+        opacity: 1;
+        transform: translateX(4px);
+      }
 
-      @keyframes filterBounceIn {
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes titlePopIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.92);
+      }
+
+      70% {
+        opacity: 1;
+        transform: translateY(-3px) scale(1.03);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes wiggle {
+
+      0%,
+      100% {
+        transform: rotate(0deg);
+      }
+
+      20% {
+        transform: rotate(-5deg);
+      }
+
+      40% {
+        transform: rotate(5deg);
+      }
+
+      60% {
+        transform: rotate(-3deg);
+      }
+
+      80% {
+        transform: rotate(3deg);
+      }
+    }
+
+    @keyframes dotPulse {
+
+      0%,
+      100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(-50%) scale(1.6);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes priceReveal {
+      0% {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .shop-page {
+      /* fill the viewport via the flex-column body, not 100vh */
+      flex: 1;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      /* design-system: allow */
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Shop Layout — sidebar left + grid right on desktop */
+    .shop-layout {
+      padding: 170px var(--page-padding) 80px;
+      /* design-system: allow */
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+    }
+
+    /* Sidebar — visible on desktop */
+    .shop-sidebar {
+      position: sticky;
+      top: 80px;
+      align-self: start;
+    }
+
+    .sidebar-section {
+      margin-bottom: 32px;
+    }
+
+    .sidebar-section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(16px, 1.56vw, 20px);
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      animation: titlePopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+
+    /* Filter bar — hidden on desktop, shown on mobile */
+    .filter-bar {
+      display: none;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 24px;
+    }
+
+    .filter-toggle-btn {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+
+    .filter-toggle-btn:hover {
+      color: var(--text-secondary);
+      animation: wiggle 0.5s ease-in-out;
+    }
+
+    /* ── Filter Popover (mobile only) ── */
+    .filter-popover {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: var(--bg-primary, #f5f3ef);
+      z-index: 200;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
+      overflow-y: auto;
+    }
+
+    .filter-popover:popover-open {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @starting-style {
+      .filter-popover:popover-open {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+    }
+
+    .filter-popover-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .filter-popover-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(20px, 2.19vw, 28px);
+      /* design-system: allow */
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .filter-popover-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: var(--text-primary);
+    }
+
+    .filter-popover-close svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .filter-popover-body {
+      padding: 32px;
+    }
+
+    .filter-section {
+      margin-bottom: 36px;
+    }
+
+    .filter-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(16px, 1.56vw, 20px);
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      animation: titlePopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+    }
+
+    /* Shared styles for category list & price filter */
+    .category-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .category-list a {
+      display: block;
+      padding: 4px 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      position: relative;
+      animation: filterBounceIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color var(--transition-fast), letter-spacing 0.35s ease;
+    }
+
+    .category-list a:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .category-list a:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .category-list a:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .category-list a:nth-child(4) {
+      animation-delay: 0.2s;
+    }
+
+    .category-list a:nth-child(5) {
+      animation-delay: 0.25s;
+    }
+
+    .category-list a:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+
+    .category-list a:nth-child(7) {
+      animation-delay: 0.35s;
+    }
+
+    .category-list a:nth-child(8) {
+      animation-delay: 0.4s;
+    }
+
+    .category-list a:hover {
+      color: var(--text-primary);
+      transform: translateX(6px);
+      letter-spacing: 0.04em;
+    }
+
+    .category-list a.active {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .category-list a.active::before {
+      content: '';
+      position: absolute;
+      left: -14px;
+      /* design-system: allow */
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: dotPulse 2s ease-in-out infinite;
+    }
+
+    /* Price slider */
+    .price-filter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .price-filter-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: var(--text-primary);
+      transition: letter-spacing 0.3s ease;
+    }
+
+    .price-filter-header:hover .price-filter-label {
+      letter-spacing: 0.04em;
+    }
+
+    .price-filter-details {
+      border: none;
+    }
+
+    .price-filter-details summary {
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .price-filter-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .price-filter-toggle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      line-height: 1;
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .price-filter-details[open] .price-filter-toggle {
+      transform: rotate(180deg);
+    }
+
+    .price-filter-details[open] .price-filter-toggle::before {
+      content: '−';
+    }
+
+    .price-filter-details:not([open]) .price-filter-toggle::before {
+      content: '+';
+    }
+
+    .price-filter-header:hover .price-filter-toggle {
+      animation: wiggle 0.4s ease-in-out;
+    }
+
+    .price-slider-track {
+      position: relative;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      animation: priceReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    }
+
+    .price-slider-track::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--text-primary);
+    }
+
+    .price-slider-track input[type="range"] {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      background: transparent;
+      pointer-events: none;
+      margin: 0;
+      padding: 0;
+      height: 36px;
+      z-index: 1;
+    }
+
+    .price-slider-track input[type="range"]::-webkit-slider-runnable-track {
+      height: 2px;
+      background: transparent;
+    }
+
+    .price-slider-track input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: var(--text-primary);
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: auto;
+      margin-top: -8px;
+      position: relative;
+      z-index: 2;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .price-slider-track input[type="range"]:hover::-webkit-slider-thumb,
+    .price-slider-track input[type="range"]:active::-webkit-slider-thumb {
+      transform: scale(1.4);
+      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.1);
+    }
+
+    .price-slider-track input[type="range"]::-moz-range-track {
+      height: 2px;
+      background: transparent;
+      border: none;
+    }
+
+    .price-slider-track input[type="range"]::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: var(--text-primary);
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      pointer-events: auto;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .price-slider-track input[type="range"]:hover::-moz-range-thumb,
+    .price-slider-track input[type="range"]:active::-moz-range-thumb {
+      transform: scale(1.4);
+      box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.1);
+    }
+
+    .price-slider-values {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      animation: priceReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.05s backwards;
+    }
+
+    .price-slider-values span {
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.25s ease;
+    }
+
+    .price-slider-values span:hover {
+      transform: scale(1.15);
+      color: var(--text-primary);
+    }
+
+    /* Results Area */
+    .shop-results {
+      min-width: 0;
+    }
+
+    /* 3-column product grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* Product card — clean style, no background */
+    .products-grid .product-card {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      background: none;
+      border-radius: 0;
+      /* design-system: allow */
+      overflow: visible;
+      box-shadow: none;
+    }
+
+    .products-grid .product-card:hover {
+      transform: none;
+      box-shadow: none;
+    }
+
+    .products-grid .product-card .product-card-image {
+      aspect-ratio: 2 / 3;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .products-grid .product-card .ribbon {
+      background: #bdd8f1;
+      color: var(--text-primary);
+      font-family: poppins-extralight, poppins, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      padding: 4px 10px;
+      border-radius: 2px;
+      letter-spacing: 0.02em;
+    }
+
+    .products-grid .product-card-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px 0 0;
+    }
+
+    .products-grid .product-card-price {
+      margin-top: 0;
+    }
+
+    /* Pagination */
+    .load-more-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .load-more-info {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Loading overlay */
+    .loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(249, 245, 240, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Below 1024px: hide sidebar, show filter link + popover ── */
+    @media (max-width: 1024px) {
+      .shop-layout {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+        /* design-system: allow */
+        gap: 0;
+      }
+
+      .shop-sidebar {
+        display: none;
+      }
+
+      .filter-bar {
+        display: flex;
+      }
+
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @scope (.siteHeader) {
+      @keyframes site-header-float-in {
         0% {
           opacity: 0;
-          transform: translateX(-20px);
+          transform: translateY(-30px);
         }
-        60% {
-          opacity: 1;
-          transform: translateX(4px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
 
-      @keyframes titlePopIn {
-        0% {
-          opacity: 0;
-          transform: translateY(10px) scale(0.92);
-        }
-        70% {
-          opacity: 1;
-          transform: translateY(-3px) scale(1.03);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-        }
-      }
-
-      @keyframes wiggle {
-        0%, 100% { transform: rotate(0deg); }
-        20% { transform: rotate(-5deg); }
-        40% { transform: rotate(5deg); }
-        60% { transform: rotate(-3deg); }
-        80% { transform: rotate(3deg); }
-      }
-
-      @keyframes dotPulse {
-        0%, 100% { transform: translateY(-50%) scale(1); opacity: 1; }
-        50% { transform: translateY(-50%) scale(1.6); opacity: 0.5; }
-      }
-
-      @keyframes priceReveal {
-        0% {
-          opacity: 0;
-          transform: translateY(8px);
-        }
         100% {
           opacity: 1;
           transform: translateY(0);
         }
       }
 
-      .shop-page {
-        min-height: 100vh;
+      :scope {
+        display: contents;
       }
 
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px; /* design-system: allow */
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-
-      /* Shop Layout — sidebar left + grid right on desktop */
-      .shop-layout {
-        padding: 170px var(--page-padding) 80px; /* design-system: allow */
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 48px;
-      }
-
-      /* Sidebar — visible on desktop */
-      .shop-sidebar {
+      .site-header {
         position: sticky;
-        top: 80px;
-        align-self: start;
+        top: 0;
+        z-index: 100;
+        padding: 50px 50px 0;
+        margin-bottom: -97px;
+        /* design-system: allow */
+        animation: site-header-float-in 0.7s ease-out backwards;
+        background: rgba(238, 238, 238, 0);
+        /* design-system: allow */
+        transition: transform 0.5s ease, opacity 0.5s ease;
       }
 
-      .sidebar-section {
-        margin-bottom: 32px;
+      .site-header.header-hidden {
+        transform: translateY(-110%);
+        opacity: 0;
+        transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.5s;
       }
 
-      .sidebar-section-title {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(16px, 1.56vw, 20px);
-        font-weight: 600;
-        color: var(--text-primary);
-        letter-spacing: 0.02em;
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--border);
-        animation: titlePopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+      .site-header-bar {
+        background: rgb(174, 58, 0);
+        border-radius: var(--radius-full);
+        box-shadow: var(--shadow-md);
+        height: 47px;
       }
 
-      /* Filter bar — hidden on desktop, shown on mobile */
-      .filter-bar {
-        display: none;
-        justify-content: flex-end;
+      .site-header-inner {
+        margin: 0 auto;
+        display: flex;
         align-items: center;
-        padding-bottom: 24px;
+        height: 100%;
+        padding: 0 24px;
+        gap: 24px;
       }
 
-      .filter-toggle-btn {
-        font-family: 'Poppins', sans-serif;
+      .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: var(--font-primary);
+        font-size: clamp(24px, 2.5vw, 32px);
+        font-weight: 600;
+        color: #ffffff;
+        letter-spacing: -0.96px;
+        white-space: nowrap;
+      }
+
+      .site-logo-icon {
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+      }
+
+      .site-logo-icon svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+
+      .site-nav a {
+        font-family: var(--font-primary);
         font-size: 16px;
         font-weight: 500;
-        color: var(--text-primary);
-        text-decoration: underline;
-        text-underline-offset: 3px;
+        color: #ffffff;
+        padding: 4px 0;
+        transition: color var(--transition-fast);
+      }
+
+      .site-nav a:hover {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .site-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+        color: #ffffff;
+      }
+
+      .site-header-action-text {
+        font-family: var(--font-primary);
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        transition: color var(--transition-fast);
+        white-space: nowrap;
+      }
+
+      .site-header-action-text:hover {
+        color: #ffffff;
+      }
+
+      .site-login-btn {
         background: none;
         border: none;
         padding: 0;
         cursor: pointer;
-        transition: color var(--transition-fast);
       }
 
-      .filter-toggle-btn:hover {
-        color: var(--text-secondary);
-        animation: wiggle 0.5s ease-in-out;
+      .site-cart-indicator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
       }
 
-      /* ── Filter Popover (mobile only) ── */
-      .filter-popover {
+      .site-cart-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 24px;
+        height: 24px;
+        padding: 0 6px;
+        background: #ffffff;
+        color: #1a1a1a;
+        font-family: var(--font-primary);
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: var(--radius-full);
+      }
+
+      .site-cart-indicator.just-added {
+        animation: cart-flash 0.4s ease;
+      }
+
+      @keyframes cart-flash {
+
+        0%,
+        100% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.15);
+        }
+      }
+
+      /* ── Hamburger Button ── */
+      .site-hamburger-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: #ffffff;
+      }
+
+      .site-hamburger-btn svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      /* ── Mobile Menu (Popover) ── */
+      .site-mobile-menu {
         position: fixed;
         inset: 0;
         width: 100%;
@@ -163,43 +811,50 @@
         margin: 0;
         padding: 0;
         border: none;
-        background: var(--bg-primary, #f5f3ef);
+        background: #f5f3ef;
         z-index: 200;
         opacity: 0;
         transform: translateX(100%);
         transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease allow-discrete;
-        overflow-y: auto;
       }
 
-      .filter-popover:popover-open {
+      .site-mobile-menu:popover-open {
         opacity: 1;
         transform: translateX(0);
       }
 
       @starting-style {
-        .filter-popover:popover-open {
+        .site-mobile-menu:popover-open {
           opacity: 0;
           transform: translateX(100%);
         }
       }
 
-      .filter-popover-header {
+      .site-mobile-menu-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 24px 32px;
-        border-bottom: 1px solid var(--border);
       }
 
-      .filter-popover-title {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(20px, 2.19vw, 28px); /* design-system: allow */
+      .site-mobile-menu-logo {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+        font-size: 28px;
         font-weight: 600;
-        color: var(--text-primary);
-        letter-spacing: -0.01em;
+        color: #2D5143;
+        letter-spacing: -0.96px;
       }
 
-      .filter-popover-close {
+      .site-mobile-menu-logo svg {
+        width: 20px;
+        height: 20px;
+        color: #2D5143;
+      }
+
+      .site-mobile-menu-close {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -207,548 +862,436 @@
         border: none;
         padding: 8px;
         cursor: pointer;
-        color: var(--text-primary);
+        color: #2D5143;
       }
 
-      .filter-popover-close svg {
+      .site-mobile-menu-close svg {
         width: 24px;
         height: 24px;
       }
 
-      .filter-popover-body {
-        padding: 32px;
+      .site-mobile-menu-nav {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 32px;
+        gap: 12px;
       }
 
-      .filter-section {
-        margin-bottom: 36px;
-      }
-
-      .filter-section:last-child {
-        margin-bottom: 0;
-      }
-
-      .filter-section-title {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(16px, 1.56vw, 20px);
+      .site-mobile-menu-nav a {
+        font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+        font-size: 22px;
         font-weight: 600;
-        color: var(--text-primary);
-        letter-spacing: 0.02em;
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--border);
-        animation: titlePopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+        color: #2D5143;
+        padding: 8px 0;
       }
 
-      /* Shared styles for category list & price filter */
-      .category-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+      .site-mobile-menu-nav a.active {
+        color: #AE3A00;
       }
 
-      .category-list a {
-        display: block;
-        padding: 4px 0;
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        color: var(--text-secondary);
-        text-decoration: none;
-        position: relative;
-        animation: filterBounceIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
-        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
-                    color var(--transition-fast),
-                    letter-spacing 0.35s ease;
-      }
-
-      .category-list a:nth-child(1) { animation-delay: 0.05s; }
-      .category-list a:nth-child(2) { animation-delay: 0.1s; }
-      .category-list a:nth-child(3) { animation-delay: 0.15s; }
-      .category-list a:nth-child(4) { animation-delay: 0.2s; }
-      .category-list a:nth-child(5) { animation-delay: 0.25s; }
-      .category-list a:nth-child(6) { animation-delay: 0.3s; }
-      .category-list a:nth-child(7) { animation-delay: 0.35s; }
-      .category-list a:nth-child(8) { animation-delay: 0.4s; }
-
-      .category-list a:hover {
-        color: var(--text-primary);
-        transform: translateX(6px);
-        letter-spacing: 0.04em;
-      }
-
-      .category-list a.active {
-        color: var(--text-primary);
-        text-decoration: underline;
-        text-underline-offset: 4px;
-      }
-
-      .category-list a.active::before {
-        content: '';
-        position: absolute;
-        left: -14px; /* design-system: allow */
-        top: 50%;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--accent);
-        animation: dotPulse 2s ease-in-out infinite;
-      }
-
-      /* Price slider */
-      .price-filter-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 0;
-        padding-bottom: 8px;
-        margin-bottom: 16px;
-      }
-
-      .price-filter-label {
-        font-family: 'Poppins', sans-serif;
-        font-size: 16px;
-        color: var(--text-primary);
-        transition: letter-spacing 0.3s ease;
-      }
-
-      .price-filter-header:hover .price-filter-label {
-        letter-spacing: 0.04em;
-      }
-
-      .price-filter-details {
-        border: none;
-      }
-
-      .price-filter-details summary {
-        list-style: none;
-        cursor: pointer;
-      }
-
-      .price-filter-details summary::-webkit-details-marker {
+      .site-mobile-menu-login {
         display: none;
+        padding: 0 32px;
       }
 
-      .price-filter-toggle {
-        font-size: 20px;
-        color: var(--text-secondary);
-        line-height: 1;
-        display: inline-block;
-        transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-
-      .price-filter-details[open] .price-filter-toggle {
-        transform: rotate(180deg);
-      }
-
-      .price-filter-details[open] .price-filter-toggle::before {
-        content: '−';
-      }
-
-      .price-filter-details:not([open]) .price-filter-toggle::before {
-        content: '+';
-      }
-
-      .price-filter-header:hover .price-filter-toggle {
-        animation: wiggle 0.4s ease-in-out;
-      }
-
-      .price-slider-track {
-        position: relative;
-        height: 36px;
-        display: flex;
-        align-items: center;
-        animation: priceReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) backwards;
-      }
-
-      .price-slider-track::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: var(--text-primary);
-      }
-
-      .price-slider-track input[type="range"] {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        -webkit-appearance: none;
-        appearance: none;
-        background: transparent;
-        pointer-events: none;
-        margin: 0;
-        padding: 0;
-        height: 36px;
-        z-index: 1;
-      }
-
-      .price-slider-track input[type="range"]::-webkit-slider-runnable-track {
-        height: 2px;
-        background: transparent;
-      }
-
-      .price-slider-track input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        appearance: none;
-        width: 18px;
-        height: 18px;
-        background: var(--text-primary);
-        border-radius: 50%;
-        cursor: pointer;
-        pointer-events: auto;
-        margin-top: -8px;
-        position: relative;
-        z-index: 2;
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                    box-shadow 0.3s ease;
-      }
-
-      .price-slider-track input[type="range"]:hover::-webkit-slider-thumb,
-      .price-slider-track input[type="range"]:active::-webkit-slider-thumb {
-        transform: scale(1.4);
-        box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.1);
-      }
-
-      .price-slider-track input[type="range"]::-moz-range-track {
-        height: 2px;
-        background: transparent;
-        border: none;
-      }
-
-      .price-slider-track input[type="range"]::-moz-range-thumb {
-        width: 18px;
-        height: 18px;
-        background: var(--text-primary);
-        border-radius: 50%;
-        border: none;
-        cursor: pointer;
-        pointer-events: auto;
-        transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-                    box-shadow 0.3s ease;
-      }
-
-      .price-slider-track input[type="range"]:hover::-moz-range-thumb,
-      .price-slider-track input[type="range"]:active::-moz-range-thumb {
-        transform: scale(1.4);
-        box-shadow: 0 0 0 4px rgba(26, 26, 26, 0.1);
-      }
-
-      .price-slider-values {
-        display: flex;
-        justify-content: space-between;
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        color: var(--text-secondary);
-        margin-top: 2px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--border);
-        animation: priceReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.05s backwards;
-      }
-
-      .price-slider-values span {
-        transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
-                    color 0.25s ease;
-      }
-
-      .price-slider-values span:hover {
-        transform: scale(1.15);
-        color: var(--text-primary);
-      }
-
-      /* Results Area */
-      .shop-results {
-        min-width: 0;
-      }
-
-      /* 3-column product grid */
-      .products-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-      }
-
-      /* Product card — clean style, no background */
-      .products-grid .product-card {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+      .site-mobile-menu-login button,
+      .site-mobile-menu-login span {
+        font-family: 'Poppins', 'Poppins Fallback', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        color: #2D5143;
         background: none;
-        border-radius: 0; /* design-system: allow */
-        overflow: visible;
-        box-shadow: none;
+        border: none;
+        padding: 8px 0;
+        cursor: pointer;
       }
 
-      .products-grid .product-card:hover {
-        transform: none;
-        box-shadow: none;
-      }
-
-      .products-grid .product-card .product-card-image {
-        aspect-ratio: 2 / 3;
-        border-radius: 20px;
-        overflow: hidden;
-      }
-
-      .products-grid .product-card .ribbon {
-        background: #bdd8f1;
-        color: var(--text-primary);
-        font-family: poppins-extralight, poppins, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        padding: 4px 10px;
-        border-radius: 2px;
-        letter-spacing: 0.02em;
-      }
-
-      .products-grid .product-card-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 12px 0 0;
-      }
-
-      .products-grid .product-card-price {
-        margin-top: 0;
-      }
-
-      /* Pagination */
-      .load-more-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        margin-top: 48px;
-        padding-top: 32px;
-        border-top: 1px solid var(--border-light);
-      }
-
-      .load-more-info {
-        font-size: 13px;
-        color: var(--text-muted);
-      }
-
-      /* Loading overlay */
-      .loading-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(249, 245, 240, 0.9);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        backdrop-filter: blur(4px);
-      }
-
-      /* ── Below 1024px: hide sidebar, show filter link + popover ── */
       @media (max-width: 1024px) {
-        .shop-layout {
-          grid-template-columns: 1fr;
-          padding-top: 120px; /* design-system: allow */
-          gap: 0;
-        }
-
-        .shop-sidebar {
+        .site-nav {
           display: none;
         }
 
-        .filter-bar {
+        .site-hamburger-btn {
           display: flex;
         }
 
-        .products-grid {
-          grid-template-columns: repeat(2, 1fr);
+        .site-header {
+          padding: 50px 25px 0;
+        }
+      }
+    }
+
+    @scope (.siteFooter) {
+      :scope {
+        background: var(--bg-footer);
+        color: var(--text-inverse);
+        padding: 64px var(--page-padding) 32px;
+      }
+
+      .footer-inner {
+        max-width: var(--container-max);
+        margin: 0 auto;
+      }
+
+      .footer-columns {
+        display: grid;
+        grid-template-columns: auto auto auto 1fr;
+        gap: 48px;
+        margin-bottom: 64px;
+      }
+
+      .footer-col h3 {
+        font-family: var(--font-primary);
+        font-size: clamp(16px, 1.56vw, 20px);
+        font-weight: 600;
+        margin-bottom: 20px;
+        letter-spacing: 0.02em;
+      }
+
+      .footer-col a {
+        display: block;
+        font-family: var(--font-primary);
+        font-size: 14px;
+        opacity: 0.7;
+        margin-bottom: 10px;
+        transition: opacity var(--transition-fast);
+      }
+
+      .footer-col a:hover {
+        opacity: 1;
+      }
+
+      .footer-col p {
+        font-family: var(--font-caption);
+        font-size: 13px;
+        opacity: 0.7;
+        margin-bottom: 6px;
+      }
+
+      .footer-newsletter .input {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: var(--text-inverse);
+        border-radius: var(--radius-md);
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+
+      .footer-newsletter .input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-newsletter .input:focus {
+        outline: none;
+        border-color: var(--cta);
+      }
+
+      .footer-newsletter label {
+        display: block;
+        font-size: 12px;
+        opacity: 0.7;
+        margin-bottom: 8px;
+      }
+
+      .footer-newsletter .newsletter-checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 12px;
+        opacity: 0.7;
+        margin-bottom: 16px;
+        cursor: pointer;
+      }
+
+      .footer-newsletter .newsletter-checkbox input {
+        margin-top: 2px;
+        accent-color: var(--cta);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 32px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+      }
+
+      .footer-logo {
+        font-family: var(--font-primary);
+        font-size: clamp(32px, 3.75vw, 48px);
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-logo .logo-icon-large {
+        color: var(--accent);
+      }
+
+      .footer-meta {
+        text-align: right;
+      }
+
+      .footer-meta p {
+        font-family: var(--font-caption);
+        font-size: 12px;
+        opacity: 0.6;
+        margin-bottom: 12px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 16px;
+        justify-content: flex-end;
+      }
+
+      .social-icons a {
+        font-size: 18px;
+        opacity: 0.7;
+      }
+
+      .social-icons a:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 1024px) {
+        .footer-columns {
+          grid-template-columns: 1fr 1fr;
+          gap: 32px;
         }
       }
 
       @media (max-width: 600px) {
-        .products-grid {
+        .footer-columns {
           grid-template-columns: 1fr;
+          gap: 24px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+        }
+
+        .footer-meta {
+          text-align: left;
+        }
+
+        .social-icons {
+          justify-content: flex-start;
         }
       }
-    </style>
-  </head>
-  <body>
-    <main class="shop-page">
-      <!-- Site Header -->
-      <jay:SiteHeader />
+    }
+  </style>
+</head>
 
-      <!-- Loading Overlay -->
-      <div class="loading-overlay" if="productSearch.isSearching">
-        <div class="loading-spinner"></div>
-      </div>
-
-      <!-- Filter Popover -->
-      <div id="shop-filter-popover" popover class="filter-popover">
-        <div class="filter-popover-header">
-          <span class="filter-popover-title">Filter</span>
-          <button popovertarget="shop-filter-popover" popovertargetaction="hide" class="filter-popover-close" aria-label="Close filters">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
-          </button>
-        </div>
-        <div class="filter-popover-body">
-          <!-- Browse by Category -->
-          <div class="filter-section">
-            <h2 class="filter-section-title">browse by</h2>
-            <div class="category-list">
-              <a href="/products">all products</a>
-              <a href="{categoryUrl}" class="{isSelected ? active}" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
-                {categoryName}
-              </a>
+<body>
+  <main class="shop-page"><jay:site-header ref="siteHeader">
+      <div class="site-header-root siteHeader">
+        <header class="site-header {headerHidden ? header-hidden}">
+          <div class="site-header-bar">
+            <div class="site-header-inner"><a href="/" class="site-logo"><span
+                  class="site-logo-icon"><svg preserveAspectRatio="xMidYMid meet"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.009 19" height="19"
+                    width="19" role="presentation" aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413">
+                    </path>
+                  </svg></span> onsko</a>
+              <nav class="site-nav"><a href="/">home</a><a href="/products">shop</a><a
+                  href="/#our-story">about</a></nav>
+              <div class="site-header-actions"><jay:login-indicator><button if="!isLoggedIn"
+                    ref="loginButton" class="site-header-action-text site-login-btn">log
+                    in</button><span if="isLoggedIn"
+                    class="site-header-action-text">{memberName}</span><button if="isLoggedIn"
+                    ref="logoutButton" class="site-header-action-text site-login-btn">log
+                    out</button></jay:login-indicator><jay:cart-indicator><a href="/cart"
+                    class="site-cart-indicator {hasItems ? has-items} {isLoading ? is-loading} {justAdded ? just-added}"
+                    ref="cartLink"><span
+                      class="site-cart-badge">{itemCount}</span></a></jay:cart-indicator><button
+                  class="site-hamburger-btn" popovertarget="site-mobile-menu"
+                  aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg></button></div>
             </div>
           </div>
-
-          <!-- Filter by Price -->
-          <div class="filter-section">
-            <h2 class="filter-section-title">filter by</h2>
-            <details class="price-filter-details" open>
-              <summary class="price-filter-header">
-                <span class="price-filter-label">Price</span>
-                <span class="price-filter-toggle"></span>
-              </summary>
-              <div class="price-slider-track">
-                <input
-                  type="range"
-                  min="{productSearch.filters.priceRange.minBound}"
-                  max="{productSearch.filters.priceRange.maxBound}"
-                  value="{productSearch.filters.priceRange.minPrice}"
-                  ref="productSearch.filters.priceRange.minPrice"
-                  aria-label="Minimum price"
-                />
-                <input
-                  type="range"
-                  min="{productSearch.filters.priceRange.minBound}"
-                  max="{productSearch.filters.priceRange.maxBound}"
-                  value="{productSearch.filters.priceRange.maxPrice}"
-                  ref="productSearch.filters.priceRange.maxPrice"
-                  aria-label="Maximum price"
-                />
-              </div>
-              <div class="price-slider-values">
-                <span>${productSearch.filters.priceRange.minPrice}</span>
-                <span>${productSearch.filters.priceRange.maxPrice}</span>
-              </div>
-            </details>
-          </div>
+        </header>
+        <div id="site-mobile-menu" popover class="site-mobile-menu">
+          <div class="site-mobile-menu-header"><a href="/" class="site-mobile-menu-logo"><svg
+                preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 19.009 19" height="19" width="19" role="presentation"
+                aria-hidden="true">
+                <path fill="currentColor"
+                  d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413">
+                </path>
+              </svg> onsko</a><button popovertarget="site-mobile-menu" popovertargetaction="hide"
+              class="site-mobile-menu-close" aria-label="Close menu"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+                <line x1="6" y1="18" x2="18" y2="6"></line>
+              </svg></button></div>
+          <nav class="site-mobile-menu-nav"><a href="/">home</a><a href="/products">shop</a><a
+              href="/#our-story">about</a></nav>
+          <div class="site-mobile-menu-login"><jay:login-indicator><button if="!isLoggedIn"
+                ref="loginButton" class="site-mobile-login-btn" popovertarget="site-mobile-menu"
+                popovertargetaction="hide">log in</button><span
+                if="isLoggedIn">{memberName}</span><button if="isLoggedIn" ref="logoutButton"
+                class="site-mobile-login-btn" popovertarget="site-mobile-menu"
+                popovertargetaction="hide">log out</button></jay:login-indicator></div>
         </div>
       </div>
-
-      <!-- Page heading (visually hidden, for SEO) -->
-      <h1 class="sr-only">{productSearch.categoryHeader.name}</h1>
-
-      <!-- Main Shop Layout -->
-      <div class="shop-layout">
-        <!-- Sidebar (desktop) -->
-        <aside class="shop-sidebar" aria-label="Product filters">
-          <!-- Browse by Category -->
-          <div class="sidebar-section">
-            <h2 class="sidebar-section-title">browse by</h2>
-            <div class="category-list">
-              <a href="/products">all products</a>
-              <a href="{categoryUrl}" class="{isSelected ? active}" forEach="productSearch.filters.categoryFilter.categories" trackBy="categoryId">
-                {categoryName}
-              </a>
+    </jay:site-header>
+    <div class="loading-overlay" if="productSearch.isSearching">
+      <div class="loading-spinner"></div>
+    </div>
+    <div id="shop-filter-popover" popover class="filter-popover">
+      <div class="filter-popover-header"><span class="filter-popover-title">Filter</span><button
+          popovertarget="shop-filter-popover" popovertargetaction="hide"
+          class="filter-popover-close" aria-label="Close filters"><svg viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+            <line x1="6" y1="18" x2="18" y2="6"></line>
+          </svg></button></div>
+      <div class="filter-popover-body">
+        <div class="filter-section">
+          <h2 class="filter-section-title">browse by</h2>
+          <div class="category-list"><a href="/products">all products</a><a href="{categoryUrl}"
+              class="{isSelected ? active}"
+              forEach="productSearch.filters.categoryFilter.categories"
+              trackBy="categoryId">{categoryName}</a></div>
+        </div>
+        <div class="filter-section">
+          <h2 class="filter-section-title">filter by</h2>
+          <details class="price-filter-details" open>
+            <summary class="price-filter-header"><span class="price-filter-label">Price</span><span
+                class="price-filter-toggle"></span></summary>
+            <div class="price-slider-track"><input type="range"
+                min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
+                value="{productSearch.filters.priceRange.minPrice}"
+                ref="productSearch.filters.priceRange.minPrice" aria-label="Minimum price"><input
+                type="range" min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
+                value="{productSearch.filters.priceRange.maxPrice}"
+                ref="productSearch.filters.priceRange.maxPrice" aria-label="Maximum price"></div>
+            <div class="price-slider-values">
+              <span>${productSearch.filters.priceRange.minPrice}</span><span>${productSearch.filters.priceRange.maxPrice}</span>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    <h1 class="sr-only">{productSearch.categoryHeader.name}</h1>
+    <div class="shop-layout">
+      <aside class="shop-sidebar" aria-label="Product filters">
+        <div class="sidebar-section">
+          <h2 class="sidebar-section-title">browse by</h2>
+          <div class="category-list"><a href="/products">all products</a><a href="{categoryUrl}"
+              class="{isSelected ? active}"
+              forEach="productSearch.filters.categoryFilter.categories"
+              trackBy="categoryId">{categoryName}</a></div>
+        </div>
+        <div class="sidebar-section">
+          <h2 class="sidebar-section-title">filter by</h2>
+          <details class="price-filter-details" open>
+            <summary class="price-filter-header"><span class="price-filter-label">Price</span><span
+                class="price-filter-toggle"></span></summary>
+            <div class="price-slider-track"><input type="range"
+                min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
+                value="{productSearch.filters.priceRange.minPrice}"
+                ref="productSearch.filters.priceRange.minPrice" aria-label="Minimum price"><input
+                type="range" min="{productSearch.filters.priceRange.minBound}"
+                max="{productSearch.filters.priceRange.maxBound}"
+                value="{productSearch.filters.priceRange.maxPrice}"
+                ref="productSearch.filters.priceRange.maxPrice" aria-label="Maximum price"></div>
+            <div class="price-slider-values">
+              <span>${productSearch.filters.priceRange.minPrice}</span><span>${productSearch.filters.priceRange.maxPrice}</span>
+            </div>
+          </details>
+        </div>
+      </aside>
+      <div class="filter-bar"><button class="filter-toggle-btn" popovertarget="shop-filter-popover"
+          aria-label="Open filters">Filter</button></div>
+      <section class="shop-results">
+        <div class="empty-state" if="!productSearch.hasResults">
+          <div class="empty-state-icon">✻</div>
+          <h2 class="empty-state-title">no products found</h2>
+          <p class="empty-state-message">{productSearch.emptyStateMessage}</p>
+        </div>
+        <div class="products-grid" if="productSearch.hasResults">
+          <article class="product-card {isAddingToCart ? is-adding}"
+            forEach="productSearch.searchResults" trackBy="_id" jay-design="allow"><a
+              href="{productUrl}" class="product-card-image"><img
+                src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp"
+                srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w"
+                sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                alt="{thumbnail.altText}" loading="lazy" width="600" height="600"
+                fetchpriority="high"><span class="badge badge-accent ribbon"
+                if="hasRibbon">{ribbon.name}</span></a>
+            <div class="product-card-content">
+              <h2 class="product-card-name"><a href="{productUrl}"
+                  ref="productSearch.searchResults.productLink">{name}</a></h2>
+              <div class="product-card-price"><span class="current-price">{price}</span><span
+                  class="original-price" if="hasDiscount">{strikethroughPrice}</span><span
+                  class="badge badge-error" if="hasDiscount" jay-design="allow">sale</span></div>
+            </div>
+          </article>
+        </div>
+        <div class="load-more-section" if="productSearch.hasResults"><span
+            class="load-more-info">{productSearch.loadedCount} of {productSearch.totalCount}
+            products</span><button class="btn btn-secondary" ref="productSearch.loadMoreButton"
+            if="productSearch.hasMore && !productSearch.isSearching">load more</button><span
+            class="load-more-info" if="!productSearch.hasMore && productSearch.totalCount > 0">all
+            products shown</span></div>
+      </section>
+    </div><jay:site-footer ref="siteFooter">
+      <footer class="site-footer siteFooter">
+        <div class="footer-inner">
+          <div class="footer-columns">
+            <div class="footer-col">
+              <h3>shop</h3><a href="/">home</a><a href="/products">shop</a>
+            </div>
+            <div class="footer-col">
+              <h3>policy</h3><a href="/terms-and-conditions">terms & conditions</a><a
+                href="/privacy-policy">privacy policy</a><a href="/refund-policy">refund
+                policy</a><a href="/shipping-policy">shipping policy</a><a
+                href="/accessibility">accessibility statement</a>
+            </div>
+            <div class="footer-col">
+              <h3>contact</h3>
+              <p>500 terry francine street</p>
+              <p>san francisco, ca 94158</p>
+              <p>info@mysite.com</p>
+              <p>123-456-7890</p>
+            </div>
+            <div class="footer-col footer-newsletter">
+              <h3>subscribe to our newsletter</h3>
+              <p>be the first to know about our hottest discounts</p><label for="footer-email">Email
+                *</label><input type="email" id="footer-email" class="input"
+                placeholder="your email" aria-label="Email for newsletter"><label
+                class="newsletter-checkbox"><input type="checkbox"> Yes, subscribe me to your
+                newsletter. *</label><button class="btn btn-cta">subscribe</button>
             </div>
           </div>
-
-          <!-- Filter by Price -->
-          <div class="sidebar-section">
-            <h2 class="sidebar-section-title">filter by</h2>
-            <details class="price-filter-details" open>
-              <summary class="price-filter-header">
-                <span class="price-filter-label">Price</span>
-                <span class="price-filter-toggle"></span>
-              </summary>
-              <div class="price-slider-track">
-                <input
-                  type="range"
-                  min="{productSearch.filters.priceRange.minBound}"
-                  max="{productSearch.filters.priceRange.maxBound}"
-                  value="{productSearch.filters.priceRange.minPrice}"
-                  ref="productSearch.filters.priceRange.minPrice"
-                  aria-label="Minimum price"
-                />
-                <input
-                  type="range"
-                  min="{productSearch.filters.priceRange.minBound}"
-                  max="{productSearch.filters.priceRange.maxBound}"
-                  value="{productSearch.filters.priceRange.maxPrice}"
-                  ref="productSearch.filters.priceRange.maxPrice"
-                  aria-label="Maximum price"
-                />
-              </div>
-              <div class="price-slider-values">
-                <span>${productSearch.filters.priceRange.minPrice}</span>
-                <span>${productSearch.filters.priceRange.maxPrice}</span>
-              </div>
-            </details>
+          <div class="footer-bottom">
+            <div class="footer-logo"><span class="logo-icon-large">✻</span> onsko</div>
+            <div class="footer-meta">
+              <p>&copy; 2035 by onsko</p>
+              <div class="social-icons"><a href="#" aria-label="Instagram">IG</a><a href="#"
+                  aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div>
+            </div>
           </div>
-        </aside>
-
-        <!-- Filter Bar (mobile) -->
-        <div class="filter-bar">
-          <button class="filter-toggle-btn" popovertarget="shop-filter-popover" aria-label="Open filters">Filter</button>
         </div>
+      </footer>
+    </jay:site-footer>
+  </main>
+</body>
 
-        <!-- Results -->
-        <section class="shop-results">
-          <!-- Empty State -->
-          <div class="empty-state" if="!productSearch.hasResults">
-            <div class="empty-state-icon">✻</div>
-            <h2 class="empty-state-title">no products found</h2>
-            <p class="empty-state-message">{productSearch.emptyStateMessage}</p>
-          </div>
-
-          <!-- Product Grid -->
-          <div class="products-grid" if="productSearch.hasResults">
-            <article class="product-card {isAddingToCart ? is-adding}" forEach="productSearch.searchResults" trackBy="_id" jay-design="allow">
-              <a href="{productUrl}" class="product-card-image">
-                <img
-                  src="{thumbnail.url}/v1/fill/w_600,h_600/file.webp"
-                  srcset="{thumbnail.url}/v1/fill/w_300%2Ch_300/file.webp 300w, {thumbnail.url}/v1/fill/w_400%2Ch_400/file.webp 400w, {thumbnail.url}/v1/fill/w_600%2Ch_600/file.webp 600w"
-                  sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  alt="{thumbnail.altText}"
-                  loading="lazy"
-                  width="600"
-                  height="600"
-                  fetchpriority="high"
-                />
-                <!-- Ribbon Badge -->
-                <span class="badge badge-accent ribbon" if="hasRibbon">{ribbon.name}</span>
-              </a>
-              <div class="product-card-content">
-                <h2 class="product-card-name">
-                  <a href="{productUrl}" ref="productSearch.searchResults.productLink">{name}</a>
-                </h2>
-                <div class="product-card-price">
-                  <span class="current-price">{price}</span>
-                  <span class="original-price" if="hasDiscount">{strikethroughPrice}</span>
-                  <span class="badge badge-error" if="hasDiscount" jay-design="allow">sale</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <!-- Load More -->
-          <div class="load-more-section" if="productSearch.hasResults">
-            <span class="load-more-info">
-              {productSearch.loadedCount} of {productSearch.totalCount} products
-            </span>
-            <button
-              class="btn btn-secondary"
-              ref="productSearch.loadMoreButton"
-              if="productSearch.hasMore && !productSearch.isSearching"
-            >
-              load more
-            </button>
-            <span class="load-more-info" if="!productSearch.hasMore && productSearch.totalCount > 0">
-              all products shown
-            </span>
-          </div>
-        </section>
-      </div>
-
-      <!-- Site Footer -->
-      <jay:SiteFooter />
-    </main>
-  </body>
 </html>
