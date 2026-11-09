@@ -1,2 +1,5 @@
 site:
   baseUrl: https://onsko.example.com
+  name: onsko
+  description: Thoughtfully designed footwear and essentials — minimal, durable, made to move.
+  logo: /logo.png

@@ -1,0 +1,17 @@
+{
+  "entries": [
+    {
+      "identifier": "urn:air:onsko:catalog:products",
+      "displayName": "onsko Product Catalog",
+      "type": "application/ld+json",
+      "url": "https://onsko.example.com/sitemap.xml",
+      "description": "Browse and search the onsko catalog of footwear and everyday essentials.",
+      "representativeQueries": [
+        "minimal sneakers",
+        "durable everyday shoes",
+        "new footwear arrivals"
+      ],
+      "tags": ["shop", "catalog", "footwear"]
+    }
+  ]
+}

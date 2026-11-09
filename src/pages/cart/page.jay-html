@@ -879,9 +879,9 @@
                     in</button><span if="isLoggedIn"
                     class="site-header-action-text">{memberName}</span><button if="isLoggedIn"
                     ref="logoutButton" class="site-header-action-text site-login-btn">log
-                    out</button></jay:login-indicator><jay:cart-indicator><a href="/cart"
+                    out</button></jay:login-indicator><jay:cart-indicator><a href="#top"
                     class="site-cart-indicator {hasItems ? has-items} {isLoading ? is-loading} {justAdded ? just-added}"
-                    ref="cartLink"><span
+                    ref="cartLink" override="href"><span
                       class="site-cart-badge">{itemCount}</span></a></jay:cart-indicator><button
                   class="site-hamburger-btn" popovertarget="site-mobile-menu"
                   aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1026,8 +1026,10 @@
             <div class="footer-logo"><span class="logo-icon-large">✻</span> onsko</div>
             <div class="footer-meta">
               <p>&copy; 2035 by onsko</p>
-              <div class="social-icons"><a href="#" aria-label="Instagram">IG</a><a href="#"
-                  aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div>
+              <div class="social-icons"><a href="https://instagram.com/onsko"
+                  aria-label="Instagram">IG</a><a href="https://facebook.com/onsko"
+                  aria-label="Facebook">FB</a><a href="https://www.tiktok.com/@onsko"
+                  aria-label="TikTok">TT</a></div>
             </div>
           </div>
         </div>

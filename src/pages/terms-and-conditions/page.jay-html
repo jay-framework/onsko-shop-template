@@ -585,7 +585,7 @@
               <h3>shop</h3><a href="/">home</a><a href="/products">shop</a>
             </div>
             <div class="footer-col">
-              <h3>policy</h3><a href="/terms-and-conditions">terms & conditions</a><a
+              <h3>policy</h3><a href="#top" override="href">terms & conditions</a><a
                 href="/privacy-policy">privacy policy</a><a href="/refund-policy">refund
                 policy</a><a href="/shipping-policy">shipping policy</a><a
                 href="/accessibility">accessibility statement</a>
@@ -610,8 +610,10 @@
             <div class="footer-logo"><span class="logo-icon-large">✻</span> onsko</div>
             <div class="footer-meta">
               <p>&copy; 2035 by onsko</p>
-              <div class="social-icons"><a href="#" aria-label="Instagram">IG</a><a href="#"
-                  aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div>
+              <div class="social-icons"><a href="https://instagram.com/onsko"
+                  aria-label="Instagram">IG</a><a href="https://facebook.com/onsko"
+                  aria-label="Facebook">FB</a><a href="https://www.tiktok.com/@onsko"
+                  aria-label="TikTok">TT</a></div>
             </div>
           </div>
         </div>

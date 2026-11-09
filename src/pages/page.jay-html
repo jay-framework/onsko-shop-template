@@ -1597,7 +1597,7 @@
   <main class="home-page">
     <header class="home-header {headerReady ? header-ready} {headerHidden ? header-hidden}">
       <div class="home-header-bar">
-        <div class="home-header-inner"><a href="/" class="home-logo"><span
+        <div class="home-header-inner"><a href="#top" class="home-logo" override="href"><span
               class="home-logo-icon"><svg preserveAspectRatio="xMidYMid meet"
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.009 19" height="19" width="19"
                 role="presentation" aria-hidden="true">
@@ -1605,7 +1605,7 @@
                   d="M16.392 9.5A2.626 2.626 0 0 0 19 6.875a2.63 2.63 0 0 0-2.624-2.626c-.723 0-1.412.149-2.04.413a5.2 5.2 0 0 0 .413-2.04A2.62 2.62 0 0 0 12.124.003 2.62 2.62 0 0 0 9.5 2.607 2.626 2.626 0 0 0 6.876 0 2.63 2.63 0 0 0 4.25 2.625c0 .723.147 1.413.413 2.04a5.25 5.25 0 0 0-2.04-.413A2.623 2.623 0 0 0 .002 6.877a2.62 2.62 0 0 0 2.606 2.624A2.626 2.626 0 0 0 0 12.126a2.627 2.627 0 0 0 2.624 2.624 5.2 5.2 0 0 0 2.04-.413 5.2 5.2 0 0 0-.413 2.04 2.62 2.62 0 0 0 2.625 2.621A2.62 2.62 0 0 0 9.5 16.393 2.626 2.626 0 0 0 12.124 19a2.63 2.63 0 0 0 2.625-2.625c0-.723-.147-1.412-.413-2.04a5.2 5.2 0 0 0 2.04.413 2.624 2.624 0 0 0 .016-5.249m-6.895 1.626c-.723 0-1.414.148-2.04.413a5.2 5.2 0 0 0 .413-2.04 5.2 5.2 0 0 0-.413-2.04 5.2 5.2 0 0 0 2.04.413 5.2 5.2 0 0 0 2.04-.412 5.2 5.2 0 0 0-.413 2.04c0 .722.147 1.412.413 2.039a5.25 5.25 0 0 0-2.04-.413">
                 </path>
               </svg></span> onsko</a>
-          <nav class="home-nav"><a href="/" class="active">home</a><a href="/products">shop</a><a
+          <nav class="home-nav"><a href="#top" class="active" override="href">home</a><a href="/products">shop</a><a
               href="#our-story">about</a></nav>
           <div class="home-header-actions"><jay:login-indicator><button if="!isLoggedIn"
                 ref="loginButton" class="home-action-text home-login-btn">log in</button><span
@@ -1626,7 +1626,7 @@
       </div>
     </header>
     <div id="mobile-menu" popover class="mobile-menu">
-      <div class="mobile-menu-header"><a href="/" class="mobile-menu-logo"><svg
+      <div class="mobile-menu-header"><a href="#top" class="mobile-menu-logo" override="href"><svg
             preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 19.009 19" height="19" width="19" role="presentation" aria-hidden="true">
             <path fill="currentColor"
@@ -1638,7 +1638,7 @@
             <line x1="6" y1="6" x2="18" y2="18"></line>
             <line x1="6" y1="18" x2="18" y2="6"></line>
           </svg></button></div>
-      <nav class="mobile-menu-nav"><a href="/" class="active">home</a><a href="/products">shop</a><a
+      <nav class="mobile-menu-nav"><a href="#top" class="active" override="href">home</a><a href="/products">shop</a><a
           href="#our-story">about</a></nav>
       <div class="mobile-menu-login"><jay:login-indicator><button if="!isLoggedIn" ref="loginButton"
             class="mobile-login-btn" popovertarget="mobile-menu" popovertargetaction="hide">log
@@ -1816,7 +1816,7 @@
         <div class="footer-inner">
           <div class="footer-columns">
             <div class="footer-col">
-              <h3>shop</h3><a href="/">home</a><a href="/products">shop</a>
+              <h3>shop</h3><a href="#top" override="href">home</a><a href="/products">shop</a>
             </div>
             <div class="footer-col">
               <h3>policy</h3><a href="/terms-and-conditions">terms & conditions</a><a
@@ -1844,8 +1844,10 @@
             <div class="footer-logo"><span class="logo-icon-large">✻</span> onsko</div>
             <div class="footer-meta">
               <p>&copy; 2035 by onsko</p>
-              <div class="social-icons"><a href="#" aria-label="Instagram">IG</a><a href="#"
-                  aria-label="Facebook">FB</a><a href="#" aria-label="TikTok">TT</a></div>
+              <div class="social-icons"><a href="https://instagram.com/onsko"
+                  aria-label="Instagram">IG</a><a href="https://facebook.com/onsko"
+                  aria-label="Facebook">FB</a><a href="https://www.tiktok.com/@onsko"
+                  aria-label="TikTok">TT</a></div>
             </div>
           </div>
         </div>
